@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+$primary: rgb(155, 155, 155);
+$secondary: rgb(239, 238, 238);
+$info: rgb(91, 91, 91);
+$dark: black;
+
+$font-family-base: "VT323", monospace;
+$font-size-base: 1.3rem;
+
+$link-color: $primary;
+$border-color: $primary;
+$font-color: $secondary;
+$line-height-base: 1.0;
+
+$nav-link-padding-y: .03rem;
+$nav-link-padding-x: 1rem;
+$nav-link-hover-color: $secondary;  
+$nav-link-transition: none;
+$nav-tabs-link-hover-border-color: $dark;
+$nav-tabs-link-active-border: null;
+
+$nav-tabs-border-color: none;
+$nav-tabs-border-radius: 0;
+$nav-tabs-link-active-bg: $primary;
+
+$figure-caption-color: $primary;
+
+@import "../node_modules/bootstrap/scss/bootstrap";

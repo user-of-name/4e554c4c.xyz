@@ -1,0 +1,1048 @@
+html, body {
+      margin: 0;
+      padding: 0;
+      background-color: #F1F1EF;
+      }
+  .home_body_content{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(6, minmax 100vh);
+      grid-row-gap: 5px;
+      grid-template-areas:
+        'section7 section7'
+        'section6 section6'
+        'section8 section8'
+        'section1 section1'
+        'section2 section2'
+        'section3 section3'
+        'section4 section4'
+        'section5 section5';
+      }
+
+  .project6_body_content{
+      display: grid;
+      grid-template-columns: 100vw;
+      grid-template-rows: 100vh auto;
+      grid-row-gap: 0px;
+      grid-template-areas:
+      "coverimg"
+      "title"
+      "intro"
+      "photos"
+      "footer";
+      }
+  .project7_body_content{
+      display: grid;
+      grid-template-columns: 100vw;
+      grid-template-rows: 100vh auto;
+      grid-row-gap: 0px;
+      grid-template-areas:
+      "coverimg"
+      "title"
+      "intro"
+      "photos"
+      "footer";
+      }
+  .project1_body_content{
+      display: grid;
+      grid-template-columns: 100vw;
+      grid-template-rows: 100vh auto;
+      grid-row-gap: 0px;
+      grid-template-areas:
+        "coverimg"
+        "title"
+        "intro"
+        "sis_web"
+        "sis_doc"
+        "sis_mag"
+        "footer";
+        }
+    .project5_body_content{
+        display: block;
+        margin: auto 5px;
+      }
+
+  .project2_body_content{
+      display: grid;
+      grid-template-columns: 2fr 2fr 2fr;
+      grid-template-rows: 100vh auto;
+      grid-column-gap: 15px;
+      grid-row-gap: 0px;
+      grid-template-areas:
+      "coverimg"
+      "title"
+      "intro"
+      "cr_main"
+      "cr_side";
+      }
+  .project3_body_content{
+          display: grid;
+          grid-template-columns: 100vw;
+          grid-template-rows: 100vh;
+          grid-column-gap: 15px;
+          grid-row-gap: 0px;
+          grid-template-areas:
+          "coverimg"
+          "title"
+          "intro"
+          "hyfe_main"
+          "footer";
+          }
+
+  h1{
+      font-family: work-sans, sans-serif;
+      font-weight: 300;
+      font-size: 15pt;
+      color: white;
+      line-height: 1em;
+      letter-spacing: -.02em;
+      text-transform: uppercase;
+  }
+  h2{
+      font-family: adobe-garamond-pro, serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 15pt;
+      color: white;
+      line-height: 1.2em;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+  }
+  h3{
+      font-family: work-sans, serif;
+      font-weight: 300;
+      font-size: 15pt;
+      color: black;
+      line-height: 1.2em;
+      letter-spacing: -.02em;
+      text-transform: uppercase;
+  }
+  h4{
+      color: white;
+      font-family: work-sans, sans-serif;
+      font-weight: 300;
+      font-size: 28pt;
+      text-align: left;
+      line-height: 0.8em;
+      letter-spacing: -.02em;
+      mix-blend-mode: difference;
+      }
+  h5{
+      font-family: garamond-premier-pro, serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 25pt;
+      text-align: justify;
+      color: rgb(60, 60, 60);
+      text-indent: 150pt;
+      line-height: 0.8em;
+  }
+  h6{
+      font-family:  work-sans, sans-serif;
+      font-weight: 300;
+      font-size: 12pt;
+      letter-spacing: -.02em;
+      line-height: 1.2em;
+      margin-left: 100px;
+      margin-top: 10px;
+  }
+  h6 a{
+      color: black;
+      font-weight: 300;
+  }
+
+  p{
+      font-family: work-sans, sans-serif;
+      font-weight: 400;
+      font-size: 14pt;
+      letter-spacing: .01em;
+      text-align: left;
+      color: black;
+      line-height: 1.3em;
+  }
+  .p_italics{
+    font-family: work-sans, sans-serif;
+    font-weight: 400;
+    font-size: 14pt;
+    letter-spacing: .01em;
+    text-align: left;
+    color: black;
+    line-height: 1.3em;
+  }
+  p a{
+    font-family: work-sans, sans-serif;
+    font-weight: 400;
+    font-size: 14pt;
+    letter-spacing: .01em;
+    text-align: left;
+    color: black;
+    line-height: 1.3em;
+  }
+  .modal_contact a{
+    font-family: work-sans, sans-serif;
+    font-weight: 400;
+    font-size: 14pt;
+    letter-spacing: .01em;
+    text-align: left;
+    color: black;
+    text-decoration: none;
+  }
+  .modal_contact a:hover{
+      font-family: garamond-premier-pro, serif;
+      font-weight: 300;
+      font-style: italic;
+      font-size: 15pt;
+      font-weight: 400;
+      line-height: 0.9em;
+  }
+
+
+  li:before {
+     content:"( "counter(section)" ) ";
+  }
+  li{
+    margin-left: auto;
+    font-family: work-sans, sans-serif;
+    font-weight: 400;
+    font-size: 14pt;
+    color: black;
+    line-height: 1.5em;
+    letter-spacing: .01em;
+    text-transform: uppercase;
+    list-style-type: none;
+    counter-increment:section;
+    margin-left: -2em;
+  }
+  li a{
+    text-decoration: none;
+    color: black;
+  }
+  li a:hover{
+    font-family: garamond-premier-pro, serif;
+    font-weight: 300;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1em;
+  }
+  li span{
+    position: relative;
+    left: 2em;
+  }
+  figure{
+      border: 1px black solid;
+      margin: auto;
+  }
+  figcaption{
+      font-family: work-sans, sans-serif;
+  }
+
+  .navbar{
+      position: fixed;
+      z-index: 5;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 85px;
+      margin: auto;
+      padding-left: 10px;
+      mix-blend-mode: difference;
+      cursor: pointer;
+  }
+
+  .navelement{
+      position: fixed;
+      height: 100%;
+      top: 0;
+      left: 7px;
+      margin: auto;
+      padding: 0;
+  }
+  .about_btn{
+      position: fixed;
+      display: block;
+      top: -14px;
+      right: 6px;
+      text-decoration: none;
+      text-align: right;
+  }
+  .about_btn h1:hover{
+      font-family: adobe-garamond-pro, serif;
+      font-weight: 300;
+      font-style: italic;
+      font-size: 15.5pt;
+      letter-spacing: 0;
+      cursor: pointer;
+  }
+  .and_sign{
+      font-family: adobe-garamond-pro, serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 17pt;
+      color: white;
+      line-height: 1rem;
+      letter-spacing: .2rem;
+      text-transform: uppercase;
+  }
+
+  .close_btn{
+    position: fixed;
+    display: block;
+    top: -13px;
+    right: 7px;
+    text-decoration: none;
+    text-align: right;
+    cursor: pointer;
+  }
+  .close_btn h3:hover{
+    font-family: adobe-garamond-pro, serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 15.5pt;
+    letter-spacing: 0;
+  }
+
+  .robin{
+    z-index: 5;
+    position: fixed;
+    display: block;
+    width: auto;
+    height: auto;
+    margin: auto 30%;
+    top: 42vh;
+    mix-blend-mode: difference;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .modal{
+    display: none;
+    position: fixed;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    padding-left: 10px;
+    mix-blend-mode: luminosity;
+    background-color: #F1F1EF;
+  }
+  .modal_menu{
+    position: fixed;
+    display: block;
+    left: 100px;
+    top: 36vh;
+    width: 45vw;
+    height: auto;
+    margin: none;
+  }
+  .modal_menu_title{
+    margin-bottom: 30px;
+  }
+  .modal_text{
+    position: fixed;
+    display: block;
+    left: 50%;
+    right: 30px;
+    top: 36vh;
+    height: auto;
+    padding-right: 10px;
+    color: black;
+    text-align: justify;
+  }
+  .modal_text_title{
+    margin-bottom: 30px;
+  }
+  .modal_contact{
+    position: fixed;
+    bottom: 50px;
+
+  }
+  .email{
+    display: block;
+    position: fixed;
+    margin-left: 100px;
+    margin-bottom: 7px;
+    bottom: 0;
+    left: 0;
+  }
+  .insta{
+    display: block;
+    position: fixed;
+    margin-left: 50vw;
+    margin-bottom: 7px;
+    bottom: 0;
+    left: 0;
+  }
+  .tel{
+    position: fixed;
+    margin-bottom: 7px;
+    bottom: 0;
+    right: 5px;
+    justify-content: right;
+  }
+
+  .section_title{
+      display: block;
+      position: absolute;
+      margin-left: 100px;
+      margin-bottom: 7px;
+      bottom: 0;
+      left: 0;
+  }
+  .section_subtitle{
+      display: block;
+      position: absolute;
+      margin-left: 50vw;
+      margin-bottom: 7px;
+      padding-left: 100px;
+      bottom: 0;
+      left: 0;
+  }
+  .section_number{
+      display: block;
+      position: absolute;
+      margin-bottom: 7px;
+      bottom: 0;
+      right: 7px;
+  }
+
+  .section1 {
+        grid-area: section1;
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-image:url("images/thesisyphean_cover_extended.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+
+  .section2 {
+        grid-area: section2;
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-image:url("images/crooswijck_cover.jpg");
+        background-size: 100vw;
+        background-size: cover;
+        background-position: center;
+      }
+
+  .section3 {
+        grid-area: section3;
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-image:url("images/hyfe_cover.jpg");
+        background-size: 100vw;
+        background-size: cover;
+        background-position: center;
+      }
+
+  .section4 {
+        grid-area: section4;
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-image:url("images/vaginaboek_cover.jpg");
+        background-size: 100vw;
+        background-size: cover;
+        background-position: center;
+      }
+
+    .section6{
+        grid-area: section6;
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-image:url("images/frankenstein_main_small.jpg");
+        background-size: 100vw;
+        background-size: cover;
+        background-position: center;
+      }
+
+  .section7{
+        grid-area: section7;
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-image:url("images/mirage_cover-8_small.jpg");
+        background-size: 100vw;
+        background-size: cover;
+        background-position: center;
+      }
+  .section8{
+        grid-area: section8;
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-image:url("images/roodkapje1.jpg");
+        background-size: 100vw;
+        background-size: cover;
+        background-position: center;
+  }
+  .footer{
+        grid-area: footer;
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding-top: 15px;
+        margin-bottom: 5px;
+      }
+    .footer_back{
+      display: block;
+      position: absolute;
+      width: 150px;
+      margin: 0 0 0 0;
+      bottom: 0px;
+      right: 7px;
+      text-align: right;
+    }
+
+  .coverimg{
+      grid-area: coverimg;
+      background-size: 100% cover;
+      background-size: cover;
+      background-position: center;
+    }
+    #coverimg1{
+        background-image:url("images/thesisyphean_cover_extended.jpg");
+    }
+    #coverimg2{
+        background-image:url("images/crooswijck_cover.jpg");
+    }
+    #coverimg3{
+        background-image: url("images/hyfe_cover.jpg")
+    }
+    #coverimg6{
+        background-image: url("images/frankenstein_main_small.jpg");
+    }
+    #coverimg7{
+        background-image: url("images/mirage_cover-8_small.jpg");
+    }
+  .web_background{
+    display: flex;
+    align-items: stretch;
+    padding: 20px 20px 20px 20px;
+  }
+  .logo{
+    display: block;
+    position: fixed;
+    width: auto;
+    height: 80px;
+    left: 0px;
+  }
+  .arrow{
+      position: absolute;
+      bottom: 5px;
+      justify-content: center;
+      text-align: center;
+      margin: auto;
+      width: 100%;
+      color: white;
+      display: block;
+  }
+
+  .title{
+      grid-area: title;
+      position: relative;
+      display: block;
+      height: auto;
+      margin-bottom: 150px;
+  }
+  .project_title{
+    display: block;
+    position: absolute;
+    margin-left: 100px;
+    margin-top: 5px;
+    top: 0;
+    left: 0;
+  }
+  .project_subtitle{
+      display: block;
+      position: absolute;
+      margin-left: 50vw;
+      margin-top: 5px;
+      top: 0;
+      left: 0;
+  }
+
+  .project_number{
+      display: block;
+      position: absolute;
+      margin-top: 5px;
+      top: 0;
+      right: 7px;
+  }
+  .intro{
+      grid-area: intro;
+      padding: 0 100px 0 0;
+      margin-left: 50vw;
+      margin-bottom: 10vh;
+      display: block;
+      position: relative;
+      top: 0;
+  }
+
+.research_link{
+      font-family: work-sans, sans-serif;
+      font-weight: 400;
+      font-size: 15pt;
+      letter-spacing: .01em;
+      text-align: left;
+      color: black;
+      line-height: 1.3em;
+      text-decoration: none;
+  }
+  .research_link:hover{
+      font-family: garamond-premier-pro, serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 17.5pt;
+      line-height: 1em;
+      letter-spacing: 0.01ch;
+  }
+
+  .mirage_images{
+      grid-area: photos;
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-content: flex-start;
+      gap: 7px;
+  }
+  .mirage_image{
+    display: block;
+    width: 40vw;
+    flex: 1 1;
+    max-width: 50vw;
+  }
+  .photobox_1{
+      position: absolute;
+      display: grid;
+      background-color: orange;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      grid-template-areas: 1fr 1fr 1fr:
+      "boxone boxtwo boxthree";
+  }
+
+  .boxone{
+    width: 100px;
+    grid-area: boxone;
+    background-color: blue;
+    justify-self: center;
+  }
+  .boxtwo{
+    width: 100px;
+    grid-area: boxtwo;
+    justify-self: center;
+  }
+  .boxthree{
+    width: 100px;
+    grid-area: boxthree;
+    background-color: yellow;
+    justify-self: center;
+  }
+
+  .sis_doc_bg p{
+      color: rgb(225, 218, 218);
+  }
+
+  .sidebar{
+      grid-area: sidebar;
+      display: block;
+      width: 100%;
+      overflow: scroll;
+
+  }
+  .sidebar_content{
+      margin: auto;
+      padding: 0em 1em 0em 1em;
+  }
+
+  .mainbar{
+      height:100vh;
+      grid-area: mainbar;
+      background-color: rgb(0, 0, 0);
+  }
+  .main_text{
+      position: relative;
+      width: 700px;
+      display: block;
+      margin: auto;
+  }
+  .sis_web{
+      grid-area: sis_web;
+      margin-top: 10vh;
+      margin-bottom: 10vh;
+  }
+  .web_contentcontainer{
+      margin: 0 5px 0 5px;
+      margin-bottom: 10vh;
+  }
+  .description{
+      grid-area: sis_web;
+      padding: 0 100px 0 0;
+      margin-left: 100px;
+      margin-right: 50vw;
+      margin-bottom: 10vh;
+      display: block;
+      position: relative;
+      top: 0;
+  }
+  .sis_doc{
+      display: grid;
+      position: relative;
+      max-width:100%;
+      grid-template-columns: auto auto;
+      grid-column-gap: 5px;
+      margin: 0;
+      padding-left: 5px;
+      padding-right: 5px;
+      height: 500px;
+      margin-bottom: 20vh;
+  }
+  .sis_doc1{
+      margin:0;
+  }
+  .sis_doc2{
+      margin:0;
+  }
+  .sis_mag{
+      position: relative;
+      grid-area: sis_mag;
+      width: 100vw;
+      margin: auto;
+  }
+  .sis_mag h6{
+      color: white;
+      position: relative;
+      top: -90px;
+  }
+
+  .cr_main{
+      grid-area: cr_main;
+  }
+  .cr_side{
+      grid-area: cr_side;
+      background-color: black;
+      padding-bottom: 15vh;
+  }
+  .hyfe_main{
+      grid-area: hyfe_main;
+      width: 100%;
+      margin: 0;
+  }
+  .cr_photocontainer{
+      display: grid;
+      grid-template-columns: 2fr 2fr 2fr;
+      grid-template-rows: 100vh auto;
+      grid-column-gap: 2em;
+      grid-row-gap: 0px;
+      margin: auto 10%;
+  }
+  .cr_photo{
+      display: block;
+      margin: auto;
+      align-content: center;
+  }
+  .photo{
+      grid-area: photo;
+      display: block;
+      width: 100%;
+  }
+  .gallery{
+    position: absolute;
+    top: 90px;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: flex-start;
+    gap: 7px;
+  }
+  .gallery_img{
+    display: block;
+    width: 30vw;
+    flex: 1 1;
+  }
+    .gallery_item-5{
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 2;
+    }
+    .gallery_item-6{
+      display: block;
+      grid-column-start: 3;
+      grid-column-end: 5;
+      grid-row-start: 2;
+      grid-row-end: 2;
+    }
+
+
+        @media screen and (max-width:1200px){
+            .robin, .robin_footer{
+              margin: auto 10%;
+            }
+            h1, h3{
+                font-size: 14pt;
+                line-height: 1.2rem;
+                font-weight: 400;
+              }
+            .and_sign{
+              font-size: 16pt;
+              letter-spacing: 0.2rem;
+              line-height: 1.3rem;
+            }
+            p{
+              font-size: 14pt;
+              font-weight: 400;
+            }
+            .p_italics{
+              font-size: 15pt;
+            }
+
+            #about_btn h1{
+              font-size: 16pt;
+              line-height: 0.8rem;
+            }
+
+              .about_btn h1:hover{
+                  font-family: adobe-garamond-pro, serif;
+                  font-weight: 300;
+                  font-style: italic;
+                  font-size: 16.2pt;
+                  letter-spacing: 0;
+                  cursor: pointer;
+              }
+              .close_btn h3:hover{
+                font-family: adobe-garamond-pro, serif;
+                font-weight: 300;
+                font-style: italic;
+                font-size: 17pt;
+                letter-spacing: 0;
+              }
+
+            .modal{
+              position: fixed;
+              overflow: scroll;
+            }
+
+            .modal_menu{
+              position: absolute;
+              display: block;
+              left: 100px;
+              top: 100px;
+              width: 70vw;
+              right: 0;
+              margin-right: 100px;
+            }
+            .modal_menu_title{
+              margin-bottom: 40px;
+            }
+            .modal_text{
+              position: absolute;
+              display: block;
+              left: 100px;
+              top: 400px;
+              width: 70vw;
+              color: black;
+              padding-bottom: 100px;
+            }
+            .modal_text_title{
+              margin-bottom: 40px;
+            }
+          }
+
+
+    @media screen and (max-width:900px){
+      h1, h3{
+          font-size: 14pt;
+          line-height: 1.2rem;
+          font-weight: 400;
+        }
+      .and_sign{
+        font-size: 15.5pt;
+        letter-spacing: 0.2rem;
+        line-height: 1.2rem;
+      }
+      p{
+        font-size: 14pt;
+        font-weight: 400;
+      }
+      .p_italics{
+        font-size: 14pt;
+      }
+      ol li{
+        font-size: 14pt;
+        font-weight: 400;
+      }
+      li a:hover{
+        font-size: 15pt;
+        line-height: 0em;
+      }
+
+      #about_btn h1{
+        font-size: 14pt;
+        line-height: 0.8rem;
+      }
+
+        .about_btn h1:hover{
+            font-family: adobe-garamond-pro, serif;
+            font-weight: 300;
+            font-style: italic;
+            font-size: 15.2pt;
+            letter-spacing: 0;
+            cursor: pointer;
+        }
+        .close_btn h3:hover{
+          font-family: adobe-garamond-pro, serif;
+          font-weight: 300;
+          font-style: italic;
+          font-size: 15pt;
+          letter-spacing: 0;
+        }
+
+        .section_subtitle{
+          display: none;
+        }
+        .project_subtitle{
+          display: none;
+        }
+        .section1, .section2, .section3, .section4, .section6, .section7, .section8{
+              height: 0;
+              width: 100%;
+              background-image: no-repeat center fixed;
+              background-size: cover;
+              padding-top: 66.64%;
+        }
+
+        .project1_body_content, .project2_body_content, .project3_body_content{
+          grid-template-rows: auto;
+        }
+        .intro{
+          padding-left: 100px;
+          padding-right: 10%;
+          margin-left: 0;
+        }
+        .coverimg{
+          height: 0;
+          width: 100%;
+          background-image:url("images/frankenstein_main_small.jpg") no-repeat center fixed;
+          background-size: 100vw;
+          padding-top: 66.64%;
+        }
+        .arrow{
+          display: none;
+        }
+        .modal_contact{
+          position: fixed;
+          bottom: 0;
+          left: 100px;
+        }
+        .email{
+          position: relative;
+          margin-left: 0px;
+        }
+        .insta{
+          position: relative;
+          margin-left: 0px;
+        }
+        .tel{
+          position: relative;
+          margin-left: 0px;
+          right: none;
+          justify-content: left;
+        }
+
+        .gallery_img{
+          display: block;
+          width: 40vw;
+        }
+
+    }
+
+    @media screen and (max-width:550px){
+      .logo{
+        height: 50px;
+      }
+      h1, h3{
+          font-size: 14pt;
+          line-height: 1.2rem;
+          font-weight: 400;
+        }
+      .and_sign{
+        font-size: 15.5pt;
+        letter-spacing: 0.2rem;
+        line-height: 1.2rem;
+      }
+      p{
+        font-size: 14pt;
+        font-weight: 400;
+      }
+      .p_italics{
+        font-size: 14pt;
+      }
+      #about_btn h1{
+        font-size: 14pt;
+        line-height: 0.8rem;
+      }
+
+      .about_btn h1:hover{
+            font-family: adobe-garamond-pro, serif;
+            font-weight: 300;
+            font-style: italic;
+            font-size: 15.2pt;
+            letter-spacing: 0;
+            cursor: pointer;
+      }
+      .close_btn h3:hover{
+          font-family: adobe-garamond-pro, serif;
+          font-weight: 300;
+          font-style: italic;
+          font-size: 15pt;
+          letter-spacing: 0;
+      }
+
+      ol li{
+          font-size: 14pt;
+      }
+      li a:hover{
+          font-size: 16pt;
+          line-height: 0em;
+          letter-spacing: 0em;
+      }
+        .modal_menu{
+          left: 70px;
+        }
+        .modal_menu_title{
+          margin-bottom: 25px;
+        }
+        .modal_text{
+          top: 350px;
+          left: 70px;
+        }
+        .modal_text_title{
+          margin-bottom: 25px;
+        }
+        .modal_contact{
+          position: fixed;
+          bottom: 0;
+          left: 70px;
+        }
+
+        .section_title{
+          margin-left: 70px;
+        }
+        .gallery_img{
+          display: block;
+          width: 50vw;
+        }
+    }
