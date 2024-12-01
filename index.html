@@ -1,5 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+    <?php
+    $servername = "localhost:mysql";
+    $username = "root";
+    $password = "";
+    $dbname = "null_db";
+    // Create connection
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
+    // Check connection
+    if (!$conn) {
+      die("Connection failed: " . mysqli_connect_error());
+    }
+    
+?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -58,19 +71,9 @@
             <div class="col-md-6 border-top border-end border-bottom overflow-y-auto" style="max-height: 90vh;">
                <div class="container-fluid">
                     <!-- <h6 class="text-center text-uppercase text-primary">*** about ***</h6> -->
-                    <?php 
-                    $sql = "SELECT * FROM site_content;";
-                    $result = mysqli_querry($conn, $sql);
-                    $resultCheck = mysql_num_rows($result);
-                    if ($resultCheck > 0){
-                        while ($row = mysqli_fetch_assoc($result)) {
-                            echo $row['title'];
-                        }
-                    }
-                    
-                    SELECT title FROM site_content;
+                    <h6 class="text-center text-uppercase text-primary"><?php echo SELECT title FROM site_content; ?></h6>
 
-                    ?>
+                    
 
                     <div class="container-fluid"></div>
                     <p class="text-primary">I am an experimental visual and documentary artist based in Latvia, I work with digital mediums as tools to better express the cultural shifts that came about the technological advancements since the beginning of the 21st century. As an artist I am interested in the new ways of organizing and structuring political resistance movements, alternative cultural scenes and digital subcultures and ways of understanding stories and narratives that have come about in the recent decade, which are radically different, faster and less linear compared to the equivalents that came before.</p>
