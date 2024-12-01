@@ -10,3 +10,5 @@ try {
 } catch (PDOException $e) {
     echo "Connection failed: " . $e->getMessage();
 }
+
+echo SELECT title FROM site_content;
