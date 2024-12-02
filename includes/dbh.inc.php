@@ -1,6 +1,6 @@
 <?php
 
-$dsn = "mysql:host=webhost;dbname=null_db";
+$dsn = "mysql:host=localhost;dbname=null_db";
 $dbusername = "null";
 $dbpassword = "EEQ1ip9CR1rAEH";
 
