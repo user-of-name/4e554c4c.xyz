@@ -2,9 +2,9 @@
 //references the connection file
 require_once "includes/dbh.inc.php";
 //defines the querry to then get the stuff
-$query = "SELECT * FROM content;";
+$query = "SELECT title_eng FROM content WHERE id = 1;";
 // prepare statement
-$stmt = $pdo->prepare($querry);
+$stmt = $pdo->prepare(query:$query);
 //it executes a thing?
 $stmt->execute();
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -73,17 +73,19 @@ $stmt = null;
         <div class="row">
             <div class="col-md-6 border-top border-end border-bottom overflow-y-auto" style="max-height: 90vh;">
                <div class="container-fluid">
-                   
+                   <h6 class="text-center text-uppercase text-primary"></h6>
                         <?php
 
-                        foreach($results as $row) {
-                            echo "<h6 class="text-center text-uppercase text-primary">";
-                            echo $row["title_eng"];
-                            echo "</h6>"
-                        }
+                       // foreach($results as $row) {
+                            
+                           // echo $row["title_eng"];
+                            
+                        //}
+                        var_dump($results);
 
+                        
                         ?>
-                    
+                    </h6>
                     <div class="container-fluid"></div>
                     <p class="text-primary">I am an experimental visual and documentary artist based in Latvia, I work with digital mediums as tools to better express the cultural shifts that came about the technological advancements since the beginning of the 21st century. As an artist I am interested in the new ways of organizing and structuring political resistance movements, alternative cultural scenes and digital subcultures and ways of understanding stories and narratives that have come about in the recent decade, which are radically different, faster and less linear compared to the equivalents that came before.</p>
                     <p class="text-primary">In recent years I have been working with <span class="text-bg-primary">meme culture</span>, the <span class=" text-bg-primary">squatting scene</span> in Rotterdam, ideas venturing into the <span class=" text-bg-primary">parasitic</span> and <span class="text-bg-primary">performance art</span> involving the merging of performers and audience. I think an important part of my practice is the desire to not see the <span class="text-bg-primary">audience as separate</span> from the process of making the artwork especially reflecting on meme culture.</p>

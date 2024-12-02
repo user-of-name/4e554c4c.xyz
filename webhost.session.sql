@@ -1,0 +1,1 @@
+SELECT title_eng FROM content WHERE id = 1;
