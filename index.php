@@ -2,7 +2,7 @@
 //references the connection file
 require_once "includes/dbh.inc.php";
 //defines the querry to then get the stuff
-$query = "SELECT title_eng FROM content WHERE id = 1;";
+$query = "SELECT title_eng, descr_eng FROM content WHERE id = 1;";
 // prepare statement
 $stmt = $pdo->prepare(query:$query);
 //it executes a thing?
@@ -73,24 +73,29 @@ $stmt = null;
         <div class="row">
             <div class="col-md-6 border-top border-end border-bottom overflow-y-auto" style="max-height: 90vh;">
                <div class="container-fluid">
-                   <h6 class="text-center text-uppercase text-primary"></h6>
+                   <h6 class="text-center text-uppercase text-primary">
                         <?php
-
-                       // foreach($results as $row) {
-                            
-                           // echo $row["title_eng"];
-                            
-                        //}
-                        var_dump($results);
-
-                        
+                        echo "<div>";
+                        foreach ($results as $row){
+                                echo $row["title_eng"];
+                        }
+                        echo "</div>";
                         ?>
                     </h6>
                     <div class="container-fluid"></div>
-                    <p class="text-primary">I am an experimental visual and documentary artist based in Latvia, I work with digital mediums as tools to better express the cultural shifts that came about the technological advancements since the beginning of the 21st century. As an artist I am interested in the new ways of organizing and structuring political resistance movements, alternative cultural scenes and digital subcultures and ways of understanding stories and narratives that have come about in the recent decade, which are radically different, faster and less linear compared to the equivalents that came before.</p>
+                    <!-- <p class="text-primary">I am an experimental visual and documentary artist based in Latvia, I work with digital mediums as tools to better express the cultural shifts that came about the technological advancements since the beginning of the 21st century. As an artist I am interested in the new ways of organizing and structuring political resistance movements, alternative cultural scenes and digital subcultures and ways of understanding stories and narratives that have come about in the recent decade, which are radically different, faster and less linear compared to the equivalents that came before.</p>
                     <p class="text-primary">In recent years I have been working with <span class="text-bg-primary">meme culture</span>, the <span class=" text-bg-primary">squatting scene</span> in Rotterdam, ideas venturing into the <span class=" text-bg-primary">parasitic</span> and <span class="text-bg-primary">performance art</span> involving the merging of performers and audience. I think an important part of my practice is the desire to not see the <span class="text-bg-primary">audience as separate</span> from the process of making the artwork especially reflecting on meme culture.</p>
                     <p class="text-primary">Through my practice I took a lot of theory from the writings of <span class="text-bg-primary">Ariela Azoulay</span> on the involvement of the spectatorand in my research into meme culture I delved quite deep into semiotics, for example <span class="text-bg-primary">Yuri Lotman</span> and his ideas of the semiosphere and expanding on that with contemporary non-canonical narrative research of <span class="text-bg-primary">Alexandra Georgakapoulou</span>.</p>
-                    <p class="text-primary">This all works towards a practice of archiving the fleeting, the temporary and the new, because right now a lot of our culture is expressed through digital communication or verbal which in essence is opt-in to be saved for it to be revisited in the future.</p>
+                    <p class="text-primary">This all works towards a practice of archiving the fleeting, the temporary and the new, because right now a lot of our culture is expressed through digital communication or verbal which in essence is opt-in to be saved for it to be revisited in the future.</p> -->
+                    <p class="text-primary">
+                    <?php
+                        //echo "<div>";
+                        foreach ($results as $row){
+                                echo $row["descr_eng"];
+                        }
+                        //echo "</div>";
+                        ?>
+                        </p>
                 </div>
             </div>
 
