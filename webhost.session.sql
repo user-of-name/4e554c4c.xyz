@@ -1,1 +1,1 @@
-SELECT title_eng FROM content WHERE id = 1;
+alter table null_db.content CHANGE descr_eng descr_en text;
