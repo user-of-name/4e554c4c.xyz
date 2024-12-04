@@ -9,15 +9,26 @@ if (isset($_GET['lang'])) {
 //references the connection file
 require_once "includes/dbh.inc.php";
 //defines the querry to then get the stuff
-$query = "SELECT * FROM content WHERE page = 'index';";
-// prepare statement
-$stmt = $pdo->prepare(query:$query);
-//it executes a thing?
+$query_content = "SELECT * FROM content WHERE group_id = 1;";
+$query_groups = "SELECT * FROM project_groups";
+$query_menu_art_proj = "SELECT title_en, title_lv FROM content WHERE group_id = 2;";
+// content
+$stmt = $pdo->prepare(query:$query_content);
 $stmt->execute();
-$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$content = $stmt->fetchAll(PDO::FETCH_ASSOC);
+//groups
+$stmt = $pdo->prepare(query:$query_groups);
+$stmt->execute();
+$project_groups = $stmt->fetchAll(PDO::FETCH_ASSOC);
+//art project titles
+$stmt = $pdo->prepare(query:$query_menu_art_proj);
+$stmt->execute();
+$menu_art_proj = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
 
 $pdo = null;
 $stmt = null;
+
 
 ?>
 
@@ -37,35 +48,33 @@ $stmt = null;
     <nav class="pb-2 bg-black navbar-expand-md nav-fill border-bottom sticky-top">
         <ul class="nav nav-tabs">
             <li class="nav-link flex-fill border-0 active" aria-current="page" href="#">
-                4e554c4c.xyz/art_projects/jiny_svety
+                4e554c4c.xyz/index.php
+                <!-- <?php echo $project_groups['group_file_name']; ?> -->
             </li>
             <select class="nav-link flex-fill border-0 active" id="langSwitcher">
                 <option class="nav-link border-0 p-0" value="en">EN</option>
                 <option class="nav-link border-0 p-0" value="lv">LV</option>
             </select>
-            <!-- <li>
-                <a class="nav-link border-0 p-0" aria-current="page" value="en"> EN /</a>
+            <!-- <li id="langSwitcher">
+                <a class="nav-link border-0 p-0" aria-current="page" value="en" href="lang=en"> EN /</a>
             </li>
-            <li>
-                <a class="nav-link border-0 active" value="lv"> LV </a>
+            <li id="langSwitcher">
+                <a class="nav-link border-0 active" value="lv" href="lang=lv"> LV </a>
             </li> -->
         </ul>
-        <ul class="nav nav-tabs nav-fill nav-fill collapse navbar-collapse" id="navbarNav"">
-            <li class="nav-item text-start">
-              <a class="nav-link active" aria-current="page" href="#">[ index ]</a>
-            </li>
-            <li class="nav-item text-start">
-                <a class="nav-link" href="#">[ art projects ]</a>
-              </li>
-            <li class="nav-item text-start">
-              <a class="nav-link" href="#">[ documentary work ]</a>
-            </li>
-            <li class="nav-item text-start">
-                <a class="nav-link" href="#">[ contact ]</a>
-            </li>
+        <ul class="nav nav-tabs nav-fill nav-fill collapse navbar-collapse" id="navbarNav">
+            <?php
+              foreach ($project_groups as $row){
+                        echo '<li class="nav-item text-start">';
+                    echo '<a class="nav-link active" aria-current="page" href="#">';
+                        echo $row["group_name_$language"];
+                    echo "</a>";
+                        echo '</li>';
+                        }
+            ?>
         </ul>
         <ul class="nav nav-tabs nav-fill collapse navbar-collapse" id="navbarNav">
-            <li class="nav-item text-start">
+            <!-- <li class="nav-item text-start">
               <a class="nav-link" aria-current="page" href="#">[ captive audience ]</a>
             </li>
             <li class="nav-item text-start">
@@ -76,7 +85,16 @@ $stmt = null;
             </li>
             <li class="nav-item text-start">
                 <a class="nav-link" href="#">[ uff servers ]</a>
-            </li>
+            </li> -->
+            <?php
+              foreach ($menu_art_proj as $row){
+                echo '<li class="nav-item text-start">';
+            echo '<a class="nav-link active" aria-current="page" href="#">';
+                echo $row["title_$language"];
+            echo "</a>";
+                echo '</li>';
+                }
+            ?>
         </ul>   
     </nav>
 
@@ -87,7 +105,7 @@ $stmt = null;
                    <h6 class="text-center text-uppercase text-primary">
                         <?php
                         echo "<div>";
-                        foreach ($results as $row){
+                        foreach ($content as $row){
                                 echo $row["title_$language"];
                         }
                         echo "</div>";
@@ -96,11 +114,11 @@ $stmt = null;
                     <div class="container-fluid"></div>
                     <p class="text-primary">
                     <?php
-                        //echo "<div>;"
-                        foreach ($results as $row){
+                        // echo "<div>";
+                        foreach ($content as $row){
                                 echo $row["descr_$language"];
                         }
-                        //echo "</div>";
+                        // echo "</div>";
                         ?>
                         </p>
                 </div>
