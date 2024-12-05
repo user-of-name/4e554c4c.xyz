@@ -64,10 +64,13 @@ $stmt = null;
                 <option class="nav-link border-0 p-0" value="lv">LV</option>
             </select>
             <!-- <li id="langSwitcher">
-                <a class="nav-link border-0 p-0" aria-current="page" value="en" href="lang=en"> EN /</a>
+                <button class="nav-link border-0 p-0" aria-current="page" id="langSwitcher" onclick="value='en'"> EN </button>
+            </li>
+            <li>
+                <a class="nav-link border-0 p-0"> / </a>
             </li>
             <li id="langSwitcher">
-                <a class="nav-link border-0 active" value="lv" href="lang=lv"> LV </a>
+                <button class="nav-link border-0 active" id="langSwitcher" value="lv"> LV </button>
             </li> -->
         </ul>
         <ul class="nav nav-tabs nav-fill nav-fill collapse navbar-collapse" id="navbarNav">
