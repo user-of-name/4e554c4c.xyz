@@ -9,9 +9,9 @@ if (isset($_GET['lang'])) {
 }
 
 //references the connection file
-require_once "includes/dbh.inc.php";
+require_once "../includes/dbh.inc.php";
 //defines the querry to then get the stuff
-$query_content = "SELECT * FROM content WHERE group_id = 1;";
+$query_content = "SELECT * FROM content WHERE id = 4;";
 $query_groups = "SELECT * FROM project_groups";
 $query_menu_art_projects = "SELECT title_en, title_lv, file_name FROM content WHERE group_id = 2;";
 $query_menu_documentary_projects = "SELECT title_en, title_lv, file_name FROM content WHERE group_id = 3;";
@@ -47,8 +47,8 @@ $stmt = null;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>4e554c4c</title>
 
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="responsivity.css">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="../responsivity.css">
 </head>
 
 <body class="p-2 bg-black">
@@ -74,7 +74,7 @@ $stmt = null;
             <?php
               foreach ($project_groups as $row){
                         echo '<li class="nav-item text-start">';
-                    echo '<a class="nav-link active" aria-current="page" href="';
+                    echo '<a class="nav-link active" aria-current="page" href="../';
                     echo $row["group_file_name"];
                     echo '">[  ';
                         echo $row["group_name_$language"];
@@ -99,7 +99,7 @@ $stmt = null;
             <?php
               foreach ($menu_art_projects as $row){
                 echo '<li class="nav-item text-start">';
-            echo '<a class="nav-link active" aria-current="page" href="';
+            echo '<a class="nav-link active" aria-current="page" href="../';
             echo $row["file_name"];
             echo '">[  ';
                 echo $row["title_$language"];
@@ -107,7 +107,7 @@ $stmt = null;
                 echo '</li>';
                 }
             ?>
-        </ul>
+        </ul> 
         <ul class="nav nav-tabs nav-fill collapse navbar-collapse" id="navbarNav">
         <?php
               foreach ($menu_documentary_projects as $row){
@@ -120,7 +120,7 @@ $stmt = null;
                 echo '</li>';
                 }
             ?>
-        </ul>    
+        </ul> 
     </nav>
 
     <!--  main body of the page begins -->
@@ -152,14 +152,6 @@ $stmt = null;
 
             <div class="col-md-6 border-top border-start border-bottom overflow-y-auto" style="max-height: 90vh;">
                 <div class="row d-flex overflow-y-auto p-2">                
-                    <div class="">
-                        <img src="../assets/Flyer.jpeg" class="border-bottom border-end border-2" alt="...">
-                        <figcaption class="figure-caption">[ img.1 ] this is an image caption</figcaption>
-                    </div>
-                    <div class="" id=>
-                        <img src="../assets/Jiny-svety.jpeg" class="w-100 border-bottom border-end border-2" alt="...">
-                        <figcaption class="figure-caption">[ img.1 ] this is an image caption</figcaption>
-                    </div>
                     <div class="" id=>
                         <img src="../assets/Cave.jpg" class="w-100 border-bottom border-end border-2" alt="...">
                         <figcaption class="figure-caption">[ img.1 ] this is an image caption</figcaption>
