@@ -53,12 +53,20 @@ $stmt = null;
 
 <body class="p-2 bg-black">
     
+<!-- menu navigation bar -->
+
+
     <nav class="pb-2 bg-black navbar-expand-md nav-fill border-bottom sticky-top">
         <ul class="nav nav-tabs">
+
+        <!-- top menu thing idk -->
+
             <li class="nav-link flex-fill border-0 active" aria-current="page" href="#">
                 4e554c4c.xyz/index.php
                 <!-- <?php echo $project_groups['group_file_name']; ?> -->
             </li>
+
+            <!-- language switch -->
             <select class="nav-link flex-fill border-0 active" id="langSwitcher">
                 <option class="nav-link border-0 p-0" value="en">EN</option>
                 <option class="nav-link border-0 p-0" value="lv">LV</option>
@@ -70,6 +78,9 @@ $stmt = null;
                 <a class="nav-link border-0 active" value="lv" href="lang=lv"> LV </a>
             </li> -->
         </ul>
+
+        <!-- project groups -->
+
         <ul class="nav nav-tabs nav-fill nav-fill collapse navbar-collapse" id="navbarNav">
             <?php
               foreach ($project_groups as $row){
@@ -83,19 +94,10 @@ $stmt = null;
                         }
             ?>
         </ul>
+
+        <!-- art projects -->
+
         <ul class="nav nav-tabs nav-fill collapse navbar-collapse" id="navbarNav">
-            <!-- <li class="nav-item text-start">
-              <a class="nav-link" aria-current="page" href="#">[ captive audience ]</a>
-            </li>
-            <li class="nav-item text-start">
-                <a class="nav-link active" href="#">[ jiny svety improv jam ]</a>
-              </li>
-            <li class="nav-item text-start">
-              <a class="nav-link" href="#">[ rats on the run ]</a>
-            </li>
-            <li class="nav-item text-start">
-                <a class="nav-link" href="#">[ uff servers ]</a>
-            </li> -->
             <?php
               foreach ($menu_art_projects as $row){
                 echo '<li class="nav-item text-start">';
@@ -107,7 +109,10 @@ $stmt = null;
                 echo '</li>';
                 }
             ?>
-        </ul> 
+        </ul>
+
+        <!-- documentary projects -->
+         
         <ul class="nav nav-tabs nav-fill collapse navbar-collapse" id="navbarNav">
         <?php
               foreach ($menu_documentary_projects as $row){
