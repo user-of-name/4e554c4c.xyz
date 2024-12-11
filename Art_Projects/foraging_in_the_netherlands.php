@@ -43,6 +43,7 @@ $stmt = null;
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>4e554c4c</title>
@@ -56,77 +57,15 @@ $stmt = null;
 <!-- menu navigation bar -->
 
 
-    <nav class="pb-2 bg-black navbar-expand-md nav-fill border-bottom sticky-top">
-        <ul class="nav nav-tabs">
+    <div id="nav-placeholder">
 
-        <!-- top menu thing idk -->
+</div>
 
-            <li class="nav-link flex-fill border-0 active" aria-current="page" href="#">
-                4e554c4c.xyz/index.php
-                <!-- <?php echo $project_groups['group_file_name']; ?> -->
-            </li>
-
-            <!-- language switch -->
-            <select class="nav-link flex-fill border-0 active" id="langSwitcher">
-                <option class="nav-link border-0 p-0" value="en">EN</option>
-                <option class="nav-link border-0 p-0" value="lv">LV</option>
-            </select>
-            <!-- <li id="langSwitcher">
-                <a class="nav-link border-0 p-0" aria-current="page" value="en" href="lang=en"> EN /</a>
-            </li>
-            <li id="langSwitcher">
-                <a class="nav-link border-0 active" value="lv" href="lang=lv"> LV </a>
-            </li> -->
-        </ul>
-
-        <!-- project groups -->
-
-        <ul class="nav nav-tabs nav-fill nav-fill collapse navbar-collapse" id="navbarNav">
-            <?php
-              foreach ($project_groups as $row){
-                        echo '<li class="nav-item text-start">';
-                    echo '<a class="nav-link active" aria-current="page" href="../';
-                    echo $row["group_file_name"];
-                    echo '">[  ';
-                        echo $row["group_name_$language"];
-                    echo "  ]</a>";
-                        echo '</li>';
-                        }
-            ?>
-        </ul>
-
-        <!-- art projects -->
-
-        <ul class="nav nav-tabs nav-fill collapse navbar-collapse" id="navbarNav">
-            <?php
-              foreach ($menu_art_projects as $row){
-                echo '<li class="nav-item text-start">';
-            echo '<a class="nav-link active" aria-current="page" href="../';
-            echo $row["file_name"];
-            echo '">[  ';
-                echo $row["title_$language"];
-            echo "  ]</a>";
-                echo '</li>';
-                }
-            ?>
-        </ul>
-
-        <!-- documentary projects -->
-         
-        <ul class="nav nav-tabs nav-fill collapse navbar-collapse" id="navbarNav">
-        <?php
-              foreach ($menu_documentary_projects as $row){
-                echo '<li class="nav-item text-start">';
-            echo '<a class="nav-link active" aria-current="page" href="../';
-            echo $row["file_name"];
-            echo '">[  ';
-                echo $row["title_$language"];
-            echo "  ]</a>";
-                echo '</li>';
-                }
-            ?>
-        </ul> 
-    </nav>
+<script>
+$(function(){
+ $("#nav-placeholder").load("../nav.php");
+});
+</script>
 
     <!--  main body of the page begins -->
     <div class="container-fluid">
