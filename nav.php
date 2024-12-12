@@ -29,12 +29,12 @@ $menu_documentary_projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $pdo = null;
 $stmt = null;
 ?>
+<script defer src="main.js"> </script>
 
 <nav class="pb-2 bg-black navbar-expand-md nav-fill border-bottom sticky-top">
         <ul class="nav nav-tabs">
             <li class="nav-link flex-fill border-0 active" aria-current="page" href="#">
                 4e554c4c.xyz/index.php
-                <!-- <?php echo $project_groups['group_file_name']; ?> -->
             </li>
             <select class="nav-link flex-fill border-0 active" id="langSwitcher">
                 <option class="nav-link border-0 p-0" value="en">EN</option>
@@ -50,36 +50,42 @@ $stmt = null;
                 <button class="nav-link border-0 active" id="langSwitcher" value="lv"> LV </button>
             </li> -->
         </ul>
-        <ul class="nav nav-tabs nav-fill nav-fill collapse navbar-collapse" id="navbarNav">
+
+
+        <!-- 1st layer nav (project categories) -->  
+        <ul class="nav nav-tabs flex-column flex-md-row align-items-start collapse navbar-collapse" id="navbarNav" id="myTab" role="tablist" aria-orientation="vertical">
             <?php
               foreach ($project_groups as $row){
                         echo '<li class="nav-item text-start">';
-                    echo '<a class="nav-link active" data-bs-toggle="tab" type="button" role="tab" href="/';
+                    echo '<a class="nav-link';
+                    //add in the + active condition
+                    echo '" id="';
+                    echo $row["group_reference"];
+                    echo '-tab" data-bs-toggle="tab" data-bs-target="#';
+                    echo $row["group_reference"];
+                    echo '-tab-pane" data-bs-target="#';
+                    echo $row["group_reference"];
+                    echo '-tab-pane" type="button" role="tab" href="/';
                     echo $row["group_file_name"];
                     echo '">[  ';
                         echo $row["group_name_$language"];
                     echo "  ]</a>";
                         echo '</li>';
-                        }
+                        };
+                    
             ?>
+            
         </ul>
-        <ul class="nav nav-tabs nav-fill collapse navbar-collapse" id="navbarNav">
-            <!-- <li class="nav-item text-start">
-              <a class="nav-link" aria-current="page" href="#">[ captive audience ]</a>
-            </li>
-            <li class="nav-item text-start">
-                <a class="nav-link active" href="#">[ jiny svety improv jam ]</a>
-              </li>
-            <li class="nav-item text-start">
-              <a class="nav-link" href="#">[ rats on the run ]</a>
-            </li>
-            <li class="nav-item text-start">
-                <a class="nav-link" href="#">[ uff servers ]</a>
-            </li> -->
+        
+         <!-- 2nd layer nav (individual projects) -->
+           <!-- art projects -->
+<div class="tab-content" id="myTabContent">
+    <div class="tab-pane" id="art-projects-tab-pane" role="tabpanel" aria-labelledby="art-projects-tab" tabindex="0">
+     <ul class="nav nav-tabs flex-column flex-md-row align-items-start text-start navbar-collapse" id="navbarNav">
             <?php
               foreach ($menu_art_projects as $row){
                 echo '<li class="nav-item text-start">';
-            echo '<a class="nav-link active" aria-current="page" href="/';
+            echo '<a class="nav-link" aria-current="page" href="/';
             echo $row["file_name"];
             echo '">[  ';
                 echo $row["title_$language"];
@@ -88,7 +94,10 @@ $stmt = null;
                 }
             ?>
         </ul>
-        <ul class="nav nav-tabs nav-fill collapse navbar-collapse" id="navbarNav">
+    </div>
+    <!-- documentary work -->
+    <div class="tab-pane" id="documentary-work-tab-pane" role="tabpanel" aria-labelledby="documentary-work-tab" tabindex="0">
+        <ul class="nav nav-tabs nav-fill flex-column flex-md-row align-items-start collapse navbar-collapse" id="navbarNav">
         <?php
               foreach ($menu_documentary_projects as $row){
                 echo '<li class="nav-item text-start">';
@@ -100,5 +109,8 @@ $stmt = null;
                 echo '</li>';
                 }
             ?>
-        </ul>    
+        </ul>
+    </div>  
+    </div>
     </nav>
+            

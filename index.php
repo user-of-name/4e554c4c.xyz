@@ -32,8 +32,11 @@ $stmt = null;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>4e554c4c</title>
 
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="responsivity.css">
+    <<link rel="stylesheet" href="assets/css/style.css">
+
+<script defer src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+<script defer src="/main.js"> </script>
 </head>
 
 <body class="p-2 bg-black">
@@ -99,6 +102,7 @@ $stmt = null;
 <!-- language junk -->
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
 <script>
     $(document).ready(function() {
         $("#langSwitcher").val('<?php echo $_GET['lang'] ?>');
