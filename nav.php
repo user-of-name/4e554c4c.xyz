@@ -54,7 +54,7 @@ $stmt = null;
             <?php
               foreach ($project_groups as $row){
                         echo '<li class="nav-item text-start">';
-                    echo '<a class="nav-link active" aria-current="page" href="/';
+                    echo '<a class="nav-link active" data-bs-toggle="tab" type="button" role="tab" href="/';
                     echo $row["group_file_name"];
                     echo '">[  ';
                         echo $row["group_name_$language"];
