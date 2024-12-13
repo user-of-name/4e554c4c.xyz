@@ -1,9 +1,4 @@
-UPDATE content SET file_name = 'Art_Projects/jiny_svety_impro_jam.php' WHERE id = 5;
-
-UPDATE content SET file_name = 'Art_Projects/rats_on_the_run.php' WHERE id = 6;
-
-UPDATE content SET file_name = 'Art_Projects/uff_Servers.php' WHERE id = 7;
-
-UPDATE content SET file_name = 'Documentary_Work/luminous_dasies.php' WHERE id = 8;
-
-UPDATE content SET file_name = 'Documentary_Work/speculative_futures_zine_workshop.php' WHERE id = 9;
+UPDATE content SET descr_en = 'I am an experimental visual and documentary artist based in Latvia, I work with digital mediums as tools to better express the cultural shifts that came about the technological advancements since the beginning of the 21st century. As an artist I am interested in the new ways of organizing and structuring political resistance movements, alternative cultural scenes and digital subcultures and ways of understanding stories and narratives that have come about in the recent decade, which are radically different, faster and less linear compared to the equivalents that came before. <br><br>
+                    In recent years I have been working with <span id="imgToggler" class="text-highlight">meme culture</span>, the <span id="TogglerSquatting" class="text-highlight">squatting scene</span> in Rotterdam, ideas venturing into the <span id="TogglerParasitic" class="text-highlight">parasitic</span> and <span class="text-highlight">performance art</span> involving the merging of performers and audience. I think an important part of my practice is the desire to not see the <span id="TogglerAudience" class="text-highlight">audience</span> as separate from the process of making the artwork especially reflecting on meme culture. <br><br>
+                    Through my practice I took a lot of theory from the writings of <span id="TogglerAzoulay" class="text-highlight">Ariela Azoulay</span> on the involvement of the spectatorand in my research into meme culture I delved quite deep into semiotics, for example <span id="TogglerLotman" class="text-highlight">Yuri Lotman</span> and his ideas of the semiosphere and expanding on that with contemporary non-canonical narrative research of <span id="TogglerGeo" class="text-highlight">Alexandra Georgakapoulou</span>. <br><br>
+                    This all works towards a practice of archiving the fleeting, the temporary and the new, because right now a lot of our culture is expressed through digital communication or verbal which in essence is opt-in to be saved for it to be revisited in the future.' WHERE id = 1;

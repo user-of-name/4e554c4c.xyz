@@ -10,28 +10,29 @@ if (isset($_GET['lang'])) {
 
 //references the connection file
 require_once "../includes/dbh.inc.php";
-//defines the querry to then get the stuff
-$query_content = "SELECT * FROM content WHERE id = 4;";
-$query_groups = "SELECT * FROM project_groups";
-$query_menu_art_projects = "SELECT title_en, title_lv, file_name FROM content WHERE group_id = 2;";
-$query_menu_documentary_projects = "SELECT title_en, title_lv, file_name FROM content WHERE group_id = 3;";
-// content
-$stmt = $pdo->prepare(query:$query_content);
-$stmt->execute();
-$content = $stmt->fetchAll(PDO::FETCH_ASSOC);
+// To Get the Current Filename. 
+$currentPage= $_SERVER['SCRIPT_NAME']; 
 //groups
+$query_groups = "SELECT * FROM project_groups";
 $stmt = $pdo->prepare(query:$query_groups);
 $stmt->execute();
 $project_groups = $stmt->fetchAll(PDO::FETCH_ASSOC);
 //art project titles
+$query_menu_art_projects = "SELECT title_en, title_lv, file_name FROM content WHERE group_id = 2;";
 $stmt = $pdo->prepare(query:$query_menu_art_projects);
 $stmt->execute();
 $menu_art_projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
 //documentary titles
+$query_menu_documentary_projects = "SELECT title_en, title_lv, file_name FROM content WHERE group_id = 3;";
 $stmt = $pdo->prepare(query:$query_menu_documentary_projects);
 $stmt->execute();
 $menu_documentary_projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
+// content
+$query_content = "SELECT * FROM content WHERE id = 4;";
+$stmt = $pdo->prepare(query:$query_content);
+$stmt->execute();
+$content = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
 
 $pdo = null;
 $stmt = null;
@@ -48,24 +49,16 @@ $stmt = null;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>4e554c4c</title>
 
-    <link rel="stylesheet" href="../main.css">
-    <link rel="stylesheet" href="../responsivity.css">
+    <<link rel="stylesheet" href="../assets/css/style.css">
+
+<script defer src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script defer src="../main.js"> </script>
 </head>
 
 <body class="p-2 bg-black">
     
-<!-- menu navigation bar -->
-
-
-    <div id="nav-placeholder">
-
-</div>
-
-<script>
-$(function(){
- $("#nav-placeholder").load("../nav.php");
-});
-</script>
+<?php include '../nav.php'; ?>
 
     <!--  main body of the page begins -->
     <div class="container-fluid">

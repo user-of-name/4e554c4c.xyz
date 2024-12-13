@@ -1,40 +1,12 @@
-<?php
 
-$language = 'en';
-
-if (isset($_GET['lang'])) {
-    $language = $_GET['lang'];
-}
-
-//references the connection file
-require_once "includes/dbh.inc.php";
-//defines the querry to then get the stuff
-$query_groups = "SELECT * FROM project_groups";
-$query_menu_art_projects = "SELECT title_en, title_lv, file_name FROM content WHERE group_id = 2;";
-$query_menu_documentary_projects = "SELECT title_en, title_lv, file_name FROM content WHERE group_id = 3;";
-//groups
-$stmt = $pdo->prepare(query:$query_groups);
-$stmt->execute();
-$project_groups = $stmt->fetchAll(PDO::FETCH_ASSOC);
-//art project titles
-$stmt = $pdo->prepare(query:$query_menu_art_projects);
-$stmt->execute();
-$menu_art_projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-//documentary titles
-$stmt = $pdo->prepare(query:$query_menu_documentary_projects);
-$stmt->execute();
-$menu_documentary_projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-$pdo = null;
-$stmt = null;
-?>
-<script defer src="main.js"> </script>
 
 <nav class="pb-2 bg-black navbar-expand-md nav-fill border-bottom sticky-top">
         <ul class="nav nav-tabs">
-            <li class="nav-link flex-fill border-0 active" aria-current="page" href="#">
-                4e554c4c.xyz/index.php
+        <li class="nav-link flex-start flex-grow-1 border-1 ps-1 active" aria-current="page" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <a>4e554e4c.xyz<?php
+                echo $currentPage;  
+                
+                ?></a>
             </li>
             <select class="nav-link flex-fill border-0 active" id="langSwitcher">
                 <option class="nav-link border-0 p-0" value="en">EN</option>
@@ -56,22 +28,40 @@ $stmt = null;
         <ul class="nav nav-tabs flex-column flex-md-row align-items-start collapse navbar-collapse" id="navbarNav" id="myTab" role="tablist" aria-orientation="vertical">
             <?php
               foreach ($project_groups as $row){
-                        echo '<li class="nav-item text-start">';
+                if ($row["href"] == "yes") {
+                  echo '<li class="nav-item text-start">';
+                  echo '<a class="nav-link flex-md-fill active" href="/';
+                    echo $row["group_file_name"];
+                  echo '">[  ';
+                    echo $row["group_name_$language"];
+                  echo "  ]</a>";
+                  echo '</li>';
+                } else {
+                  if ($row["group_id"] == "5") {
+                    echo '<li class="nav-item text-start">
+                <a class="nav-link" aria-selected="false" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+                    [ ';
+                     echo $row["group_name_$language"];
+                     echo ' ]</a>
+            </li>';
+                  } else {
+                    echo '<li class="nav-item text-start">';
                     echo '<a class="nav-link';
                     //add in the + active condition
                     echo '" id="';
-                    echo $row["group_reference"];
+                      echo $row["group_reference"];
                     echo '-tab" data-bs-toggle="tab" data-bs-target="#';
-                    echo $row["group_reference"];
-                    echo '-tab-pane" data-bs-target="#';
-                    echo $row["group_reference"];
-                    echo '-tab-pane" type="button" role="tab" href="/';
-                    echo $row["group_file_name"];
-                    echo '">[  ';
+                      echo $row["group_reference"];
+                    echo '-tab-pane" type="button" role="tab" aria-controls="';
+                      echo $row["group_reference"];
+                    echo '-tab-pane"';
+                    echo '>[  ';
                         echo $row["group_name_$language"];
                     echo "  ]</a>";
-                        echo '</li>';
+                    echo '</li>';
+                  };
                         };
+                      };
                     
             ?>
             
@@ -85,7 +75,7 @@ $stmt = null;
             <?php
               foreach ($menu_art_projects as $row){
                 echo '<li class="nav-item text-start">';
-            echo '<a class="nav-link" aria-current="page" href="/';
+            echo '<a class="nav-link" href="/';
             echo $row["file_name"];
             echo '">[  ';
                 echo $row["title_$language"];
@@ -101,7 +91,7 @@ $stmt = null;
         <?php
               foreach ($menu_documentary_projects as $row){
                 echo '<li class="nav-item text-start">';
-            echo '<a class="nav-link active" aria-current="page" href="../';
+            echo '<a class="nav-link" href="/';
             echo $row["file_name"];
             echo '">[  ';
                 echo $row["title_$language"];
@@ -113,4 +103,41 @@ $stmt = null;
     </div>  
     </div>
     </nav>
-            
+        <!-- contact modal -->
+        <div class="modal" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content border-black border-end border-bottom border-2">
+            <h6 class="text-center">*** CONTACT ***</h6>
+            <div class="modal-body">
+                <table class="table m-1">
+                    <tbody>
+                    <tr>
+                        <td colspan="2">Contact me here sample text idk:</td>
+                    </tr>
+                      <tr>
+                        <td>e-mail</td>
+                        <td><a class="link-dark" href="">> belte.francis@gmail.com</a></td>
+                      </tr>
+                      <tr>
+                        <td>insta</td>
+                        <td><a class="link-dark" href="">> @4e_55_4c_4c</a></td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td colspan="1">Collective works and contacts:</td>
+                      </tr>
+                      <tr>
+                        <td colspan="1"><a class="text-dark" href="">> unitedfriedfront.xyz</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+            <div class="modal-footer">
+              <a type="button" class="text-dark" data-bs-dismiss="modal">[ close ]</a>
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- language switcher -->
