@@ -2,34 +2,11 @@
 
 <?php
 
-$language = 'en';
-
-if (isset($_GET['lang'])) {
-    $language = $_GET['lang'];
-}
-
+include "includes/lang-top.php";
 //references the connection file
 require_once "includes/dbh.inc.php";
-
-// needed for nav bar
-
-// To Get the Current Filename. 
-$currentPage= $_SERVER['SCRIPT_NAME']; 
-//groups
-$query_groups = "SELECT * FROM project_groups";
-$stmt = $pdo->prepare(query:$query_groups);
-$stmt->execute();
-$project_groups = $stmt->fetchAll(PDO::FETCH_ASSOC);
-//art project titles
-$query_menu_art_projects = "SELECT title_en, title_lv, file_name FROM content WHERE group_id = 2;";
-$stmt = $pdo->prepare(query:$query_menu_art_projects);
-$stmt->execute();
-$menu_art_projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
-//documentary titles
-$query_menu_documentary_projects = "SELECT title_en, title_lv, file_name FROM content WHERE group_id = 3;";
-$stmt = $pdo->prepare(query:$query_menu_documentary_projects);
-$stmt->execute();
-$menu_documentary_projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
+//querys the db for the nav bar
+include "includes/db_nav.php";
 
 
 // content - change this specific to each page
@@ -65,7 +42,7 @@ $stmt = null;
 
     <!-- we get the nav bar here -->
     
-    <?php include 'nav.php'; ?>
+    <?php include 'includes/nav.php'; ?>
 
     <!--  main body of the page begins -->
       
@@ -114,15 +91,7 @@ $stmt = null;
 
 <!-- language junk -->
 
-<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<?php include "includes/lang-script.php"; ?>
 
-<script>
-    $(document).ready(function() {
-        $("#langSwitcher").val('<?php echo $_GET['lang'] ?>');
-        $("#langSwitcher").on('change', function () {
-            window.location = '<?php echo $_SERVER['PHP_SELF'] ?>?lang=' + $(this).val();
-         });
-    });
-</script>
 </body>
 </html>

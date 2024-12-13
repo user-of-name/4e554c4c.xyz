@@ -2,31 +2,11 @@
 
 <?php
 
-$language = 'en';
-
-if (isset($_GET['lang'])) {
-    $language = $_GET['lang'];
-}
-
+include "../includes/lang-top.php";
 //references the connection file
 require_once "../includes/dbh.inc.php";
-// To Get the Current Filename. 
-$currentPage= $_SERVER['SCRIPT_NAME'];
-//groups
-$query_groups = "SELECT * FROM project_groups";
-$stmt = $pdo->prepare(query:$query_groups);
-$stmt->execute();
-$project_groups = $stmt->fetchAll(PDO::FETCH_ASSOC);
-//art project titles
-$query_menu_art_projects = "SELECT title_en, title_lv, file_name FROM content WHERE group_id = 2;";
-$stmt = $pdo->prepare(query:$query_menu_art_projects);
-$stmt->execute();
-$menu_art_projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
-//documentary titles
-$query_menu_documentary_projects = "SELECT title_en, title_lv, file_name FROM content WHERE group_id = 3;";
-$stmt = $pdo->prepare(query:$query_menu_documentary_projects);
-$stmt->execute();
-$menu_documentary_projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
+include "../includes/db_nav.php";
+
 // content
 $query_content = "SELECT * FROM content WHERE id = 7;";
 $stmt = $pdo->prepare(query:$query_content);
@@ -43,22 +23,12 @@ $stmt = null;
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4e554c4c</title>
 
-    <<link rel="stylesheet" href="../assets/css/style.css">
-
-<script defer src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-<script defer src="../main.js"> </script>
-</head>
+<?php include "../includes/proj_head.php"; ?>
 
 <body class="p-2 bg-black">
     
-<?php include '../nav.php'; ?>
+<?php include '../includes/nav.php'; ?>
 
     <!--  main body of the page begins -->
     <div class="container-fluid">
@@ -102,14 +72,7 @@ $stmt = null;
 
 <!-- language junk -->
 
-<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-<script>
-    $(document).ready(function() {
-        $("#langSwitcher").val('<?php echo $_GET['lang'] ?>');
-        $("#langSwitcher").on('change', function () {
-            window.location = '<?php echo $_SERVER['PHP_SELF'] ?>?lang=' + $(this).val();
-         });
-    });
-</script>
+<?php include "../includes/lang-script.php"; ?>
+
 </body>
 </html>
