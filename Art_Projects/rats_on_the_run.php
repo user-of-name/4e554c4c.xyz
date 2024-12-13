@@ -11,7 +11,7 @@ if (isset($_GET['lang'])) {
 //references the connection file
 require_once "../includes/dbh.inc.php";
 // To Get the Current Filename. 
-$currentPage= $_SERVER['SCRIPT_NAME']; 
+$currentPage= $_SERVER['SCRIPT_NAME'];
 //groups
 $query_groups = "SELECT * FROM project_groups";
 $stmt = $pdo->prepare(query:$query_groups);

@@ -14,7 +14,7 @@ require_once "includes/dbh.inc.php";
 // needed for nav bar
 
 // To Get the Current Filename. 
-$currentPage= $_SERVER['SCRIPT_NAME']; 
+$currentPage= $_SERVER['SCRIPT_NAME'];
 //groups
 $query_groups = "SELECT * FROM project_groups";
 $stmt = $pdo->prepare(query:$query_groups);
@@ -68,6 +68,7 @@ $stmt = null;
     <?php include 'nav.php'; ?>
 
     <!--  main body of the page begins -->
+
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6 border-top border-end border-bottom overflow-y-auto" style="max-height: 90vh;">

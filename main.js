@@ -13,8 +13,13 @@ const img1 = document.getElementById('img1');
     img1.style.display = ("none");
     }
 ;
+const button = document.querySelector("a");
 
+button.addEventListener("click", updateButton);
 
+function updateButton() {
+    $lang = button.value;
+}
 /*
 const imgTogglerParent = document.querySelector("#imgTogglerParent");
 imgTogglerParent.addEventListener("mouseover", selectToggler, false);

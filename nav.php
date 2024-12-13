@@ -8,19 +8,22 @@
                 
                 ?></a>
             </li>
-            <select class="nav-link flex-fill border-0 active" id="langSwitcher">
+            <!-- <select class="nav-link flex-fill border-0 active" id="langSwitcher">
                 <option class="nav-link border-0 p-0" value="en">EN</option>
                 <option class="nav-link border-0 p-0" value="lv">LV</option>
-            </select>
-            <!-- <li id="langSwitcher">
-                <button class="nav-link border-0 p-0" aria-current="page" id="langSwitcher" onclick="value='en'"> EN </button>
+            </select> -->
+
+
+            <li id="langSwitcher">
+                <a type="button" id="langSwitcher" class="nav-link border-0 p-0" aria-current="page" value="en"> EN </a>
             </li>
             <li>
                 <a class="nav-link border-0 p-0"> / </a>
             </li>
             <li id="langSwitcher">
-                <button class="nav-link border-0 active" id="langSwitcher" value="lv"> LV </button>
-            </li> -->
+                <a type="button" id="langSwitcher" class="nav-link border-0 active" value="lv"> LV </a>
+            </li>
+
         </ul>
 
 
@@ -30,7 +33,11 @@
               foreach ($project_groups as $row){
                 if ($row["href"] == "yes") {
                   echo '<li class="nav-item text-start">';
-                  echo '<a class="nav-link flex-md-fill active" href="/';
+                  echo '<a class="nav-link flex-md-fill';
+                  if (substr($currentPage, 1) == $row["group_file_name"]) {
+                    echo ' active';
+                  };
+                  echo '" href="/';
                     echo $row["group_file_name"];
                   echo '">[  ';
                     echo $row["group_name_$language"];
@@ -38,16 +45,17 @@
                   echo '</li>';
                 } else {
                   if ($row["group_id"] == "5") {
-                    echo '<li class="nav-item text-start">
-                <a class="nav-link" aria-selected="false" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
-                    [ ';
+                    echo '<li class="nav-item text-start"><a class="nav-link" aria-selected="false" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">[ ';
                      echo $row["group_name_$language"];
-                     echo ' ]</a>
-            </li>';
+                     echo ' ]</a></li>';
                   } else {
                     echo '<li class="nav-item text-start">';
                     echo '<a class="nav-link';
-                    //add in the + active condition
+                    // if (basename(getcwd()) == $row["group_name_en"]) {
+                    //   echo ' active';
+                    // } else {
+                    //   echo '';
+                    // };
                     echo '" id="';
                       echo $row["group_reference"];
                     echo '-tab" data-bs-toggle="tab" data-bs-target="#';
