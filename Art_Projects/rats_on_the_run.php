@@ -60,7 +60,7 @@ $stmt = null;
             <div class="col-md-6 border-top border-start border-bottom overflow-y-auto" style="max-height: 90vh;">
                 <div class="row d-flex overflow-y-auto p-2">                
                     <div class="" id=>
-                        <img src="../assets/Cave.jpg" class="w-100 border-bottom border-end border-2" alt="...">
+                        <img src="../images/Cave.jpg" class="w-100 border-bottom border-end border-2" alt="...">
                         <figcaption class="figure-caption">[ img.1 ] this is an image caption</figcaption>
                     </div>
                 </div>

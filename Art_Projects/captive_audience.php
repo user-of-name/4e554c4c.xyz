@@ -13,6 +13,12 @@ $stmt = $pdo->prepare(query:$query_content);
 $stmt->execute();
 $content = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+// images
+$query_project_images = "SELECT * FROM images WHERE project_id = 2 ORDER BY Display_order;";
+$stmt = $pdo->prepare(query:$query_project_images);
+$stmt->execute();
+$project_images = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
 
 $pdo = null;
 $stmt = null;
@@ -59,10 +65,11 @@ $stmt = null;
 
             <div class="col-md-6 border-top border-start border-bottom overflow-y-auto" style="max-height: 90vh;">
                 <div class="row d-flex overflow-y-auto p-2">                
-                    <div class="" id=>
+                    <!-- <div class="" id=>
                         <img src="../assets/Cave.jpg" class="w-100 border-bottom border-end border-2" alt="...">
                         <figcaption class="figure-caption">[ img.1 ] this is an image caption</figcaption>
-                    </div>
+                    </div> -->
+                    <?php include '../includes/get_project_images.php' ?>
                 </div>
             </div>            
         </div>
