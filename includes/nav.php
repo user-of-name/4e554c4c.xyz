@@ -15,13 +15,13 @@
 
 
             <li id="langSwitcher">
-                <a type="button" id="langSwitcher" class="nav-link border-0 p-0" aria-current="page" value="en"> EN </a>
+                <button type="button" id="langSwitcher" class="nav-link border-0 p-0" aria-current="page" value="en">
             </li>
             <li>
                 <a class="nav-link border-0 p-0"> / </a>
             </li>
             <li id="langSwitcher">
-                <a type="button" id="langSwitcher" class="nav-link border-0 active" value="lv"> LV </a>
+                <button type="button" id="langSwitcher" class="nav-link border-0 active" value="lv">
             </li>
 
         </ul>

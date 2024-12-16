@@ -33,10 +33,22 @@ $stmt = null;
 
             <div class="col-md-3 d-flex flex-column border-top border-end border-bottom" style="height: 90vh;">
                <div class="container-fluid flex-grow-1 p-0">
-                    <h6 class="text-center text-uppercase text-primary">*** INDEX_COPY ***</h6>
+                    <h6 class="text-center text-uppercase text-primary"><?php
+                        echo "<div>";
+                        foreach ($content as $row){
+                                echo $row["title_$language"];
+                        }
+                        echo "</div>";
+                        ?></h6>
                     <div class="container-fluid"></div>
                     <p class="text-primary">
-                      I documented stuff in helsinki
+                    <?php
+                        // echo "<div>";
+                        foreach ($content as $row){
+                                echo $row["descr_$language"];
+                        }
+                        // echo "</div>";
+                        ?>
                     </p>
                 </div>
                 <div class="container-fluid ps-0 pb-3 ">
