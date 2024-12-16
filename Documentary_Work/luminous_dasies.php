@@ -13,6 +13,13 @@ $stmt = $pdo->prepare(query:$query_content);
 $stmt->execute();
 $content = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+// images
+$query_project_images = "SELECT * FROM images WHERE project_id = 8 ORDER BY Display_order;";
+$stmt = $pdo->prepare(query:$query_project_images);
+$stmt->execute();
+$project_images = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+
 $pdo = null;
 $stmt = null;
 ?>
@@ -62,22 +69,46 @@ $stmt = null;
                     </div>
                     <figcaption class="figure-caption"> luminous_dasies.mp4 <br> Fujifilm GFX100 II, 3:4 <br> 5-5-2024</figcaption>
                     <script src="https://player.vimeo.com/api/player.js"></script>   
-
-                    <div class="h-100">
+<!-- images start here -->
+                    <!-- <div class="h-100">
                         <img src="../images/adriana_towers_a2.jpg" class="border-bottom border-end border-3 img-fluid" style="" alt="...">
                         <figcaption class="figure-caption"> test to see if format works <br> FUJIFILM GFX100 II <br> 5-5-2021</figcaption>
                     </div>
                     <div class="h-100">
                         <img src="../images/sten_and_crowd.jpg" class="w-100 border-bottom border-end" alt="...">
                         <figcaption class="figure-caption">this is an image caption <br> Fujifilm GFX100 II <br> 05.05.2021</figcaption>
-                    </div>
+                    </div> -->
+
+                    <?php
+
+foreach ($project_images as $row) {
+
+echo '<div id="" class="h-100"> <img src="/images/';
+
+    echo $row["file_name"];
+
+echo '" class="border-bottom border-end border-3 img-fluid" style="" alt="..."><figcaption class="figure-caption"> ';
+
+    echo $row["image_title_$language"];
+
+echo '<br>';
+
+    echo $row["date"];
+
+echo '<br>';
+
+    echo $row["location"];
+
+echo '</figcaption></div>';
+
+}
+
+ ?>
+
                     <div class="m-5">
 
                     </div>
-                    <div class="">
-                        <img src="../images/Cave.jpg" class="w-100 border-bottom border-end" alt="...">
-                        <figcaption class="figure-caption">this is an image caption <br> Fujifilm GFX100 II <br> 05.05.2021</figcaption>
-                    </div>
+
                 </div>
             </div>            
         </div>
