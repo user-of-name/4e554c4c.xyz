@@ -59,7 +59,7 @@ $stmt = null;
                     </p>
                 </div>
                 <div class="container-fluid ps-0 pb-3 ">
-                  <a href="#">> link to contributor</a>
+                  <a href="https://stenheijster.net/Luminous_Daisies.html">> link to contributor</a>
                 </div>
             </div>
 
@@ -67,17 +67,9 @@ $stmt = null;
                 <div class="row"> 
                     <div class="border-bottom border-end border-3" style="padding:56.25% 0 0 1rem; position:relative;"><iframe src="https://player.vimeo.com/video/952301381?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Luminous Daisies"></iframe>
                     </div>
-                    <figcaption class="figure-caption"> luminous_dasies.mp4 <br> Fujifilm GFX100 II, 3:4 <br> 5-5-2024</figcaption>
+                    <figcaption class="figure-caption"> luminous_dasies.mp4 <br> Canon C300 Mkii, 3:4 <br>2024-05-19</figcaption>
                     <script src="https://player.vimeo.com/api/player.js"></script>   
 <!-- images start here -->
-                    <!-- <div class="h-100">
-                        <img src="../images/adriana_towers_a2.jpg" class="border-bottom border-end border-3 img-fluid" style="" alt="...">
-                        <figcaption class="figure-caption"> test to see if format works <br> FUJIFILM GFX100 II <br> 5-5-2021</figcaption>
-                    </div>
-                    <div class="h-100">
-                        <img src="../images/sten_and_crowd.jpg" class="w-100 border-bottom border-end" alt="...">
-                        <figcaption class="figure-caption">this is an image caption <br> Fujifilm GFX100 II <br> 05.05.2021</figcaption>
-                    </div> -->
 
                     <?php
 
