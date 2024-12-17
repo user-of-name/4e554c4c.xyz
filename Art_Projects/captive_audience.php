@@ -65,11 +65,31 @@ $stmt = null;
 
             <div class="col-md-6 border-top border-start border-bottom overflow-y-auto" style="max-height: 90vh;">
                 <div class="row d-flex overflow-y-auto p-2">                
-                    <!-- <div class="" id=>
-                        <img src="../assets/Cave.jpg" class="w-100 border-bottom border-end border-2" alt="...">
-                        <figcaption class="figure-caption">[ img.1 ] this is an image caption</figcaption>
-                    </div> -->
-                    <?php include '../includes/get_project_images.php' ?>
+                    <?php
+
+foreach ($project_images as $row) {
+
+echo '<div id="" class="h-100"> <img src="../images/';
+
+    echo $row["file_name"];
+
+echo '" class="border-bottom border-end border-3 img-fluid" style="max-height:80vh;" alt="..."><figcaption class="figure-caption"> ';
+
+    echo $row["image_title_$language"];
+
+echo '<br>';
+
+    echo $row["date"];
+
+echo '<br>';
+
+    echo $row["location"];
+
+echo '</figcaption></div>';
+
+}
+
+ ?>
                 </div>
             </div>            
         </div>
