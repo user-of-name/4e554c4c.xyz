@@ -1,1 +1,1 @@
-delete from images WHERE file_name = 'glitch fried foraging.jpg';
+ALTER TABLE content RENAME COLUMN file_name TO project_file_name;

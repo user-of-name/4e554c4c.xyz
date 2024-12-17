@@ -79,7 +79,7 @@
               foreach ($menu_art_projects as $row){
                 echo '<li class="nav-item text-start">';
             echo '<a class="nav-link" href="/';
-            echo $row["file_name"];
+            echo $row["project_file_name"];
             echo '">[  ';
                 echo $row["title_$language"];
             echo "  ]</a>";
@@ -95,7 +95,7 @@
               foreach ($menu_documentary_projects as $row){
                 echo '<li class="nav-item text-start">';
             echo '<a class="nav-link" href="/';
-            echo $row["file_name"];
+            echo $row["project_file_name"];
             echo '">[  ';
                 echo $row["title_$language"];
             echo "  ]</a>";

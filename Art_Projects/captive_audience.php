@@ -65,7 +65,7 @@ $stmt = null;
 
             <div class="col-md-6 border-top border-start border-bottom overflow-y-auto" style="max-height: 90vh;">
                 <div class="row d-flex overflow-y-auto p-2">                
-                    <?php
+                <?php
 
 foreach ($project_images as $row) {
 
@@ -73,7 +73,7 @@ echo '<div id="" class="h-100"> <img src="../images/';
 
     echo $row["file_name"];
 
-echo '" class="border-bottom border-end border-3 img-fluid" style="max-height:80vh;" alt="..."><figcaption class="figure-caption"> ';
+echo '" class="border-bottom border-end border-3 img-fluid" style="" alt="..."><figcaption class="figure-caption"> ';
 
     echo $row["image_title_$language"];
 
