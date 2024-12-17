@@ -13,6 +13,11 @@ $stmt = $pdo->prepare(query:$query_content);
 $stmt->execute();
 $content = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+// images
+$query_project_images = "SELECT * FROM images WHERE project_id = 6 ORDER BY Display_order;";
+$stmt = $pdo->prepare(query:$query_project_images);
+$stmt->execute();
+$project_images = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 $pdo = null;
 $stmt = null;
@@ -59,10 +64,31 @@ $stmt = null;
 
             <div class="col-md-6 border-top border-start border-bottom overflow-y-auto" style="max-height: 90vh;">
                 <div class="row d-flex overflow-y-auto p-2">                
-                    <div class="" id=>
-                        <img src="../images/Cave.jpg" class="w-100 border-bottom border-end border-2" alt="...">
-                        <figcaption class="figure-caption">[ img.1 ] this is an image caption</figcaption>
-                    </div>
+                <?php
+
+foreach ($project_images as $row) {
+
+echo '<div id="" class="h-100"> <img src="../images/';
+
+    echo $row["file_name"];
+
+echo '" class="border-bottom border-end border-3 img-fluid" style="" alt="..."><figcaption class="figure-caption"> ';
+
+    echo $row["image_title_$language"];
+
+echo '<br>';
+
+    echo $row["date"];
+
+echo '<br>';
+
+    echo $row["location"];
+
+echo '</figcaption></div>';
+
+}
+
+ ?>
                 </div>
             </div>            
         </div>
