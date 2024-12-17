@@ -8,20 +8,15 @@
                 
                 ?></a>
             </li>
-            <!-- <select class="nav-link flex-fill border-0 active" id="langSwitcher">
-                <option class="nav-link border-0 p-0" value="en">EN</option>
-                <option class="nav-link border-0 p-0" value="lv">LV</option>
-            </select> -->
-
-
-            <li id="langSwitcher">
-                <button type="button" id="langSwitcher" class="nav-link border-0 p-0" aria-current="page" value="en">
+            <li>
+                <button id="langSwitcher" 
+                <?php if ($language == 'en') { echo ' class="nav-link border-0 p-0 active"';} else { echo 'class="nav-link border-0 p-0"';}?> aria-current="page" value="en" onclick="window.location = '<?php echo $_SERVER['PHP_SELF'] ?>?lang=en'">EN</button>
             </li>
             <li>
-                <a class="nav-link border-0 p-0"> / </a>
+                <a class="nav-link border-0 p-0 active"> / </a>
             </li>
-            <li id="langSwitcher">
-                <button type="button" id="langSwitcher" class="nav-link border-0 active" value="lv">
+            <li>
+                <button id="langSwitcher" <?php if ($language == 'lv') { echo ' class="nav-link border-0 p-0 active"';} else { echo 'class="nav-link border-0 p-0"';}?> value="lv" onclick="window.location = '<?php echo $_SERVER['PHP_SELF'] ?>?lang=lv'">LV</button>
             </li>
 
         </ul>
