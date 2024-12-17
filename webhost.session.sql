@@ -1,1 +1,1 @@
-UPDATE images SET file_name = 'self_reflection.jpg' WHERE img_id = 3;
+delete from images WHERE file_name = 'glitch fried foraging.jpg';

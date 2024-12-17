@@ -40,11 +40,11 @@ $stmt = null;
                <div class="container-fluid">
                    <h6 class="text-center text-uppercase text-primary">
                         <?php
-                        echo "<div>";
+                        echo "<div>***";
                         foreach ($content as $row){
                                 echo $row["title_$language"];
                         }
-                        echo "</div>";
+                        echo "***</div>";
                         ?>
                     </h6>
                     <div class="container-fluid"></div>
