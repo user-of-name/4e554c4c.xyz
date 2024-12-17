@@ -1,5 +1,3 @@
-
-
 <nav class="pb-2 bg-black navbar-expand-md nav-fill border-bottom sticky-top">
         <ul class="nav nav-tabs">
         <li class="nav-link flex-start flex-grow-1 border-1 ps-1 active" aria-current="page" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -96,6 +94,22 @@
                 echo '<li class="nav-item text-start">';
             echo '<a class="nav-link" href="/';
             echo $row["project_file_name"];
+            echo '">[  ';
+                echo $row["title_$language"];
+            echo "  ]</a>";
+                echo '</li>';
+                }
+            ?>
+        </ul>
+    </div>  
+    <!-- image making -->
+    <div class="tab-pane" id="image-making-tab-pane" role="tabpanel" aria-labelledby="documentary-work-tab" tabindex="0">
+        <ul class="nav nav-tabs nav-fill flex-column flex-md-row align-items-start collapse navbar-collapse" id="navbarNav">
+        <?php
+              foreach ($menu_image_making as $row){
+                echo '<li class="nav-item text-start">';
+            echo '<a class="nav-link" href="/';
+            echo $row["group_file_name"];
             echo '">[  ';
                 echo $row["title_$language"];
             echo "  ]</a>";
