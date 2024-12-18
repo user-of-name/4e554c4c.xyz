@@ -25,41 +25,36 @@
             <?php
               foreach ($project_groups as $row){
                 if ($row["href"] == "yes") {
-                  echo '<li class="nav-item text-start">';
-                  echo '<a class="nav-link flex-md-fill';
+                  echo '<li class="nav-item text-start">',
+                  '<a class="nav-link flex-md-fill';
                   if (substr($currentPage, 1) == $row["group_file_name"]) {
                     echo ' active';
                   };
-                  echo '" href="/';
-                    echo $row["group_file_name"];
-                  echo '">[  ';
-                    echo $row["group_name_$language"];
-                  echo "  ]</a>";
-                  echo '</li>';
+                  echo '" href="/',
+                  $row["group_file_name"],
+                  '">[  ',
+                  $row["group_name_$language"],
+                  '  ]</a>',
+                  '</li>';
                 } else {
                   if ($row["group_id"] == "5") {
-                    echo '<li class="nav-item text-start"><a class="nav-link" aria-selected="false" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">[ ';
-                     echo $row["group_name_$language"];
-                     echo ' ]</a></li>';
+                    echo '<li class="nav-item text-start"><a class="nav-link" aria-selected="false" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">[ ',
+                    $row["group_name_$language"],
+                    ' ]</a></li>';
                   } else {
-                    echo '<li class="nav-item text-start">';
-                    echo '<a class="nav-link';
-                    // if (basename(getcwd()) == $row["group_name_en"]) {
-                    //   echo ' active';
-                    // } else {
-                    //   echo '';
-                    // };
-                    echo '" id="';
-                      echo $row["group_reference"];
-                    echo '-tab" data-bs-toggle="tab" data-bs-target="#';
-                      echo $row["group_reference"];
-                    echo '-tab-pane" type="button" role="tab" aria-controls="';
-                      echo $row["group_reference"];
-                    echo '-tab-pane"';
-                    echo '>[  ';
-                        echo $row["group_name_$language"];
-                    echo "  ]</a>";
-                    echo '</li>';
+                    echo '<li class="nav-item text-start">',
+                    '<a class="nav-link',
+                    '" id="',
+                    $row["group_reference"],
+                    '-tab" data-bs-toggle="tab" data-bs-target="#',
+                    $row["group_reference"],
+                    '-tab-pane" type="button" role="tab" aria-controls="',
+                    $row["group_reference"],
+                    '-tab-pane"',
+                    '>[  ',
+                    $row["group_name_$language"],
+                    '  ]</a>',
+                    '</li>';
                   };
                         };
                       };
@@ -75,13 +70,13 @@
      <ul class="nav nav-tabs flex-column flex-md-row align-items-start text-start navbar-collapse" id="navbarNav">
             <?php
               foreach ($menu_art_projects as $row){
-                echo '<li class="nav-item text-start">';
-            echo '<a class="nav-link" href="/';
-            echo $row["project_file_name"];
-            echo '">[  ';
-                echo $row["title_$language"];
-            echo "  ]</a>";
-                echo '</li>';
+                echo '<li class="nav-item text-start">',
+                '<a class="nav-link" href="/',
+                $row["project_file_name"],
+                '">[  ',
+                $row["title_$language"],
+                '  ]</a>',
+                '</li>';
                 }
             ?>
         </ul>
@@ -91,13 +86,13 @@
         <ul class="nav nav-tabs nav-fill flex-column flex-md-row align-items-start collapse navbar-collapse" id="navbarNav">
         <?php
               foreach ($menu_documentary_projects as $row){
-                echo '<li class="nav-item text-start">';
-            echo '<a class="nav-link" href="/';
-            echo $row["project_file_name"];
-            echo '">[  ';
-                echo $row["title_$language"];
-            echo "  ]</a>";
-                echo '</li>';
+                echo '<li class="nav-item text-start">',
+                '<a class="nav-link" href="/',
+                $row["project_file_name"],
+                '">[  ',
+                $row["title_$language"],
+                "  ]</a>",
+                '</li>';
                 }
             ?>
         </ul>
@@ -107,13 +102,13 @@
         <ul class="nav nav-tabs nav-fill flex-column flex-md-row align-items-start collapse navbar-collapse" id="navbarNav">
         <?php
               foreach ($menu_image_making as $row){
-                echo '<li class="nav-item text-start">';
-            echo '<a class="nav-link" href="/';
-            echo $row["group_file_name"];
-            echo '">[  ';
-                echo $row["title_$language"];
-            echo "  ]</a>";
-                echo '</li>';
+                echo '<li class="nav-item text-start">',
+                '<a class="nav-link" href="/',
+                $row["group_file_name"],
+                '">[  ',
+                $row["title_$language"],
+                "  ]</a>",
+                '</li>';
                 }
             ?>
         </ul>
