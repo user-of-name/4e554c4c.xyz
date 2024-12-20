@@ -1,0 +1,12 @@
+@use '../custom' as *;
+
+//navbar
+
+.nav-link{
+    border-color: $dark;
+
+    &:hover{
+        background-color: $primary;
+        border: 1px solid $primary;
+    }
+}

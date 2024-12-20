@@ -1,0 +1,24 @@
+@use '../custom' as *;
+
+.text-highlight{
+    color: $dark;
+    background-color: $primary;
+    text-decoration: none;
+
+    &:hover{
+        background-color: $dark;
+        color: $primary;
+        cursor: pointer;
+}
+}
+
+.text-dark{
+    &:hover{
+        color: $primary;
+        background-color: $dark;   
+    }
+}
+
+.figure-caption{
+    padding-bottom: $spacer;
+}

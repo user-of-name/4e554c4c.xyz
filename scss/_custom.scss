@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+// colors
+$primary: rgb(184, 184, 184);
+$secondary: rgb(239, 238, 238);
+$primary-dark: rgb(91, 91, 91);
+$dark: black;
+$btn-hover-bg: $secondary;
+
+// typography
+$font-family-base: "VT323", monospace;
+$font-size-base: 1.3rem;
+
+$link-color: $primary;
+$font-color: $primary;
+$line-height-base: 1;
+
+$figure-caption-color: $primary;
+
+//navbar
+$nav-link-padding-y: .03rem;
+$nav-link-padding-x: 0rem;
+$nav-link-hover-color: $secondary;  
+$nav-link-transition: none;
+
+$btn-padding-y:               1;
+$btn-padding-x:               1;
+
+$nav-tabs-link-hover-background-color: $primary-dark;
+$nav-tabs-link-hover-border-color: $primary;
+$nav-tabs-border-color: $primary;
+$nav-tabs-border-radius: 0;
+$nav-tabs-link-active-bg: $primary;
+$nav-link-hover-color: $dark;
+$border-color: $primary;
+
+//modal
+$modal-inner-padding:               0rem;
+
+$modal-content-color:               $dark;
+$modal-content-bg:                  $primary;
+$modal-content-border-radius:       0;
+
+$modal-backdrop-opacity:            .0;
+$modal-header-border-color:         none;
+
+//table
+$table-cell-padding-y:        .05rem;
+$table-cell-padding-x:        .05rem;
+$table-bg:                    none;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+

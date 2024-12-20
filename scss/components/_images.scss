@@ -1,0 +1,11 @@
+@use '../custom' as *;
+
+#img1, #img2, #img3{
+    display: none;
+}
+
+#imgToggler{
+    &:hover > #img1{
+        display: block;
+    };
+};
