@@ -1,17 +1,17 @@
-const imgToggler = document.getElementById("imgToggler");
-const img1 = document.getElementById('img1');
+// const imgToggler = document.getElementById("imgToggler");
+// const img1 = document.getElementById('img1');
 
-    imgToggler.addEventListener("mouseover", ToggleImgOn, false);
-    imgToggler.addEventListener("mouseout", ToggleImgOff, false);
+//     imgToggler.addEventListener("mouseover", ToggleImgOn, false);
+//     imgToggler.addEventListener("mouseout", ToggleImgOff, false);
 
-    function ToggleImgOn()
-    {
-    img1.style.display = ("block");
-    }
-    function ToggleImgOff()
-    {
-    img1.style.display = ("none");
-    };
+//     function ToggleImgOn()
+//     {
+//     img1.style.display = ("block");
+//     }
+//     function ToggleImgOff()
+//     {
+//     img1.style.display = ("none");
+//     };
 
 
 // const button = document.querySelector("a");
@@ -35,3 +35,23 @@ function ToggleImgOn(e) {
   img1.style.display = ("block");
   }
 };*/
+
+
+function contentToggler(project_id) {
+  var y = document.getElementById("img"+project_id);
+
+  if (x.style.display === "none") {
+    y.style.display = "block";
+  } else {
+    y.style.display = "none";
+  }
+};
+function contentHide(project_id) {
+  var y = document.getElementById("img"+project_id);
+  if (x.style.display === "none") {
+    y.style.display = "block";
+  } else {
+    y.style.display = "none";
+  }
+};
+
