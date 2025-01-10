@@ -1,4 +1,4 @@
-fetch('/nav.php')
+fetch('/includes/nav.php')
 .then(res => res.text())
 .then(text => {
     let oldelem = document.querySelector("script#replace_with_navbar");
@@ -6,3 +6,4 @@ fetch('/nav.php')
     newelem.innerHTML = text;
     oldelem.parentNode.replaceChild(newelem,oldelem);
 })
+

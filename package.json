@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "4e554c4c.xyz",
   "version": "1.0.0",
   "main": "main.js",
@@ -20,5 +21,12 @@
   "dependencies": {
     "bootstrap": "^5.3.3",
     "sass": "^1.83.0"
+=======
+  "dependencies": {
+    "three": "^0.171.0"
+  },
+  "devDependencies": {
+    "vite": "^6.0.4"
+>>>>>>> refs/remotes/origin/main
   }
 }
