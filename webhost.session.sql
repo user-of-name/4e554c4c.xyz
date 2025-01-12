@@ -1,1 +1,0 @@
-SELECT * FROM images where project_id = 10;

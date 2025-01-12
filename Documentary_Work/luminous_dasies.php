@@ -35,8 +35,6 @@ $stmt = null;
 
 <div class="container-fluid">
         <div class="row">
-            <div class="col-m-12 m-2 m-md-4">
-            </div>
 
             <div class="col-md-3 d-flex flex-column border-top border-end border-bottom" style="height: 90vh;">
                <div class="container-fluid flex-grow-1 p-0">
@@ -75,7 +73,7 @@ $stmt = null;
 
 foreach ($project_images as $row) {
 
-    echo '<div id="" class="h-100"> <img src="../images/',
+    echo '<div id="" class="h-100"> <img src="../images-small/',
     $row["file_name"],
     '" class="border-bottom border-end border-3 img-fluid" style="" alt="..."><figcaption class="figure-caption"> ',
     $row["image_title_$language"],

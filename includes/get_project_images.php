@@ -2,7 +2,7 @@
 
 foreach ($project_images as $row) {
 
-echo '<div id="" class="h-100"> <img src="/images/';
+echo '<div id="" class="h-100"> <img src="/images-small/';
 
     echo $row["file_name"];
 
