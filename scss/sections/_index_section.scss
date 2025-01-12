@@ -1,0 +1,16 @@
+@use '../custom' as *;
+
+@include media-breakpoint-down(md) {
+.mobile-d{
+    background-color: $dark;
+    position: fixed;
+    bottom: -2px;
+}
+
+#mobile-d-content{
+    display: none;
+}
+}
+
+
+

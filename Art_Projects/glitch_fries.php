@@ -67,15 +67,15 @@ $stmt = null;
         <div class="row">
             <div class="col-md-6 border-top border-end border-bottom overflow-y-auto" style="max-height: 90vh;">
                <div class="container-fluid">
-                   <h6 class="text-center text-uppercase text-primary">
+                   <div class="text-center text-uppercase text-primary">
                         <?php
-                        echo "<div>";
+                        echo "<h6>";
                         foreach ($content as $row){
                                 echo $row["title_$language"];
                         }
-                        echo "</div>";
+                        echo "</h6>";
                         ?>
-                    </h6>
+                    </div>
                     <div class="container-fluid"></div>
                     <p class="text-primary">
                     <?php
@@ -99,7 +99,7 @@ foreach ($project_images as $row) {
     $row["href"],
     '"><img src="../images-small/',
     $row["file_name"],
-    '" class="border-bottom border-end border-3 img-fluid" style="" alt="..."></a><figcaption class="figure-caption"> ',
+    '" class="img_styles img-fluid" style="" alt="..."></a><figcaption class="figure-caption"> ',
     $row["image_title_$language"],
     '<br>',
     $row["date"],

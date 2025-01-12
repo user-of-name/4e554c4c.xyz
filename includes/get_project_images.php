@@ -6,7 +6,7 @@ echo '<div id="" class="h-100"> <img src="/images-small/';
 
     echo $row["file_name"];
 
-echo '" class="border-bottom border-end border-3 img-fluid" style="max-height:80vh;" alt="..."><figcaption class="figure-caption"> ';
+echo '"class="img_styles img-fluid" style="max-height:80vh;" alt="..."><figcaption class="figure-caption"> ';
 
     echo $row["image_title_$language"];
 
@@ -23,3 +23,7 @@ echo '</figcaption></div>';
 }
 
  ?>
+
+<!-- 
+    class=" border-bottom border-end border-3 img-fluid" style="max-height:80vh;"
+-->

@@ -15,5 +15,6 @@
             "database": "null_db",
             "connectionTimeout": 5000
         }
-    ]
+    ],
+    "liveServer.settings.port": 5502
 }
