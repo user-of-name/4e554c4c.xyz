@@ -23,8 +23,6 @@ $stmt = null;
 ?>
 
 <!-- html begins -->
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,12 +45,12 @@ $stmt = null;
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-    <script defer src="/main.js"> </script>
-    <script defer src="/nav.js"> </script>
+    <script defer src="/main.js"></script>
+    <script defer src="/nav.js"></script>
 </head>
 </head>
 
-<body class="p-2 bg-black">
+<body class="p-2 bg-black mq-value">
 
     <!-- we get the nav bar here -->
     
@@ -62,48 +60,51 @@ $stmt = null;
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-3 border-top border-end border-bottom overflow-y-auto" style="max-height: 90vh;">
-               <div class="container-fluid">
-                   <h6 class="text-center text-uppercase text-primary">
+             <!-- shuffled classes and added custom mobile classes around so they properly show mobile version -->
+            <div class="col-lg-3 col-md-6 mobile-d border-top border-end border-bottom overflow-y-auto" style="max-height: 90vh;">
+               <div id="mobileD" onclick="myFunction()" class="container-fluid">
+                   <div class="text-center text-uppercase text-primary">
                         <?php
-                        echo "<div>***";
+                        echo "<h6>";
                         foreach ($content as $row){
                                 echo $row["title_$language"];
                         }
-                        echo "***</div>";
+                        echo "</h6>";
                         ?>
-                    </h6>
-                    <div class="container-fluid"></div>
-                    <p class="text-primary">
-                    <?php
-                        foreach ($content as $row){
-                                echo $row["descr_$language"];
-                        }
-                        ?>
+                    </div>
+
+                    <div id="mobile-d-content" class="container-fluid">
+                        <p class="text-primary">
+                        <?php
+                            foreach ($content as $row){
+                                    echo $row["descr_$language"];
+                            }
+                            ?>
                         </p>
+                    </div>
                 </div>
             </div>
 
-            <div class="col-md-9 border-top border-start border-bottom overflow-y-auto p-2" style="max-height: 90vh;">
+            <div class="col-lg-9 col-md-6 order-first order-md-last border-top border-start border-bottom overflow-y-auto p-2" style="max-height: 90vh;">
                 <!-- <div class="row">                 -->
                 <?php
-
-foreach ($art_project1 as $row) {
-echo'<div class="row" id="img',
-    $row["id"],
-    '"><h6 class="text-center text-uppercase text-primary"><br>',
-$row["title_$language"],
-'<br></h6><div id="" class="h-100"><a href="/',
-$row["project_file_name"],
-'"> <img src="../images/',
-$row["file_name"],
-'" class="border-bottom border-end border-3 img-fluid" style="" alt="..."></a><figcaption class="figure-caption"> ',
-'<br>',
-$row["date"],
-'<br>',
-$row["location"],
-'</figcaption></div></div>';
-}
+                
+                foreach ($art_project1 as $row) {
+                echo'<div class="row" id="img"',
+                    $row["id"],
+                    '"><div class="text-center text-uppercase text-primary"><br>',
+                $row["title_$language"],
+                '<br></div><div id="" class="h-100"><a href="/',
+                $row["project_file_name"],
+                '"> <img src="../images/',
+                $row["file_name"],
+                '" class="img_styles img-fluid" style="" alt="..."></a><figcaption class="figure-caption"> ',
+                '<br>',
+                $row["date"],
+                '<br>',
+                $row["location"],
+                '</figcaption></div></div>';
+                }
 
  ?>
                 <!-- </div> -->
@@ -114,6 +115,7 @@ $row["location"],
 <!-- language junk -->
 
 <?php include "includes/lang-script.php"; ?>
+
 
 </body>
 </html>

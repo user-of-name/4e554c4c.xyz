@@ -1,5 +1,17 @@
 @use '../custom' as *;
 
+.img_styles{
+    border-bottom: 3px solid $primary;
+    border-right: 3px solid $primary;
+    cursor: pointer;
+    &:hover{
+        border-left:  3px solid $primary;
+        border-top:  3px solid $primary;
+        border-bottom: 0;
+        border-right: 0;
+    }
+}
+
 #img1, #img2, #img3{
     display: none;
 }
@@ -7,5 +19,25 @@
 #imgToggler{
     &:hover > #img1{
         display: block;
-    };
-};
+    }
+}
+
+.modal-carousel{
+    background-color: $dark;
+}
+
+.modal-border{
+    border-bottom: 3px solid $primary;
+    border-right: 3px solid $primary;
+}
+
+.c-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+    
+
+

@@ -1,4 +1,16 @@
 @use '../custom' as *;
+h6{
+    &:before {
+        content:"*** ";
+    }
+    &:after {
+     content: " ***";
+    }   
+}
+
+.li_styles{
+    text-decoration: none;
+}
 
 .text-highlight{
     color: $dark;

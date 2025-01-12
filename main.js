@@ -1,41 +1,40 @@
-// const imgToggler = document.getElementById("imgToggler");
-// const img1 = document.getElementById('img1');
+ const mobileIndexToggler = document.getElementById("indexToggler");
+ const mobileIndexContent = document.getElementById('indexContent');
 
-//     imgToggler.addEventListener("mouseover", ToggleImgOn, false);
-//     imgToggler.addEventListener("mouseout", ToggleImgOff, false);
+ 
+     contentToggler.addEventListener("mouseclick", ToggleContentOn, false);
+     imgToggler.addEventListener("mouseclick", ToggleContentOff, false);
 
-//     function ToggleImgOn()
-//     {
-//     img1.style.display = ("block");
-//     }
-//     function ToggleImgOff()
-//     {
-//     img1.style.display = ("none");
-//     };
+     function ToggleImgOn()
+     {
+     img1.style.display = ("block");
+     }
+     function ToggleImgOff()
+     {
+     img1.style.display = ("none");
+     };
 
+     document.addEventListener('DOMContentLoaded', init);
 
-// const button = document.querySelector("a");
+     function init(){
+      let query = window.matchMedia("(min-width:600px)");
+      
+      if (query.matches){
+        myFunction();
+      } else {
 
-// button.addEventListener("click", updateButton);
-
-/*
-const imgTogglerParent = document.querySelector("#imgTogglerParent");
-imgTogglerParent.addEventListener("mouseover", selectToggler, false);
-
-function selectToggler(e) {
-  if (e.target !== e.currentTarget) {
-    const clickedItem = e.target.id;
-    alert
-  }
-  e.stopPropagation();
-};
-
-function ToggleImgOn(e) {
-  if (clickedItem == ("#togglerMeme")) {
-  img1.style.display = ("block");
-  }
-};*/
-
+      }
+    }
+    
+    function myFunction() {
+      var x = document.getElementById("mobile-d-content");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+    
 
 function contentToggler(project_id) {
   var y = document.getElementById("img"+project_id);
@@ -46,6 +45,7 @@ function contentToggler(project_id) {
     y.style.display = "none";
   }
 };
+
 function contentHide(project_id) {
   var y = document.getElementById("img"+project_id);
   if (x.style.display === "none") {

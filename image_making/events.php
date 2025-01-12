@@ -96,7 +96,7 @@ foreach ($project_images as $row) {
 if ($row["project_id"] == $content_row["id"]){
 echo '<div id="" class="h-100"><img src="/images/',
     $row["file_name"],
-    '" class="border-bottom border-end border-3 img-fluid" style="" alt="..."><figcaption class="figure-caption"> ',
+    '" class="img-styles img-fluid" alt="..."><figcaption class="figure-caption"> ',
     $row["image_title_$language"],
     '<br>',
     $row["date"],

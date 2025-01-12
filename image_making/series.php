@@ -40,13 +40,13 @@ $stmt = null;
 
             <div class="col-md-3 d-flex flex-column border-top border-end border-bottom" style="height: 90vh;">
                <div class="container-fluid flex-grow-1 p-0">
-                    <h6 class="text-center text-uppercase text-primary"><?php
-                        echo "<div>";
+                    <div class="text-center text-uppercase text-primary"><?php
+                        echo "<h6>";
                         foreach ($content as $row){
                                 echo $row["title_$language"];
                         }
-                        echo "</div>";
-                        ?></h6>
+                        echo "</h6>";
+                        ?></div>
                     <div class="container-fluid"></div>
                     <p class="text-primary">
                     <?php
@@ -79,7 +79,7 @@ echo '<div id="" class="h-100"> <img src="/images/';
 
     echo $row["file_name"];
 
-echo '" class="border-bottom border-end border-3 img-fluid" style="" alt="..."><figcaption class="figure-caption"> ';
+echo '" class="img_styles img-fluid" style="" alt="..."><figcaption class="figure-caption"> ';
 
     echo $row["image_title_$language"];
 

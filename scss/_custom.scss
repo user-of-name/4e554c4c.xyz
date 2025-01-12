@@ -49,5 +49,14 @@ $table-cell-padding-y:        .05rem;
 $table-cell-padding-x:        .05rem;
 $table-bg:                    none;
 
+//carousel
+$carousel-control-color:             $dark;
+$carousel-control-width:             50%;
+$carousel-control-opacity:           1;
+$carousel-control-hover-opacity:     1;
+
+$carousel-caption-width:             70%;
+$carousel-transition-duration:       0s;
+
 @import "../node_modules/bootstrap/scss/bootstrap";
 

@@ -1,1 +1,41 @@
 @use '../custom' as *;
+
+.control-arrows{
+    background-color: $dark;
+    color: $primary;
+    width: auto;
+    height: 1em;
+    display: block;
+    position: relative;
+    margin-inline: .3em;
+    &:hover{
+        color: $dark;
+        background-color: $primary;
+    }
+}
+
+.contact-close-btn{
+    text-decoration: none;
+    color: $dark;
+    &:hover{
+        color: $primary;
+        background-color: $dark;
+    }
+}
+
+.contact-link{
+    text-decoration: none;
+    color: $dark;
+    &:hover{
+        color: $primary;
+        background-color: $dark;
+    }
+}
+
+.close-btn{
+    text-decoration: none;
+    &:hover{
+        color: $dark;
+        background-color: $primary;
+    }
+}

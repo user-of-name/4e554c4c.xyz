@@ -6,15 +6,15 @@
                 
                 ?></a>
             </li>
-            <li>
-                <button id="langSwitcher" 
-                <?php if ($language == 'en') { echo ' class="nav-link border-0 p-0 active"';} else { echo 'class="nav-link border-0 p-0"';}?> aria-current="page" value="en" onclick="window.location = '<?php echo $_SERVER['PHP_SELF'] ?>?lang=en'">EN</button>
+            <li class="li_styles">
+                <button  id="langSwitcher" 
+                <?php if ($language == 'en') { echo ' class="nav-link active"';} else { echo 'class="nav-link"';}?> aria-current="page" value="en" onclick="window.location = '<?php echo $_SERVER['PHP_SELF'] ?>?lang=en'">EN</button>
             </li>
             <li>
-                <a class="nav-link border-0 p-0 active"> / </a>
+                <a class="nav-link active"> / </a>
             </li>
-            <li>
-                <button id="langSwitcher" <?php if ($language == 'lv') { echo ' class="nav-link border-0 p-0 active"';} else { echo 'class="nav-link border-0 p-0"';}?> value="lv" onclick="window.location = '<?php echo $_SERVER['PHP_SELF'] ?>?lang=lv'">LV</button>
+            <li class="li_styles">
+                <button id="langSwitcher" <?php if ($language == 'lv') { echo ' class="nav-link active"';} else { echo 'class="nav-link"';}?> value="lv" onclick="window.location = '<?php echo $_SERVER['PHP_SELF'] ?>?lang=lv'">LV</button>
             </li>
 
         </ul>
@@ -118,8 +118,8 @@
         <!-- contact modal -->
         <div class="modal" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content border-black border-end border-bottom border-2">
-            <h6 class="text-center">*** CONTACT ***</h6>
+          <div class="modal-content">
+            <h6 class="text-center">CONTACT</h6>
             <div class="modal-body">
                 <table class="table m-1">
                     <tbody>
@@ -128,11 +128,11 @@
                     </tr>
                       <tr>
                         <td>e-mail</td>
-                        <td><a class="link-dark" href="">> belte.francis@gmail.com</a></td>
+                        <td><a class="contact-link" href="">> belte.francis@gmail.com</a></td>
                       </tr>
                       <tr>
                         <td>insta</td>
-                        <td><a class="link-dark" href="">> @4e_55_4c_4c</a></td>
+                        <td><a class="contact-link" href="">> @4e_55_4c_4c</a></td>
                       </tr>
                       <tr>
                         <td>&nbsp;</td>
@@ -141,13 +141,13 @@
                         <td colspan="1">Collective works and contacts:</td>
                       </tr>
                       <tr>
-                        <td colspan="1"><a class="text-dark" href="">> unitedfriedfront.xyz</a></td>
+                        <td colspan="1"><a class="contact-link" href="">> unitedfriedfront.xyz</a></td>
                       </tr>
                     </tbody>
                   </table>
             </div>
             <div class="modal-footer">
-              <a type="button" class="text-dark" data-bs-dismiss="modal">[ close ]</a>
+              <a type="button" class="contact-close-btn" data-bs-dismiss="modal">[ close ]</a>
             </div>
           </div>
         </div>
