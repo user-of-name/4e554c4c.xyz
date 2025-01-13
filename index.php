@@ -61,7 +61,7 @@ $stmt = null;
     <div class="container-fluid">
         <div class="row">
              <!-- shuffled classes and added custom mobile classes around so they properly show mobile version -->
-            <div class="col-lg-3 col-md-6 mobile-d border-top border-end border-bottom overflow-y-auto" style="max-height: 90vh;">
+            <div class="col-lg-4 col-md-6 mobile-d border-top border-end border-bottom overflow-y-auto" style="max-height: 90vh;">
                <div id="mobileD" onclick="myFunction()" class="container-fluid">
                    <div class="text-center text-uppercase text-primary">
                         <?php
@@ -85,7 +85,7 @@ $stmt = null;
                 </div>
             </div>
 
-            <div class="col-lg-9 col-md-6 order-first order-md-last border-top border-start border-bottom overflow-y-auto p-2" style="max-height: 90vh;">
+            <div class="col-lg-8 col-md-6 order-first order-md-last border-top border-start border-bottom overflow-y-auto p-2" style="max-height: 90vh;">
                 <!-- <div class="row">                 -->
                 <?php
                 

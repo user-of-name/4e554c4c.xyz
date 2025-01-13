@@ -19,6 +19,12 @@ $stmt = $pdo->prepare(query:$query_project_images);
 $stmt->execute();
 $project_images = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+//collaborators
+$query_project_collaborators = "SELECT roles.role_en,roles.role_lv,collaborators.artist_name,collaborators.link FROM collaborators LEFT JOIN roles ON roles.collaborator = collaborators.collaborator_id WHERE roles.project = 5;";
+$stmt = $pdo->prepare(query:$query_project_collaborators);
+$stmt->execute();
+$project_collaborators = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
 $pdo = null;
 $stmt = null;
 ?>
@@ -61,6 +67,7 @@ $stmt = null;
                         ?>
                         </p>
                 </div>
+                <?php include "../includes/contributors_link.php"; ?>
             </div>
 
             <div class="col-lg-9 col-md-6 border-top border-start border-bottom overflow-y-auto" style="max-height: 90vh;">

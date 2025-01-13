@@ -5,7 +5,7 @@
 // To Get the Current Filename. 
 $currentPage= $_SERVER['SCRIPT_NAME'];
 //groups
-$query_groups = "SELECT * FROM project_groups";
+$query_groups = "SELECT * FROM project_groups WHERE Display = 1";
 $stmt = $pdo->prepare(query:$query_groups);
 $stmt->execute();
 $project_groups = $stmt->fetchAll(PDO::FETCH_ASSOC);

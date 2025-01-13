@@ -1,10 +1,7 @@
 <nav class="pb-2 bg-black navbar-expand-md nav-fill border-bottom sticky-top">
         <ul class="nav nav-tabs">
         <li class="nav-link flex-start flex-grow-1 border-1 ps-1 active" aria-current="page" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <a>4e554e4c.xyz<?php
-                echo $currentPage;  
-                
-                ?></a>
+                <a>4e554e4c.xyz<?php echo $currentPage;?></a>
             </li>
             <li class="li_styles">
                 <button  id="langSwitcher" 
