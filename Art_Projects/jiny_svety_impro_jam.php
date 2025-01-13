@@ -63,82 +63,21 @@ $stmt = null;
                 </div>
             </div>
 
-            <div class="col-md-6 border-top border-start border-bottom overflow-y-auto" style="max-height: 90vh;">
+            <div class="col-lg-9 col-md-6 border-top border-start border-bottom overflow-y-auto" style="max-height: 90vh;">
                 <div class="row d-flex overflow-y-auto p-2">  
                     <!-- added bootstrap attributes to trigger modal -->
                     <!-- data-bs-slide-to="0" handles on which slide carousel opens, currently not working as it needs to be attached to specific trigger -->             
-                <?php 
-
-foreach ($project_images as $row) {
-
-    echo '<div id="" class="h-100"> <img src="../images-small/',
-    $row["file_name"],
-    '" class="img_styles img-fluid" style="" alt="Thumbnail 1" data-bs-toggle="modal" data-bs-target="#carouselModal" data-bs-slide-to="0" alt="..."><figcaption class="figure-caption"> ',
-    $row["image_title_$language"],
-    '<br>',
-    $row["date"],
-    '<br>',
-    $row["location"],
-    '</figcaption></div>';
-
-}
-
- ?>
+                <?php include "../includes/get_project_images.php";?>
                 </div>
             </div>            
         </div>
             </div>
         </div>
     </div>
-
-<!-- language junk -->
-
-
 <!-- modal trial -->
 <!-- Modal -->
-<div class="modal" id="carouselModal" tabindex="-1" aria-labelledby="carouselModalLabel" aria-hidden="true">
-<div class="modal-dialog modal-dialog-centered modal-fullscreen p-md-5">
-<div class="modal-content modal-carousel">
-<div class="modal-body">
-  <!-- Carousel -->
-    <!-- Could database handle fetching right image?? 
-        also, would it make sense to have modal in a separate file like nav bar?
-    -->
-  <div id="imageCarousel" class="carousel slide" data-bs-ride="false" data-bs-touch="true">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="../images/Jiny-Svety-6627.jpg" class="d-block img-fluid" alt="Image 1">
-      </div>
-      <div class="carousel-item">
-        <img src="/images/adriana_towers.jpg" class="d-block img-fluid" alt="Image 2">
-      </div>
-      <div class="carousel-item">
-        <img src="/images/At the projector copy.jpg" class="d-block img-fluid" alt="Image 3">
-      </div>
-    </div>
-    <!-- Controls -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
-    </button>
-  </div>
-</div>
-
-<div class="modal-footer d-flex justify-content-between">
-    <div class="d-flex justify-content-start">
-    <button class="carousel-control-prev control-arrows" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
-    [ <-- ]
-    </button>
-    <button class="carousel-control-next control-arrows" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
-    [ --> ]
-    </button>
-    </div>
-      <a type="button" class="close-btn" data-bs-dismiss="modal">[ close ]</a>
-    </div>
-</div>
-</div>
-</div>
-
+<?php include "../includes/image_carousel_modal.php"; ?>
+<!-- language junk -->
 <?php include "../includes/lang-script.php"; ?>
 
 </body>

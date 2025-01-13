@@ -64,30 +64,15 @@ $stmt = null;
 
             <div class="col-md-6 border-top border-start border-bottom overflow-y-auto" style="max-height: 90vh;">
                 <div class="row d-flex overflow-y-auto p-2">                
-                <?php
-
-foreach ($project_images as $row) {
-
-    echo '<div id="" class="h-100"> <img src="../images-small/',
-    $row["file_name"],
-    '" class="img_styles img-fluid" style="" alt="..."><figcaption class="figure-caption"> ',
-    $row["image_title_$language"],
-    '<br>',
-    $row["date"],
-    '<br>',
-    $row["location"],
-    '</figcaption></div>';
-
-}
-
- ?>
+                <?php include "../includes/get_project_images.php";?>
                 </div>
             </div>            
         </div>
             </div>
         </div>
     </div>
-
+<!-- Modal -->
+<?php include "../includes/image_carousel_modal.php"; ?>
 <!-- language junk -->
 <?php include "../includes/lang-script.php"; ?>
 </body>

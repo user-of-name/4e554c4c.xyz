@@ -69,23 +69,7 @@ $stmt = null;
                     <script src="https://player.vimeo.com/api/player.js"></script>   
 <!-- images start here -->
 
-                    <?php
-
-foreach ($project_images as $row) {
-
-    echo '<div id="" class="h-100"> <img src="../images-small/',
-    $row["file_name"],
-    '" class="img_styles img-fluid" style="" alt="..."><figcaption class="figure-caption"> ',
-    $row["image_title_$language"],
-    '<br>',
-    $row["date"],
-    '<br>',
-    $row["location"],
-    '</figcaption></div>';
-
-}
-
- ?>
+<?php include "../includes/get_project_images.php";?>
 
                     <div class="m-5">
 
@@ -95,9 +79,9 @@ foreach ($project_images as $row) {
             </div>            
         </div>
     </div>
-
+<!-- Modal -->
+<?php include "../includes/image_carousel_modal.php"; ?>
     <!-- language junk -->
-
     <?php include "../includes/lang-script.php"; ?>
 </body>
 </html>
