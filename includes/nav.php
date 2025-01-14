@@ -116,35 +116,35 @@
         <div class="modal" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
-            <h6 class="text-center">CONTACT</h6>
+            <h6 class="text-center"><?php echo $misc["0"]["element_$language"]; ?></h6>
             <div class="modal-body">
                 <table class="table m-1">
                     <tbody>
                     <tr>
-                        <td colspan="2">Contact me here sample text idk:</td>
+                        <td colspan="2"><?php echo $misc["1"]["element_$language"]; ?>:</td>
                     </tr>
                       <tr>
-                        <td>e-mail</td>
+                        <td><?php echo $misc["2"]["element_$language"]; ?></td>
                         <td><a class="contact-link" href="">> belte.francis@gmail.com</a></td>
                       </tr>
                       <tr>
-                        <td>insta</td>
+                        <td><?php echo $misc["3"]["element_$language"]; ?></td>
                         <td><a class="contact-link" href="">> @4e_55_4c_4c</a></td>
                       </tr>
-                      <tr>
+                      <!-- <tr>
                         <td>&nbsp;</td>
                       </tr>
                       <tr>
                         <td colspan="1">Collective works and contacts:</td>
                       </tr>
                       <tr>
-                        <td colspan="1"><a class="contact-link" href="">> unitedfriedfront.xyz</a></td>
-                      </tr>
+                        <td colspan="1"><a class="contact-link" href="https://unitedfriedfront.xyz">> unitedfriedfront.xyz</a></td>
+                      </tr> -->
                     </tbody>
                   </table>
             </div>
             <div class="modal-footer">
-              <a type="button" class="contact-close-btn" data-bs-dismiss="modal">[ close ]</a>
+              <a type="button" class="contact-close-btn" data-bs-dismiss="modal">[ <?php echo $misc["4"]["element_$language"]; ?> ]</a>
             </div>
           </div>
         </div>

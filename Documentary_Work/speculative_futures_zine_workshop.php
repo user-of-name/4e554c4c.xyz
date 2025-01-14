@@ -1,32 +1,15 @@
 <!-- db query stuff -->
 
 <?php
-
+//language stuff
 include "../includes/lang-top.php";
 //references the connection file
 require_once "../includes/dbh.inc.php";
+//navigation database
 include "../includes/db_nav.php";
-
-// content
-$query_content = "SELECT * FROM content WHERE id = 9;";
-$stmt = $pdo->prepare(query:$query_content);
-$stmt->execute();
-$content = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-// images
-$query_project_images = "SELECT * FROM images WHERE project_id = 9 ORDER BY Display_order;";
-$stmt = $pdo->prepare(query:$query_project_images);
-$stmt->execute();
-$project_images = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-//collaborators
-$query_project_collaborators = "SELECT roles.role_en,roles.role_lv,collaborators.artist_name,collaborators.link FROM collaborators LEFT JOIN roles ON roles.collaborator = collaborators.collaborator_id WHERE roles.project = 9;";
-$stmt = $pdo->prepare(query:$query_project_collaborators);
-$stmt->execute();
-$project_collaborators = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-$pdo = null;
-$stmt = null;
+//project id and content
+$project_id = 9;
+include "../includes/content_db.php";
 ?>
 
 <!-- html begins -->
@@ -47,21 +30,13 @@ $stmt = null;
             <div class="col-md-4 d-flex flex-column border-top border-end border-bottom" style="height: 90vh;">
                <div class="container-fluid flex-grow-1 p-0">
                    <div class="text-center text-uppercase text-primary">
-                        <?php
-                        echo "<h6>";
-                        foreach ($content as $row){
-                                echo $row["title_$language"];
-                        }
-                        echo "</h6>";
-                        ?>
+                    <h6>
+                   <?php echo $content["0"]["title_$language"]; ?>
+                    </h6>
                     </div>
                     <div class="container-fluid"></div>
                     <p class="text-primary">
-                    <?php
-                        foreach ($content as $row){
-                                echo $row["descr_$language"];
-                        }
-                        ?>
+                    <?php echo $content["0"]["descr_$language"]; ?>
                         </p>
                 </div>
                 <?php include "../includes/contributors_link.php"; ?>

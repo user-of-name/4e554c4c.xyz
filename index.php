@@ -64,22 +64,14 @@ $stmt = null;
             <div class="col-lg-4 col-md-6 mobile-d border-top border-end border-bottom overflow-y-auto" style="max-height: 90vh;">
                <div id="mobileD" onclick="myFunction()" class="container-fluid">
                    <div class="text-center text-uppercase text-primary">
-                        <?php
-                        echo "<h6>";
-                        foreach ($content as $row){
-                                echo $row["title_$language"];
-                        }
-                        echo "</h6>";
-                        ?>
+                        <h6>
+                        <?php echo $content["0"]["title_$language"]; ?>
+                        </h6>
                     </div>
 
                     <div id="mobile-d-content" class="container-fluid">
                         <p class="text-primary">
-                        <?php
-                            foreach ($content as $row){
-                                    echo $row["descr_$language"];
-                            }
-                            ?>
+                        <?php echo $content["0"]["descr_$language"]; ?>
                         </p>
                     </div>
                 </div>
@@ -98,7 +90,7 @@ $stmt = null;
                 $row["project_file_name"],
                 '"> <img src="../images-small/',
                 $row["file_name"],
-                '" class="img_styles img-fluid" style="" alt="..."></a><figcaption class="figure-caption"> ',
+                '" class="img_styles img-fluid w-100" style="" alt="..."></a><figcaption class="figure-caption"> ',
                 '<br>',
                 $row["date"],
                 '<br>',

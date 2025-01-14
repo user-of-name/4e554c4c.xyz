@@ -2,7 +2,7 @@
 
 <script>
 $(document).ready(function() {
-    $("#langSwitcher").val('<?php echo $_GET['lang'] ?>');
+    $("#langSwitcher").val('<?php echo $_GET["lang"] ?>');
     // $("#langSwitcher").on('change', function () {
     //     window.location = '<?php //echo $_SERVER['PHP_SELF'] ?>?lang=' + $(this).val();
     //  });

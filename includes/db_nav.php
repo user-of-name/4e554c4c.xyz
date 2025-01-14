@@ -19,11 +19,14 @@ $query_menu_documentary_projects = "SELECT title_en, title_lv, project_file_name
 $stmt = $pdo->prepare(query:$query_menu_documentary_projects);
 $stmt->execute();
 $menu_documentary_projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
 //image making titles
 $query_menu_image_making = "SELECT title_en, title_lv, group_file_name FROM image_making;";
 $stmt = $pdo->prepare(query:$query_menu_image_making);
 $stmt->execute();
 $menu_image_making = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
+//image making titles
+$query_misc = "SELECT * FROM misc_elements;";
+$stmt = $pdo->prepare(query:$query_misc);
+$stmt->execute();
+$misc = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>

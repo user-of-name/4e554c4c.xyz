@@ -2,17 +2,17 @@
  const mobileIndexContent = document.getElementById('indexContent');
 
  
-     contentToggler.addEventListener("mouseclick", ToggleContentOn, false);
-     imgToggler.addEventListener("mouseclick", ToggleContentOff, false);
+    //  contentToggler.addEventListener("mouseclick", ToggleContentOn, false);
+    //  imgToggler.addEventListener("mouseclick", ToggleContentOff, false);
 
-     function ToggleImgOn()
-     {
-     img1.style.display = ("block");
-     }
-     function ToggleImgOff()
-     {
-     img1.style.display = ("none");
-     };
+    //  function ToggleImgOn()
+    //  {
+    //  img1.style.display = ("block");
+    //  }
+    //  function ToggleImgOff()
+    //  {
+    //  img1.style.display = ("none");
+    //  };
 
      document.addEventListener('DOMContentLoaded', init);
 

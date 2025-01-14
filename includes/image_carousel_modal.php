@@ -9,15 +9,15 @@
   <div id="imageCarousel" class="carousel slide" data-bs-ride="false" data-bs-touch="true">
     <div class="carousel-inner">
       <?php
-      $img_nr = 1;
+      $img_nr = 0;
       foreach ($project_images as $row) {
         echo '<div class="carousel-item';
-        if ($img_nr == 1) {
+        if ($img_nr ==0) {
           echo ' active';
         }; 
-        echo '"><img src="../images-small/',
+        echo '"><img src="../images/',
         $row["file_name"],
-        '" class="d-block img-fluid" alt="Image ',
+        '" class="d-block img-fluid" alt="Image',
         $img_nr,
         '"></div>';
         $img_nr++;
@@ -37,7 +37,7 @@
     <button class="carousel-control-prev control-arrows" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">[ <-- ]</button>
     <button class="carousel-control-next control-arrows" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">[ --> ]</button>
     </div>
-      <a type="button" class="close-btn" data-bs-dismiss="modal">[ close ]</a>
+      <a type="button" class="close-btn" data-bs-dismiss="modal">[ <?php echo $misc["4"]["element_$language"]; ?> ]</a>
     </div>
 </div>
 </div>

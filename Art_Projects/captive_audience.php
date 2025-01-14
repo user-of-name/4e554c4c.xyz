@@ -1,27 +1,15 @@
 <!-- db query stuff -->
 
 <?php
-
+//language stuff
 include "../includes/lang-top.php";
 //references the connection file
 require_once "../includes/dbh.inc.php";
+//navigation database
 include "../includes/db_nav.php";
-
-// content
-$query_content = "SELECT * FROM content WHERE id = 2;";
-$stmt = $pdo->prepare(query:$query_content);
-$stmt->execute();
-$content = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-// images
-$query_project_images = "SELECT * FROM images WHERE project_id = 2 ORDER BY Display_order;";
-$stmt = $pdo->prepare(query:$query_project_images);
-$stmt->execute();
-$project_images = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-
-$pdo = null;
-$stmt = null;
+//project id and content
+$project_id = 2;
+include "../includes/content_db.php";
 ?>
 
 <!-- html begins -->
@@ -42,22 +30,12 @@ $stmt = null;
             <div class="col-md-6 border-top border-end border-bottom overflow-y-auto" style="max-height: 90vh;">
                <div class="container-fluid">
                    <h6 class="text-center text-uppercase text-primary">
-                        <?php
-                        foreach ($content as $row){
-                                echo $row["title_$language"];
-                        }
-                        ?>
+                        <?php echo $content["0"]["title_$language"]; ?>
                     </h6>
                     <div class="container-fluid"></div>
                     <p class="text-primary">
-                    <?php
-                        // echo "<div>";
-                        foreach ($content as $row){
-                                echo $row["descr_$language"];
-                        }
-                        // echo "</div>";
-                        ?>
-                        </p>
+                    <?php echo $content["0"]["descr_$language"]; ?>
+                    </p>
                 </div>
             </div>
 

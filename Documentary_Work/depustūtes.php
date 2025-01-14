@@ -1,26 +1,15 @@
 <!-- db query stuff -->
 
 <?php
-
+//language stuff
 include "../includes/lang-top.php";
 //references the connection file
 require_once "../includes/dbh.inc.php";
+//navigation database
 include "../includes/db_nav.php";
-
-// content
-$query_content = "SELECT * FROM content WHERE id = 10;";
-$stmt = $pdo->prepare(query:$query_content);
-$stmt->execute();
-$content = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-// images
-$query_project_images = "SELECT * FROM images WHERE project_id = 10 ORDER BY Display_order;";
-$stmt = $pdo->prepare(query:$query_project_images);
-$stmt->execute();
-$project_images = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-$pdo = null;
-$stmt = null;
+//project id and content
+$project_id = 10;
+include "../includes/content_db.php";
 ?>
 
 <!-- html begins -->

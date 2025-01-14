@@ -62,73 +62,7 @@ $stmt = null;
         <div>
             <?php
 
-foreach ($art_project1 as $row) {
-
-echo '<h6 class="text-center text-uppercase text-primary"><br>';
-    echo $row["title_$language"];
-echo '<br></h6><div id="" class="h-100"><a href="/';
-    echo $row["project_file_name"];
-echo '"> <img src="../images/';
-    echo $row["file_name"];
-echo '" class="border-bottom border-end border-3 img-fluid" style="" alt="..."></a><figcaption class="figure-caption"> ';
-echo '<br>';
-    echo $row["date"];
-echo '<br>';
-    echo $row["location"];
-echo '</figcaption></div>';
-
-}
-
-
-foreach ($documentary_project1 as $row) {
-
-    echo '<h6 class="text-center text-uppercase text-primary"><br>';
-    echo $row["title_$language"];
-echo '<br></h6><div id="" class="h-100"><a href="/';
-    echo $row["project_file_name"];
-echo '"> <img src="../images/';
-    echo $row["file_name"];
-echo '" class="border-bottom border-end border-3 img-fluid" style="" alt="..."></a><figcaption class="figure-caption"> ';
-echo '<br>';
-    echo $row["date"];
-echo '<br>';
-    echo $row["location"];
-echo '</figcaption></div>';
-
-    }
-    foreach ($art_project2 as $row) {
-
-        echo '<h6 class="text-center text-uppercase text-primary"><br>';
-            echo $row["title_$language"];
-        echo '<br></h6><div id="" class="h-100"><a href="/';
-            echo $row["project_file_name"];
-        echo '"> <img src="../images/';
-            echo $row["file_name"];
-        echo '" class="border-bottom border-end border-3 img-fluid" style="" alt="..."></a><figcaption class="figure-caption"> ';
-        echo '<br>';
-            echo $row["date"];
-        echo '<br>';
-            echo $row["location"];
-        echo '</figcaption></div>';
-        
-        }
-
-        foreach ($documentary_project2 as $row) {
-
-            echo '<h6 class="text-center text-uppercase text-primary"><br>';
-            echo $row["title_$language"];
-        echo '<br></h6><div id="" class="h-100"><a href="/';
-            echo $row["project_file_name"];
-        echo '"> <img src="../images/';
-            echo $row["file_name"];
-        echo '" class="border-bottom border-end border-3 img-fluid" style="" alt="..."></a><figcaption class="figure-caption"> ';
-        echo '<br>';
-            echo $row["date"];
-        echo '<br>';
-            echo $row["location"];
-        echo '</figcaption></div>';
-        
-            }
+echo $art_project1["0"]["title_$language"];
  ?>
           
         </div>
