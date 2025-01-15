@@ -59,6 +59,5 @@ include "../includes/content_db.php";
 <?php include "../includes/image_carousel_modal.php"; ?>
 <!-- language junk -->
 <?php include "../includes/lang-script.php"; ?>
-<?php include "../includes/meta_descr.php"; ?>
 </body>
 </html>

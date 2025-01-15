@@ -1,0 +1,212 @@
+[
+  {
+    "role_id": 5,
+    "collaborator": 1,
+    "project": 8,
+    "role_en": "director, animator",
+    "role_lv": "režisors, animators"
+  },
+  {
+    "role_id": 6,
+    "collaborator": 2,
+    "project": 8,
+    "role_en": "choreographer, dancer",
+    "role_lv": "horeogrāfe, dejotāja"
+  },
+  {
+    "role_id": 7,
+    "collaborator": 3,
+    "project": 9,
+    "role_en": "zine workshop host",
+    "role_lv": "role_lv:varchar"
+  },
+  {
+    "role_id": 8,
+    "collaborator": 4,
+    "project": 9,
+    "role_en": "foraging workshop host",
+    "role_lv": "role_lv:varchar"
+  },
+  {
+    "role_id": 9,
+    "collaborator": 5,
+    "project": 6,
+    "role_en": "collective",
+    "role_lv": "role_lv:varchar"
+  },
+  {
+    "role_id": 10,
+    "collaborator": 6,
+    "project": 6,
+    "role_en": "initiator, director, editor",
+    "role_lv": "role_lv:varchar"
+  },
+  {
+    "role_id": 11,
+    "collaborator": 2,
+    "project": 5,
+    "role_en": "founder, curator, organizer, social media",
+    "role_lv": "role_lv:varchar"
+  },
+  {
+    "role_id": 12,
+    "collaborator": 7,
+    "project": 5,
+    "role_en": "producer, organizer, curator",
+    "role_lv": "role_lv:varchar"
+  },
+  {
+    "role_id": 13,
+    "collaborator": 1,
+    "project": 5,
+    "role_en": "editor, performer",
+    "role_lv": "role_lv:varchar"
+  },
+  {
+    "role_id": 14,
+    "collaborator": 5,
+    "project": 7,
+    "role_en": "collective",
+    "role_lv": "kolektīvs"
+  },
+  {
+    "role_id": 15,
+    "collaborator": 3,
+    "project": 11,
+    "role_en": "image making, research",
+    "role_lv": ""
+  },
+  {
+    "role_id": 16,
+    "collaborator": 8,
+    "project": 11,
+    "role_en": "costume design, research",
+    "role_lv": ""
+  },
+  {
+    "role_id": 17,
+    "collaborator": 2,
+    "project": 11,
+    "role_en": "model",
+    "role_lv": ""
+  },
+  {
+    "role_id": 18,
+    "collaborator": 9,
+    "project": 11,
+    "role_en": "model",
+    "role_lv": ""
+  },
+  {
+    "role_id": 19,
+    "collaborator": 10,
+    "project": 11,
+    "role_en": "model",
+    "role_lv": ""
+  },
+{
+  "role_id": 20,
+  "collaborator": 8,
+  "project": 6,
+  "role_en": "actor, costume design coordinator",
+  "role_lv": ""
+},
+{
+  "role_id": 21,
+  "collaborator": 12,
+  "project": 6,
+  "role_en": "balaclava ornaments",
+  "role_lv": ""
+},
+{
+  "role_id": 22,
+  "collaborator": 13,
+  "project": 6,
+  "role_en": "actor",
+  "role_lv": ""
+},
+{
+  "role_id": 23,
+  "collaborator": 14,
+  "project": 6,
+  "role_en": "actor",
+  "role_lv": ""
+},
+{
+  "role_id": 24,
+  "collaborator": 15,
+  "project": 6,
+  "role_en": "protester",
+  "role_lv": ""
+},
+{
+  "role_id": 25,
+  "collaborator": 16,
+  "project": 6,
+  "role_en": "protester",
+  "role_lv": ""
+},
+{
+  "role_id": 26,
+  "collaborator": 17,
+  "project": 6,
+  "role_en": "vision creature voice",
+  "role_lv": ""
+},
+{
+  "role_id": 27,
+  "collaborator": 18,
+  "project": 6,
+  "role_en": "solidarity candy giver and dj",
+  "role_lv": ""
+},
+{
+  "role_id": 28,
+  "collaborator": 19,
+  "project": 6,
+  "role_en": "live music",
+  "role_lv": ""
+},
+{
+  "role_id": 29,
+  "collaborator": 20,
+  "project": 6,
+  "role_en": "music",
+  "role_lv": ""
+},
+{
+  "role_id": 30,
+  "collaborator": 21,
+  "project": 6,
+  "role_en": "music",
+  "role_lv": ""
+},
+{
+  "role_id": 31,
+  "collaborator": 5,
+  "project": 6,
+  "role_en": "collective",
+  "role_lv": ""
+},
+{
+  "role_id": 32,
+  "collaborator": 11,
+  "project": 6,
+  "role_en": "anonymous activity",
+  "role_lv": ""
+},
+{
+  "role_id": 33,
+  "collaborator": 22,
+  "project": 6,
+  "role_en": "removed",
+  "role_lv": ""
+},
+{
+  "role_id": 34,
+  "collaborator": 23,
+  "project": 6,
+  "role_en": "assistant camera day 1",
+  "role_lv": ""
+}
+]

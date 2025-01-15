@@ -1,0 +1,32 @@
+[
+  {
+    "element_id": 1,
+    "element_en": "contact",
+    "element_lv": "kontakti"
+  },
+  {
+    "element_id": 2,
+    "element_en": "contact me here",
+    "element_lv": "element_lv"
+  },
+  {
+    "element_id": 3,
+    "element_en": "e-mail",
+    "element_lv": "e-pasts"
+  },
+  {
+    "element_id": 4,
+    "element_en": "instagram",
+    "element_lv": "instagrams"
+  },
+  {
+    "element_id": 5,
+    "element_en": "close",
+    "element_lv": "aizvērt"
+  },
+  {
+    "element_id": 6,
+    "element_en": "contributors",
+    "element_lv": "element_lv"
+  }
+]

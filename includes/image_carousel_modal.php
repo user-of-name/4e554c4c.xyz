@@ -12,7 +12,7 @@
       $img_nr = 0;
       foreach ($project_images as $row) {
         echo '<div class="carousel-item';
-        if ($img_nr ==0) {
+        if ($img_nr == 0) {
           echo ' active';
         }; 
         echo '"><img src="../images/',

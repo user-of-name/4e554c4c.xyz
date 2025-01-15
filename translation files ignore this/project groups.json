@@ -1,0 +1,47 @@
+[
+  {
+    "group_id": 1,
+    "group_name_lv": "index",
+    "group_name_en": "index",
+    "group_file_name": "index.php",
+    "group_reference": null,
+    "href": "yes",
+    "Display": 1
+  },
+  {
+    "group_id": 2,
+    "group_name_lv": "Mākslas Projekti",
+    "group_name_en": "art_projects",
+    "group_file_name": "index.php",
+    "group_reference": "art-projects",
+    "href": "no",
+    "Display": 1
+  },
+  {
+    "group_id": 3,
+    "group_name_lv": "Dokumentālie Darbi",
+    "group_name_en": "documentary_work",
+    "group_file_name": "index.php",
+    "group_reference": "documentary-work",
+    "href": "no",
+    "Display": 1
+  },
+  {
+    "group_id": 4,
+    "group_name_lv": "Attēlu Veidošana",
+    "group_name_en": "image_making",
+    "group_file_name": "image_making.php",
+    "group_reference": "image-making",
+    "href": "no",
+    "Display": 0
+  },
+  {
+    "group_id": 5,
+    "group_name_lv": "Kontakts",
+    "group_name_en": "contact",
+    "group_file_name": "contact.php",
+    "group_reference": null,
+    "href": "no",
+    "Display": 1
+  }
+]

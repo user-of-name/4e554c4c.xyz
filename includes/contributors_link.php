@@ -1,5 +1,6 @@
 <div class="container-fluid ps-0 pb-3">
-  <div class="text-primary"><?php echo $misc["5"]["element_$language"]; ?>:<br></div>
+  <div class="text-primary" onclick="contributors_toggle()"><?php echo $misc["5"]["element_$language"]; ?>:<br></div>
+  <div id="contributorsList">
   <?php 
   foreach ($project_collaborators as $row){
     echo '<div class="text-primary">',
@@ -11,4 +12,5 @@
     '</a><br></div>';
   }
   ?>
+</div>
 </div>

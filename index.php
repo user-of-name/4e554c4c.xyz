@@ -16,7 +16,7 @@ $content = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $query_projects = "SELECT content.id,content.title_en,content.title_lv,content.project_file_name,images.img_id,images.file_name,images.project_id,images.date,images.location from content, images where content.id = 6 and images.img_id = 42 or content.id = 8 and images.img_id = 5 or content.id = 5 and images.img_id = 26 or content.id = 9 and images.img_id = 69;";
 $stmt = $pdo->prepare(query:$query_projects);
 $stmt->execute();
-$art_project1 = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$art_project = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 $pdo = null;
 $stmt = null;
@@ -62,9 +62,9 @@ $stmt = null;
         <div class="row">
              <!-- shuffled classes and added custom mobile classes around so they properly show mobile version -->
             <div class="col-lg-4 col-md-6 mobile-d border-top border-end border-bottom overflow-y-auto" style="max-height: 90vh;">
-               <div id="mobileD" onclick="myFunction()" class="container-fluid">
+               <div id="mobileD" class="container-fluid">
                    <div class="text-center text-uppercase text-primary">
-                        <h6>
+                        <h6 onclick="text_toggle()">
                         <?php echo $content["0"]["title_$language"]; ?>
                         </h6>
                     </div>
@@ -81,7 +81,7 @@ $stmt = null;
                 <!-- <div class="row">                 -->
                 <?php
                 
-                foreach ($art_project1 as $row) {
+                foreach ($art_project as $row) {
                 echo'<div class="row" id="img"',
                     $row["id"],
                     '"><div class="text-center text-uppercase text-primary"><br>',

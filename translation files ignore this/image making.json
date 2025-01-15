@@ -1,0 +1,20 @@
+[
+  {
+    "image_making_group_id": 1,
+    "title_en": "events",
+    "title_lv": "pasākumi",
+    "group_file_name": "image_making/events.php"
+  },
+  {
+    "image_making_group_id": 2,
+    "title_en": "experimental",
+    "title_lv": "eksperimentāli",
+    "group_file_name": "image_making/experimental.php"
+  },
+  {
+    "image_making_group_id": 3,
+    "title_en": "series",
+    "title_lv": "sērijas",
+    "group_file_name": "image_making/series.php"
+  }
+]
