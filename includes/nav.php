@@ -29,6 +29,8 @@
                   };
                   echo '" href="/',
                   $row["group_file_name"],
+                  '?lang=',
+                $language,
                   '">[  ',
                   $row["group_name_$language"],
                   '  ]</a>',
