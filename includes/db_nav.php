@@ -24,7 +24,7 @@ $query_menu_image_making = "SELECT title_en, title_lv, group_file_name FROM imag
 $stmt = $pdo->prepare(query:$query_menu_image_making);
 $stmt->execute();
 $menu_image_making = $stmt->fetchAll(PDO::FETCH_ASSOC);
-//image making titles
+//misc
 $query_misc = "SELECT * FROM misc_elements;";
 $stmt = $pdo->prepare(query:$query_misc);
 $stmt->execute();

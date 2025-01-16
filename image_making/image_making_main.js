@@ -17,7 +17,6 @@ function contentToggler(project_id) {
     y.style.display = "none";
   }
   var close = project_id;
-};
 function contentHide(project_id) {
   var x = document.getElementById("descr"+project_id);
   var y = document.getElementById("img"+project_id);

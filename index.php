@@ -13,7 +13,7 @@ $stmt = $pdo->prepare(query:$query_content);
 $stmt->execute();
 $content = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-$query_projects = "SELECT content.id,content.title_en,content.title_lv,content.project_file_name,images.img_id,images.file_name,images.project_id,images.date,images.location from content, images where content.id = 6 and images.img_id = 42 or content.id = 8 and images.img_id = 5 or content.id = 5 and images.img_id = 26 or content.id = 9 and images.img_id = 69;";
+$query_projects = "SELECT content.id,content.title_en,content.title_lv,content.project_file_name,project_images.img_id,project_images.file_name,project_images.project_id,project_images.date,project_images.location from content, project_images where content.id = 6 and project_images.img_id = 42 or content.id = 8 and project_images.img_id = 5 or content.id = 5 and project_images.img_id = 26 or content.id = 9 and project_images.img_id = 69;";
 $stmt = $pdo->prepare(query:$query_projects);
 $stmt->execute();
 $art_project = $stmt->fetchAll(PDO::FETCH_ASSOC);

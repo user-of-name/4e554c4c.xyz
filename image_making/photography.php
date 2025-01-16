@@ -8,13 +8,13 @@ require_once "../includes/dbh.inc.php";
 include "../includes/db_nav.php";
 
 // content
-$query_content = "SELECT * FROM image_making WHERE image_making_group_id = 2;";
+$query_content = "SELECT * FROM image_making WHERE image_making_group_id = 1;";
 $stmt = $pdo->prepare(query:$query_content);
 $stmt->execute();
 $content = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 // content
-$query_image_making_doc = "SELECT * FROM image_making_projects WHERE img_making_group = 2 ORDER BY year DESC;";
+$query_image_making_doc = "SELECT * FROM image_making_projects WHERE img_making_group = 1 ORDER BY year DESC;";
 $stmt = $pdo->prepare(query:$query_image_making_doc);
 $stmt->execute();
 $image_making_projects = $stmt->fetchAll(PDO::FETCH_ASSOC);

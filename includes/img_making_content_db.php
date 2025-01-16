@@ -1,12 +1,12 @@
 <?php
 // content
-$query_content = "SELECT * FROM content WHERE id = $project_id;";
+$query_content = "SELECT * FROM image_making_projects WHERE img_making_project_id = $project_id;";
 $stmt = $pdo->prepare(query:$query_content);
 $stmt->execute();
 $content = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 // images
-$query_project_images = "SELECT * FROM project_images WHERE project_id = $project_id ORDER BY Display_order;";
+$query_project_images = "SELECT * FROM img_making_images WHERE img_making_project_id = $project_id ORDER BY Display_order;";
 $stmt = $pdo->prepare(query:$query_project_images);
 $stmt->execute();
 $project_images = $stmt->fetchAll(PDO::FETCH_ASSOC);
