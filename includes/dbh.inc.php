@@ -1,6 +1,6 @@
 <?php
 
-$dsn = "mysql:host=webhost:3306;dbname=null_db";
+$dsn = "mysql:host=100.83.88.95:3306;dbname=null_db";
 $dbusername = "4e554c4c";
 $dbpassword = "X0tOC94R9qH8Ak1O14EEwFVhkTT";
 
