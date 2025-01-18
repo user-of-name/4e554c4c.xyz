@@ -78,6 +78,8 @@ $stmt = null;
                     foreach ($image_making_projects as $row){
                         echo '<a href="/',
                         $row["href"],
+                        '?lang=',
+                        $language,
                         '"><h6 class="text-center text-uppercase text-primary">',
                         $row["title_$language"],
                         '</h6>',

@@ -8,7 +8,7 @@ require_once "../../includes/dbh.inc.php";
 include "../../includes/db_nav.php";
 
 // images
-$query_project_images = "SELECT * FROM images WHERE project_id = 11 and img_id = 70 ORDER BY Display_order;";
+$query_project_images = "SELECT * FROM project_images WHERE project_id = 11 and img_id = 70 ORDER BY Display_order;";
 $stmt = $pdo->prepare(query:$query_project_images);
 $stmt->execute();
 $project_images = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -28,11 +28,7 @@ $stmt = null;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        <?php
-    foreach ($project_images as $row){
-        echo $row["image_title_$language"];
-        }
-    ?>
+    <?php echo $project_images["0"]["image_title_$language"];?>
     </title>
 
     <link rel="stylesheet" href="../../assets/css/style.css">
@@ -58,13 +54,7 @@ $stmt = null;
     <!--  main body of the page begins -->
 
                     <h6 class="text-center text-uppercase text-primary">
-                        <?php
-                        echo "<ls>";
-                        foreach ($project_images as $row){
-                                echo $row["image_title_$language"];
-                        }
-                        echo "</ls>";
-                        ?>
+                    <?php echo $project_images["0"]["image_title_$language"];?>
                     </h6>
 
 
