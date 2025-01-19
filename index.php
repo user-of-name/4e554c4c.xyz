@@ -88,7 +88,7 @@ $stmt = null;
                 $row["title_$language"],
                 '<br></div><div id="" class="h-100"><a href="/',
                 $row["project_file_name"],
-                '"> <img src="../images-small/',
+                '"> <img src="images/',
                 $row["file_name"],
                 '" class="img_styles img-fluid w-100" style="" alt="..."></a><figcaption class="figure-caption"> ',
                 '<br>',
@@ -111,3 +111,4 @@ $stmt = null;
 
 </body>
 </html>
+

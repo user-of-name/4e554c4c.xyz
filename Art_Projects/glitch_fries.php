@@ -72,7 +72,7 @@ foreach ($project_images as $row) {
 
     echo '<div id="" class="h-100"><a href="',
     $row["href"],
-    '"><img src="../images-small/',
+    '"><img src="../images/',
     $row["file_name"],
     '" class="img_styles img-fluid" style="" alt="..."></a><figcaption class="figure-caption"> ',
     $row["image_title_$language"],

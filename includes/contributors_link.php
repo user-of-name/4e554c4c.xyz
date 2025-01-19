@@ -1,8 +1,11 @@
-<div class="container-fluid ps-0 pb-3">
-  <div class="text-primary" onclick="contributors_toggle()"><?php echo $misc["5"]["element_$language"]; ?>:<br></div>
-  <div id="contributorsList">
-  <?php 
-  foreach ($project_collaborators as $row){
+<?php
+if (count($project_collaborators) > 0) {
+  echo '<div class="container-fluid ps-0 pb-3">
+  <div class="text-primary" onclick="contributors_toggle()">';
+  echo $misc["5"]["element_$language"];
+  echo ':<br></div>
+  <div id="contributorsList">';
+  foreach ($project_collaborators as $row) {
     echo '<div class="text-primary">',
     $row["role_$language"],
     ': <a href="',
@@ -11,6 +14,6 @@
     $row["artist_name"],
     '</a><br></div>';
   }
-  ?>
-</div>
-</div>
+  echo '</div>
+  </div>';
+}

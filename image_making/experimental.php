@@ -29,13 +29,7 @@ $stmt = null;
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <?php
-    foreach ($image_making_doc as $row){
-        echo $row["title_$language"];
-        }
-    ?>
-    </title>
+    <title><?php echo $content["0"]["title_$language"]; ?></title>
 
     <link rel="stylesheet" href="../assets/css/style.css">
 

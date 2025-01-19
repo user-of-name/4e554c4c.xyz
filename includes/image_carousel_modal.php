@@ -15,7 +15,7 @@
         if ($img_nr == 0) {
           echo ' active';
         }; 
-        echo '"><img src="../images/',
+        echo '"><img src="/images/',
         $row["file_name"],
         '" class="d-block img-fluid" alt="Image',
         $img_nr,
