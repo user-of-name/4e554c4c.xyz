@@ -14,7 +14,7 @@ $stmt->execute();
 $content = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 // content
-$query_image_making_doc = "SELECT * FROM image_making_projects WHERE img_making_group = 1 ORDER BY year DESC;";
+$query_image_making_doc = "SELECT * FROM image_making_projects WHERE img_making_group = 1 AND Displayed = 1  ORDER BY year DESC;";
 $stmt = $pdo->prepare(query:$query_image_making_doc);
 $stmt->execute();
 $image_making_projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
