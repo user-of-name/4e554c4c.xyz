@@ -23,8 +23,7 @@ include "../includes/content_db.php";
 <body class="p-2 bg-black">
     
 <?php include '../includes/nav.php'; ?>
-
-    <!--  main body of the page begins -->
+   <!--  main body of the page begins -->
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6 border-top border-end border-bottom overflow-y-auto" style="max-height: 90vh;">
@@ -43,7 +42,10 @@ include "../includes/content_db.php";
             </div>
 
             <div class="col-md-6 border-top border-start border-bottom overflow-y-auto" style="max-height: 90vh;">
-                <div class="row d-flex overflow-y-auto p-2">                
+                <div class="row d-flex overflow-y-auto p-2">   
+                <div class="border-bottom border-end border-3"><iframe style="width-100;" src="https://www.youtube.com/embed/6H08hUQybzI?si=nxte96I4r35eIyvQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <figcaption class="figure-caption"> rats_on_the_run.mp4 <br> Canon 80D<br>2024-05-19</figcaption>             
                 <?php include "../includes/get_project_images.php";?>
                 </div>
             </div>            
