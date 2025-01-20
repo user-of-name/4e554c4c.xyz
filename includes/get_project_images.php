@@ -3,7 +3,7 @@ $thumbnail_nr = 0;
 foreach ($project_images as $row) {
 
     echo '<div id="" class="h-100">
-    <img src="/images_small/',
+    <img src="/images/',
     $row["file_name"],
     '" class="img_styles img-fluid w-100" style="" alt="Thumbnail ',
     $thumbnail_nr,
