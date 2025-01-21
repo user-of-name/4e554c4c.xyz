@@ -1,3 +1,7 @@
+document.addEventListener('DOMContentLoaded', () => {
+  document.documentElement.style.setProperty('--vh', `${viewportHeight * 0.01}px`)
+})
+ 
  const mobileIndexToggler = document.getElementById("indexToggler");
  const mobileIndexContent = document.getElementById('indexContent');
 
