@@ -40,7 +40,8 @@ $modal-content-color:               $dark;
 $modal-content-bg:                  $primary;
 $modal-content-border-radius:       0;
 
-$modal-backdrop-opacity:            .0;
+$modal-backdrop-opacity:            1;
+$modal-backdrop-bg:                 $dark;
 $modal-header-border-color:         none;
 
 //table

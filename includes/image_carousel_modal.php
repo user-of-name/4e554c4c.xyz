@@ -1,5 +1,5 @@
 <div class="modal" id="carouselModal" tabindex="-1" aria-labelledby="carouselModalLabel" aria-hidden="true">
-<div class="modal-dialog modal-dialog-centered modal-fullscreen p-md-5">
+<div class="modal-dialog modal-dialog-centered modal-md">
 <div class="modal-content modal-carousel">
 <div class="modal-body">
   <!-- Carousel -->
@@ -18,7 +18,7 @@
         }; 
         echo '"><img src="/images/',
         $row["file_name"],
-        '" class="d-block img-fluid" alt="Image',
+        '" class="d-block w-100" alt="Image',
         $img_nr,
         '"></div>';
         $img_nr++;

@@ -67,6 +67,7 @@ $stmt = null;
                             <h6 onclick="text_toggle()">
                             <?php echo $content["0"]["title_$language"]; ?>
                             </h6>
+                        </a>
                     </div>
 
                     <div id="mobile-d-content">
