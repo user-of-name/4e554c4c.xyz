@@ -1,210 +1,44 @@
-INSERT INTO img_making_images (
-    file_name,
-    img_making_project_id,
-    date,
-    location,
-    image_title_en,
-    image_title_lv,
-    Display_order,
-    is3D,
-    href
-  )
+INSERT INTO img_making_roles (collaborator, project, role_en, role_lv)
 VALUES (
-    'THE_VOID_03.jpg',
-    1002,
-    '2019-1-12',
-    'Riga',
-    'THE_VOID_03',
-    'THE_VOID_03',
     1,
-    0,
-    'href:varchar'
+    1001,
+    'Artist, curator',
+    'Mākslinkieks, kurators'
   ),
   (
-    'THE_VOID_04.jpg',
-    1002,
-    '2019-1-6',
-    'Riga',
-    'THE_VOID_04',
-    'THE_VOID_04',
-    2,
-    0,
-    'href:varchar'
-  ),
-  (
-    'THE_VOID_06.jpg',
-    1002,
-    '2019-1-29',
-    'Riga',
-    'THE_VOID_06',
-    'THE_VOID_06',
-    3,
-    0,
-    'href:varchar'
-  ),
-  (
-    'THE_VOID_07.jpg',
-    1002,
-    '2019-1-29',
-    'Riga',
-    'THE_VOID_07',
-    'THE_VOID_07',
-    4,
-    0,
-    'href:varchar'
-  ),
-  (
-    'THE_VOID_08.jpg',
-    1002,
-    '2019-6-6',
-    'Riga',
-    'THE_VOID_08',
-    'THE_VOID_08',
-    5,
-    0,
-    'href:varchar'
-  ),
-  (
-    'THE_VOID_09.jpg',
-    1002,
-    '2019-1-22',
-    'Riga',
-    'THE_VOID_09',
-    'THE_VOID_09',
-    6,
-    0,
-    'href:varchar'
-  ),
-  (
-    'THE_VOID_10.jpg',
-    1002,
-    '2019-1-27',
-    'Riga',
-    'THE_VOID_10',
-    'THE_VOID_10',
-    7,
-    0,
-    'href:varchar'
-  ),
-  (
-    'THE_VOID_14.jpg',
-    1002,
-    '2019-2-1',
-    'Riga',
-    'THE_VOID_14',
-    'THE_VOID_14',
-    8,
-    0,
-    'href:varchar'
-  ),
-  (
-    'THE_VOID_20.jpg',
-    1002,
-    '2019-2-9',
-    'redacted',
-    'THE_VOID_20',
-    'THE_VOID_20',
-    9,
-    0,
-    'href:varchar'
-  ),
-  (
-    'THE_VOID_21.jpg',
-    1002,
-    '2019-2-9',
-    'Riga',
-    'THE_VOID_21',
-    'THE_VOID_21',
-    10,
-    0,
-    'href:varchar'
-  ),
-  (
-    'THE_VOID_22.jpg',
-    1002,
-    '2019-2-9',
-    'Riga',
-    'THE_VOID_22',
-    'THE_VOID_22',
-    11,
-    0,
-    'href:varchar'
-  ),
-  (
-    'THE_VOID_26-2.jpg',
-    1002,
-    '2019-2-16',
-    'Riga',
-    'THE_VOID_26',
-    'THE_VOID_26',
     12,
-    0,
-    'href:varchar'
+    1026,
+    'Artist',
+    'Mākslinkieks'
   ),
   (
-    'THE_VOID_39.jpg',
-    1002,
-    '2019-2-28',
-    'Riga',
-    'THE_VOID_39',
-    'THE_VOID_39',
-    13,
-    0,
-    'href:varchar'
+    1,
+    1024,
+    'Artist',
+    'Mākslinkieks'
   ),
   (
-    'THE_VOID_40.jpg',
-    1002,
-    '2019-2-28',
-    'Riga',
-    'THE_VOID_40',
-    'THE_VOID_40',
-    14,
-    0,
-    'href:varchar'
+    5,
+    1024,
+    'Collective',
+    'Kolektīvs'
   ),
   (
-    'THE_VOID_43-2.jpg',
-    1002,
-    '2019-2-28',
-    'Riga',
-    'THE_VOID_43',
-    'THE_VOID_43',
-    15,
-    0,
-    'href:varchar'
+    1,
+    1050,
+    'Visual artist',
+    'Video mākslinkieks'
   ),
   (
-    'THE_VOID_44.jpg',
-    1002,
-    '2019-3-10',
-    'redacted',
-    'THE_VOID_44',
-    'THE_VOID_44',
-    16,
-    0,
-    'href:varchar'
+    3,
+    1050,
+    'Set Builder',
+    'Dekorāciju būvētāji'
   ),
   (
-    'THE_VOID_54.jpg',
-    1002,
-    '2019-4-14',
-    'Riga',
-    'THE_VOID_54',
-    'THE_VOID_54',
-    17,
-    0,
-    'href:varchar'
-  ),
-  (
-    'THE_VOID_105.jpg',
-    1002,
-    '2019-6-16',
-    'Riga',
-    'THE_VOID_105',
-    'THE_VOID_105',
-    18,
-    0,
-    'href:varchar'
-  )
-  ;
+    5,
+    1009,
+    'Collective',
+    'Kolektīvs'
+  );
+
