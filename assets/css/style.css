@@ -12095,13 +12095,13 @@ h6:after {
     right: 0;
     margin-left: 8px;
     margin-right: 8px;
-    max-height: 80vh;
     width: auto;
     border-right: none;
     border-top: 2px solid rgb(184, 184, 184);
   }
   #mobile-d-content {
     display: none;
+    max-height: 80vh;
   }
   .mobile-d-content {
     border-left: none;

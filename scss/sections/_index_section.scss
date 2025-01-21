@@ -21,7 +21,6 @@
     right: 0;
     margin-left: 8px;
     margin-right: 8px;
-    max-height: 80vh;
     width: auto;
 
     border-right: none;
@@ -30,6 +29,7 @@
 
 #mobile-d-content{
     display: none;
+    max-height: 80vh;
 }
 
 .mobile-d-content{
