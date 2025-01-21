@@ -26,8 +26,8 @@ include "../includes/content_db.php";
    <!--  main body of the page begins -->
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-6 border-top border-end border-bottom overflow-y-auto" style="max-height: 90vh;">
-               <div class="container-fluid">
+            <div class="col-md-6 mobile-d d-flex flex-column border-top border-end border-bottom overflow-y-auto" style="max-height: 90vh;">
+               <div  id="mobileD" onclick="myFunction()" class="container-fluid flex-grow-1 p-0">
                    <div class="text-center text-uppercase text-primary">
                     <h6>
                    <?php echo $content["0"]["title_$language"]; ?>

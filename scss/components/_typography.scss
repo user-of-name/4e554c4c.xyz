@@ -34,3 +34,16 @@ h6{
 .figure-caption{
     padding-bottom: $spacer;
 }
+
+.contributors-decoration{
+        color: $primary;
+        cursor: pointer;
+        &:hover{
+            color: $dark;
+            background-color: $primary;
+        }
+
+    &:before {
+        content: "> ";
+    }
+}

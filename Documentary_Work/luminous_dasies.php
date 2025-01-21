@@ -26,10 +26,10 @@ include "../includes/content_db.php";
             <div class="col-md-4 d-flex flex-column border-top border-end border-bottom" style="height: 90vh;">
                <div class="container-fluid flex-grow-1 p-0">
                     <div class="text-center text-uppercase text-primary">
-                    <h6>
-                   <?php echo $content["0"]["title_$language"]; ?>
-                    </h6>
-                        </div>
+                        <h6>
+                            <?php echo $content["0"]["title_$language"]; ?>
+                        </h6>
+                    </div>
                     <div class="container-fluid"></div>
                     <p class="text-primary">
                     <?php echo $content["0"]["descr_$language"]; ?>

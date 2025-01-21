@@ -39,3 +39,12 @@
         background-color: $primary;
     }
 }
+
+.contributors-link{
+    color: $primary;
+    &:hover{
+        color: $dark;
+        background-color: $primary;
+    }
+}
+

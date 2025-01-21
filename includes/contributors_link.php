@@ -1,14 +1,14 @@
 <?php
 if (count($project_collaborators) > 0) {
   echo '<div class="container-fluid ps-0 pb-3">
-  <div class="text-primary" onclick="contributors_toggle()">';
+  <p class="contributors-decoration" onclick="contributors_toggle()">';
   echo $misc["5"]["element_$language"];
-  echo ':<br></div>
+  echo '</p>
   <div id="contributorsList">';
   foreach ($project_collaborators as $row) {
     echo '<div class="text-primary">',
     $row["role_$language"],
-    ': <a href="',
+    ': <a class="contributors-link li_styles" href="',
     $row["link"],
     '">> ',
     $row["artist_name"],
@@ -17,3 +17,4 @@ if (count($project_collaborators) > 0) {
   echo '</div>
   </div>';
 }
+
