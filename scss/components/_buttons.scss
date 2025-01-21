@@ -1,7 +1,6 @@
 @use '../custom' as *;
 
 .control-arrows{
-    background-color: $dark;
     color: $primary;
     width: auto;
     height: 1em;
@@ -11,6 +10,9 @@
     &:hover{
         color: $dark;
         background-color: $primary;
+    }
+    &:active{
+        color: $primary;
     }
 }
 

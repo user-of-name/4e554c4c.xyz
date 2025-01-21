@@ -11946,7 +11946,6 @@ textarea.form-control-lg {
   }
 }
 .control-arrows {
-  background-color: black;
   color: rgb(184, 184, 184);
   width: auto;
   height: 1em;
@@ -11957,6 +11956,9 @@ textarea.form-control-lg {
 .control-arrows:hover {
   color: black;
   background-color: rgb(184, 184, 184);
+}
+.control-arrows:active {
+  color: rgb(184, 184, 184);
 }
 
 .contact-close-btn {
@@ -12076,6 +12078,7 @@ h6:after {
     background-color: black;
     position: fixed;
     bottom: -2px;
+    max-height: 80vh;
   }
   #mobile-d-content {
     display: none;

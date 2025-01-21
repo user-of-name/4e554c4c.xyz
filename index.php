@@ -69,7 +69,7 @@ $stmt = null;
                         </h6>
                     </div>
 
-                    <div id="mobile-d-content" class="container-fluid">
+                    <div id="mobile-d-content">
                         <p class="text-primary">
                         <?php echo $content["0"]["descr_$language"]; ?>
                         </p>
