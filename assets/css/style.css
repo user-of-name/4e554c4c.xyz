@@ -12073,15 +12073,39 @@ h6:after {
   align-items: center;
 }
 
+.mobile-d {
+  border-top: 1px solid rgb(184, 184, 184);
+  border-bottom: 1px solid rgb(184, 184, 184);
+  border-right: 1px solid rgb(184, 184, 184);
+}
+
+.mobile-d-content {
+  border-top: 1px solid rgb(184, 184, 184);
+  border-bottom: 1px solid rgb(184, 184, 184);
+  border-left: 1px solid rgb(184, 184, 184);
+}
+
 @media (max-width: 767.98px) {
   .mobile-d {
     background-color: black;
     position: fixed;
+    display: block;
     bottom: -2px;
+    left: 0;
+    right: 0;
+    margin-left: 8px;
+    margin-right: 8px;
     max-height: 80vh;
+    width: auto;
+    border-right: none;
+    border-top: 2px solid rgb(184, 184, 184);
   }
   #mobile-d-content {
     display: none;
+  }
+  .mobile-d-content {
+    border-left: none;
+    border-bottom: none;
   }
 }
 .nav-link {

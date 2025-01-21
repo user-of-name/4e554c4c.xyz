@@ -23,7 +23,7 @@ include "../includes/content_db.php";
 
 <div class="container-fluid">
         <div class="row">
-            <div class="col-md-4 d-flex flex-column border-top border-end border-bottom" style="height: 90vh;">
+        <div class="col-lg-3 col-md-6 mobile-d overflow-y-auto" style="max-height: 90vh;">
                <div class="container-fluid flex-grow-1 p-0">
                     <div class="text-center text-uppercase text-primary">
                         <h6>
@@ -38,7 +38,7 @@ include "../includes/content_db.php";
                 <?php include "../includes/contributors_link.php"; ?>
             </div>
 
-            <div class="col-md-8 border-top border-start border-bottom overflow-y-auto p-2" style="max-height: 90vh;">
+            <div class="col-lg-9 col-md-6 border-top border-start border-bottom overflow-y-auto" style="max-height: 90vh;">
                 <div class="row"> 
                     <div class="border-bottom border-end border-3" style="padding:56.25% 0 0 1rem; position:relative;"><iframe src="https://player.vimeo.com/video/952301381?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Luminous Daisies"></iframe>
                     </div>

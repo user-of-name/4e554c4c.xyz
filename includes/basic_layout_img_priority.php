@@ -27,14 +27,14 @@ include "../includes/content_db.php";
     <div class="container-fluid">
         <div class="row">
             <!-- shuffled classes around so they properly show mobile version -->
-            <div class="col-lg-3 col-md-6 mobile-d d-flex flex-column border-top border-end border-bottom overflow-y-auto" style="max-height: 90vh;">
+            <div class="col-lg-3 col-md-6 mobile-d overflow-y-auto" style="max-height: 90vh;">
                  <div id="mobileD" onclick="myFunction()" class="container-fluid flex-grow-1 p-0">
                    <div class="text-center text-uppercase text-primary">
                        <h6>
                        <?php echo $content["0"]["title_$language"]; ?>
                        </h6>
                     </div>
-                    <div class="mobile-d-content" class="container-fluid"></div>
+                    <div id="mobile-d-content" class="container-fluid"></div>
                     <p class="text-primary">
                     <?php echo $content["0"]["descr_$language"]; ?>
                         </p>

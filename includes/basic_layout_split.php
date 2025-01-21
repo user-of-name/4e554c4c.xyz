@@ -27,14 +27,14 @@ include "../includes/content_db.php";
     <div class="container-fluid">
         <div class="row">
             <!-- shuffled classes around so they properly show mobile version -->
-            <div class="col-lg-6 col-md-6 mobile-d d-flex flex-column border-top border-end border-bottom overflow-y-auto" style="max-height: 90vh;">
-                 <div id="mobileD" onclick="myFunction()" class="container-fluid flex-grow-1 p-0">
+            <div class="col-lg-4 col-md-6 mobile-d overflow-y-auto" style="max-height: 90vh;">
+            <div id="mobileD" class="container-fluid">
                    <div class="text-center text-uppercase text-primary">
-                       <h6>
+                        <h6 onclick="text_toggle()">
                        <?php echo $content["0"]["title_$language"]; ?>
                        </h6>
                     </div>
-                    <div class="mobile-d-content" class="container-fluid"></div>
+                    <div id="mobile-d-content" class="container-fluid"></div>
                     <p class="text-primary">
                     <?php echo $content["0"]["descr_$language"]; ?>
                         </p>
@@ -42,7 +42,7 @@ include "../includes/content_db.php";
                 <?php include "../includes/contributors_link.php"; ?>
             </div>
 
-            <div class="col-lg-6 col-md-6 border-top border-start border-bottom overflow-y-auto" style="max-height: 90vh;">
+            <div class="col-lg-8 col-md-6 mobile-d-content order-first order-md-last overflow-y-auto p-2" style="max-height: 90vh;">
                 <div class="row d-flex overflow-y-auto p-2">  
                     <!-- added bootstrap attributes to trigger modal -->
                     <!-- data-bs-slide-to="0" handles on which slide carousel opens, currently not working as it needs to be attached to specific trigger -->             
