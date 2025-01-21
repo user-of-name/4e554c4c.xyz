@@ -14,7 +14,7 @@
         if ($row["is3D"] == 0) {
           echo '<div class="carousel-item';
         if ($img_nr == 0) {
-          echo 'active';
+          echo ' active';
         }; 
         echo '"><img src="/images/',
         $row["file_name"],
