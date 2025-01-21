@@ -16,7 +16,7 @@
     background-color: $dark;
     position: fixed;
     display: block;
-    bottom: -2px;
+    top: 40px;
     left: 0;
     right: 0;
     margin-left: 8px;
@@ -29,7 +29,6 @@
 
 #mobile-d-content{
     display: none;
-    max-height: 500px;
 }
 
 .mobile-d-content{

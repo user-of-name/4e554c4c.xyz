@@ -12090,7 +12090,7 @@ h6:after {
     background-color: black;
     position: fixed;
     display: block;
-    bottom: -2px;
+    top: 40px;
     left: 0;
     right: 0;
     margin-left: 8px;
@@ -12101,7 +12101,6 @@ h6:after {
   }
   #mobile-d-content {
     display: none;
-    max-height: 500px;
   }
   .mobile-d-content {
     border-left: none;
