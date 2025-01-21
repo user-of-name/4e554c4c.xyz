@@ -12,7 +12,7 @@ $stmt->execute();
 $project_images = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 //collaborators
-$query_project_collaborators = "SELECT roles.role_en,roles.role_lv,collaborators.artist_name,collaborators.link FROM collaborators LEFT JOIN roles ON roles.collaborator = collaborators.collaborator_id WHERE roles.project = $project_id;";
+$query_project_collaborators = "SELECT img_making_roles.role_en,img_making_roles.role_lv,collaborators.artist_name,collaborators.link FROM collaborators LEFT JOIN img_making_roles ON img_making_roles.collaborator = collaborators.collaborator_id WHERE img_making_roles.project = $project_id;";
 $stmt = $pdo->prepare(query:$query_project_collaborators);
 $stmt->execute();
 $project_collaborators = $stmt->fetchAll(PDO::FETCH_ASSOC);

@@ -1,14 +1,6 @@
-<!-- db query stuff -->
-
 <?php
-//language stuff
-include "../includes/lang-top.php";
-//references the connection file
-require_once "../includes/dbh.inc.php";
-//navigation database
-include "../includes/db_nav.php";
-//project id and content
 $project_id = 11;
+<<<<<<< HEAD
 include "../includes/content_db.php";
 ?>
 
@@ -92,3 +84,6 @@ foreach ($project_images as $row) {
 
 </body>
 </html>
+=======
+include "../includes/basic_layout_split.php";
+>>>>>>> d59d74f794db73d3bc3700dc0a762d3c9546b50f
