@@ -11,7 +11,8 @@
       <?php
       $img_nr = 0;
       foreach ($project_images as $row) {
-        echo '<div class="carousel-item';
+        if ($row["is3D"] == 0) {
+          echo '<div class="carousel-item';
         if ($img_nr == 0) {
           echo ' active';
         }; 
@@ -21,6 +22,7 @@
         $img_nr,
         '"></div>';
         $img_nr++;
+        };
       };
       ?>
     </div>
