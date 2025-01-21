@@ -34,11 +34,12 @@ include "../includes/content_db.php";
                        <?php echo $content["0"]["title_$language"]; ?>
                        </h6>
                     </div>
-                    <div id="mobile-d-content" class="container-fluid"></div>
-                    <p class="text-primary">
-                    <?php echo $content["0"]["descr_$language"]; ?>
+
+                    <div id="mobile-d-content">
+                        <p class="text-primary">
+                        <?php echo $content["0"]["descr_$language"]; ?>
                         </p>
-                </div>
+                    </div>
                 <?php include "../includes/contributors_link.php"; ?>
             </div>
 

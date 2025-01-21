@@ -12101,7 +12101,7 @@ h6:after {
   }
   #mobile-d-content {
     display: none;
-    max-height: 80vh;
+    max-height: 50vh;
   }
   .mobile-d-content {
     border-left: none;
