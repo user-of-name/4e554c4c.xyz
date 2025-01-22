@@ -29,9 +29,9 @@ include "../includes/content_db.php";
             <div class="col-md-6 mobile-d d-flex flex-column border-top border-end border-bottom overflow-y-auto" style="max-height: 90vh;">
                <div class="container-fluid flex-grow-1 p-0">
                    <div class="text-center text-uppercase text-primary">
-                    <h6 onclick="text_toggle()">
-                   <?php echo $content["0"]["title_$language"]; ?>
-                    </h6>
+                        <a class="title" onclick="text_toggle()">
+                        <?php echo $content["0"]["title_$language"]; ?>
+                        </a>
                     </div>
                     <div id="mobile-d-content" class="container-fluid">
                     <p class="text-primary" id="mobileD">

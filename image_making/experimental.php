@@ -51,9 +51,9 @@ $stmt = null;
             <div class="col-lg-6 col-md-6 mobile-d overflow-y-auto" style="max-height: 90vh;">
             <div class="container-fluid flex-grow-1 p-0">
                    <div class="text-center text-uppercase text-primary">
-                    <h6 onclick="text_toggle()">
-                   <?php echo $content["0"]["title_$language"]; ?>
-                    </h6>
+                        <a class="title" onclick="text_toggle()">
+                        <?php echo $content["0"]["title_$language"]; ?>
+                        </a>
                     </div>
                     <div id="mobile-d-content" class="container-fluid">
                     <p class="text-primary" id="mobileD">

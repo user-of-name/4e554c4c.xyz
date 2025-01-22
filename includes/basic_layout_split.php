@@ -30,9 +30,9 @@ include "../includes/content_db.php";
             <div class="col-lg-6 col-md-6 mobile-d overflow-y-auto" style="max-height: 90vh;">
             <div id="mobileD" class="container-fluid">
                    <div class="text-center text-uppercase text-primary">
-                        <h6 onclick="text_toggle()">
+                        <a class="title" onclick="text_toggle()">
                        <?php echo $content["0"]["title_$language"]; ?>
-                       </h6>
+                        </a>
                     </div>
 
                     <div id="mobile-d-content" class="container-fluid">

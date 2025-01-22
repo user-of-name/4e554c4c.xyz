@@ -2,6 +2,7 @@
 .title{
     cursor: pointer;
     text-decoration: none;
+    line-height: 1.5em;
     &:hover{
         color: $primary;
     }

@@ -11998,6 +11998,7 @@ textarea.form-control-lg {
 .title {
   cursor: pointer;
   text-decoration: none;
+  line-height: 1.5em;
 }
 .title:hover {
   color: rgb(184, 184, 184);
