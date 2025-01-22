@@ -11995,10 +11995,17 @@ textarea.form-control-lg {
   background-color: rgb(184, 184, 184);
 }
 
-h6:before {
+.title {
+  cursor: pointer;
+  text-decoration: none;
+}
+.title:hover {
+  color: rgb(184, 184, 184);
+}
+.title:before {
   content: "*** ";
 }
-h6:after {
+.title:after {
   content: " ***";
 }
 
