@@ -62,19 +62,18 @@ $stmt = null;
         <div class="row">
              <!-- shuffled classes and added custom mobile classes around so they properly show mobile version -->
             <div class="col-lg-4 col-md-6 mobile-d overflow-y-auto" style="max-height: 90vh;">
-               <div id="mobileD" class="container-fluid">
+            <div id="mobileD" class="container-fluid flex-grow-1 p-0">
                    <div class="text-center text-uppercase text-primary">
-                            <a class="title" onclick="text_toggle()">
-                            <?php echo $content["0"]["title_$language"]; ?>
-                            </a>
+                        <a class="title" onclick="text_toggle()">
+                       <?php echo $content["0"]["title_$language"]; ?>
+                        </a>
                     </div>
-
                     <div id="mobile-d-content">
-                        <p class="text-primary">
-                        <?php echo $content["0"]["descr_$language"]; ?>
+                    <p class="text-primary">
+                    <?php echo $content["0"]["descr_$language"]; ?>
                         </p>
-                    </div>
                 </div>
+            </div>
             </div>
 
             <div class="col-lg-8 col-md-6 mobile-d-content order-first order-md-last overflow-y-auto p-2" style="max-height: 90vh;">
