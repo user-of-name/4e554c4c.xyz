@@ -122,7 +122,7 @@
     </nav>
         <!-- contact modal -->
         <div class="modal" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-dialog modal-dialog-centered custom-contact-modal">
           <div class="modal-content">
             <h6 class="text-center"><?php echo $misc["0"]["element_$language"]; ?></h6>
             <div class="modal-body">
