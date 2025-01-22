@@ -1,11 +1,16 @@
 @use '../custom' as *;
-h6{
+.title{
+    cursor: pointer;
+    text-decoration: none;
+    &:hover{
+        color: $primary;
+    }
     &:before {
         content:"*** ";
     }
     &:after {
      content: " ***";
-    }   
+    }
 }
 
 .li_styles{
