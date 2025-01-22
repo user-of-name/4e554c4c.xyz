@@ -35,10 +35,14 @@
 .mobile-d-content{
     border-left: none;
     border-bottom: none;
-
 }
 }
 
+@include media-breakpoint-down(md) {
+    .mobile-d-content{
+        
+}
+}
 
 
 
