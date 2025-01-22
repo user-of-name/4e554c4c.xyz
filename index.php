@@ -23,46 +23,23 @@ $stmt = null;
 ?>
 
 <!-- html begins -->
+
+
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <?php
-    foreach ($content as $row){
-        echo $row["title_$language"];
-        }
-    ?>
-    </title>
+<?php include "includes/proj_head.php"; ?>
 
-    <link rel="stylesheet" href="/assets/css/style.css">
-
-    <!-- <script defer src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-    <script defer src="/main.js"></script>
-    <script defer src="/nav.js"></script>
-</head>
-</head>
-
-<body class="p-2 bg-black mq-value">
-
-    <!-- we get the nav bar here -->
+<body class="p-2 bg-black">
     
-    <?php include 'includes/nav.php'; ?>
+<?php include 'includes/nav.php'; ?>
 
     <!--  main body of the page begins -->
-
     <div class="container-fluid">
         <div class="row">
-             <!-- shuffled classes and added custom mobile classes around so they properly show mobile version -->
-            <div class="col-lg-4 col-md-6 mobile-d overflow-y-auto" style="max-height: 90vh;">
-            <div id="mobileD" class="container-fluid flex-grow-1 p-0">
+            <!-- shuffled classes around so they properly show mobile version -->
+            <div class="col-lg-3 col-md-6 mobile-d overflow-y-auto" style="max-height: 90vh;">
+                 <div id="mobileD" class="container-fluid flex-grow-1 p-0">
                    <div class="text-center text-uppercase text-primary">
                         <a class="title" onclick="text_toggle()">
                        <?php echo $content["0"]["title_$language"]; ?>
@@ -74,11 +51,14 @@ $stmt = null;
                         </p>
                 </div>
             </div>
+                
             </div>
 
-            <div class="col-lg-8 col-md-6 mobile-d-content order-first order-md-last overflow-y-auto p-2" style="max-height: 90vh;">
-                <!-- <div class="row">                 -->
-                <?php
+            <div class="col-lg-9 col-md-6 mobile-d-content order-first order-md-last overflow-y-auto p-2" style="max-height: 90vh;">
+                <div class="row d-flex overflow-y-auto p-2">  
+                    <!-- added bootstrap attributes to trigger modal -->
+                    <!-- data-bs-slide-to="0" handles on which slide carousel opens, currently not working as it needs to be attached to specific trigger -->             
+                    <?php
                 
                 foreach ($art_project as $row) {
                 echo'<div class="row" id="img"',
@@ -96,18 +76,15 @@ $stmt = null;
                 $row["location"],
                 '</figcaption></div></div>';
                 }
-
- ?>
-                <!-- </div> -->
+                 ?>
+                </div>
+            </div>            
         </div>
             </div>
-        </div>
-
+<!-- modal trial -->
+<!-- Modal -->
+<?php include "includes/image_carousel_modal.php"; ?>
 <!-- language junk -->
-
 <?php include "includes/lang-script.php"; ?>
-
-
 </body>
 </html>
-
