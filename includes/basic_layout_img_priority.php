@@ -45,7 +45,7 @@ include "../includes/content_db.php";
             </div>
 
             <div class="col-lg-9 col-md-6 mobile-d-content order-first order-md-last overflow-y-auto p-2" style="max-height: 90vh;">
-                <div class="row d-flex overflow-y-auto p-2" style="max-width: 100%">  
+                <div class="row d-flex overflow-y-auto p-2">  
                     <!-- added bootstrap attributes to trigger modal -->
                     <!-- data-bs-slide-to="0" handles on which slide carousel opens, currently not working as it needs to be attached to specific trigger -->             
                 <?php include "../includes/get_project_images.php";?>

@@ -40,7 +40,11 @@
 
 @include media-breakpoint-down(md) {
     .mobile-d-content{
-        
+        display: block;
+        left: 0;
+        right: 0;
+        width: auto;
+        overflow-x: hidden;
 }
 }
 
