@@ -12116,6 +12116,15 @@ textarea.form-control-lg {
     border-bottom: none;
   }
 }
+@media (max-width: 767.98px) {
+  .mobile-d-content {
+    display: block;
+    left: 0;
+    right: 0;
+    width: auto;
+    overflow-x: hidden;
+  }
+}
 .nav-link {
   border-color: black;
 }
