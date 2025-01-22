@@ -47,7 +47,7 @@ include "../includes/img_making_content_db.php";
                 <div class="row d-flex overflow-y-auto p-2">  
                     <!-- added bootstrap attributes to trigger modal -->
                     <!-- data-bs-slide-to="0" handles on which slide carousel opens, currently not working as it needs to be attached to specific trigger -->             
-                <?php include "../includes/get_project_images.php";?>
+                <?php include "../includes/get_img_making_images.php";?>
                 </div>
             </div>    
             </div>
