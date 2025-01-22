@@ -48,25 +48,22 @@ $stmt = null;
             <!-- <div class="col-m-12 m-2 m-md-4">
             </div> -->
 
-            <div class="col-lg-4 col-md-6 mobile-d overflow-y-auto" style="max-height: 90vh;">
-               <div class="container-fluid flex-grow-1 p-0">
-               <div class="text-center text-uppercase text-primary">
-                <br>
-                        <h6 onclick="text_toggle()">
-                        <?php echo $content["0"]["title_$language"]; ?>
-                        </h6>
+            <div class="col-lg-6 col-md-6 mobile-d overflow-y-auto" style="max-height: 90vh;">
+            <div class="container-fluid flex-grow-1 p-0">
+                   <div class="text-center text-uppercase text-primary">
+                    <h6 onclick="text_toggle()">
+                   <?php echo $content["0"]["title_$language"]; ?>
+                    </h6>
                     </div>
-
                     <div id="mobile-d-content" class="container-fluid">
-                        <p class="text-primary">
-                        <?php echo $content["0"]["descr_$language"]; ?>
+                    <p class="text-primary" id="mobileD">
+                    <?php echo $content["0"]["descr_$language"]; ?>
                         </p>
-                    </div>
-                       
                 </div>
             </div>
+            </div>
 
-            <div class="col-lg-9 col-md-6 border-top border-start border-bottom overflow-y-auto" style="max-height: 90vh;">
+            <div class="col-lg-6 col-md-6 border-top border-start border-bottom overflow-y-auto" style="max-height: 90vh;">
                     <div class="m-5">
                          <?php
                     foreach ($image_making_projects as $row){

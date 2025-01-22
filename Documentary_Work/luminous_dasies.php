@@ -24,18 +24,20 @@ include "../includes/content_db.php";
 <div class="container-fluid">
         <div class="row">
         <div class="col-lg-3 col-md-6 mobile-d overflow-y-auto" style="max-height: 90vh;">
-               <div class="container-fluid flex-grow-1 p-0">
-                    <div class="text-center text-uppercase text-primary">
-                        <h6>
-                            <?php echo $content["0"]["title_$language"]; ?>
-                        </h6>
+        <div class="container-fluid flex-grow-1 p-0">
+                   <div class="text-center text-uppercase text-primary">
+                    <h6 onclick="text_toggle()">
+                   <?php echo $content["0"]["title_$language"]; ?>
+                    </h6>
                     </div>
-                    <div class="container-fluid"></div>
-                    <p class="text-primary">
+                    <div id="mobile-d-content" class="container-fluid">
+                    <p class="text-primary" id="mobileD">
                     <?php echo $content["0"]["descr_$language"]; ?>
-                    </p>
+                        </p>
+                        <?php include "../includes/contributors_link.php"; ?>
                 </div>
-                <?php include "../includes/contributors_link.php"; ?>
+                </div>
+                
             </div>
 
             <div class="col-lg-9 col-md-6 border-top border-start border-bottom overflow-y-auto" style="max-height: 90vh;">
@@ -47,7 +49,7 @@ include "../includes/content_db.php";
 <!-- images start here -->
 
 <?php include "../includes/get_project_images.php";?>
-
+</div>
                     <div class="m-5">
 
                     </div>
