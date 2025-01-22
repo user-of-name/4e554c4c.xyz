@@ -3,9 +3,6 @@
 <div class="modal-content modal-carousel">
 <div class="modal-body">
   <!-- Carousel -->
-    <!-- Could database handle fetching right image?? 
-        also, would it make sense to have modal in a separate file like nav bar?
-    -->
   <div id="imageCarousel" class="carousel slide" data-bs-ride="false" data-bs-touch="true">
     <div class="carousel-inner">
       <?php
@@ -18,7 +15,7 @@
         }; 
         echo '"><img src="/images/',
         $row["file_name"],
-        '" class="d-block w-100" alt="Image',
+        '" class="d-block w-100" alt="Image ',
         $img_nr,
         '"></div>';
         $img_nr++;
