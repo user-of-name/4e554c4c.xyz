@@ -31,5 +31,4 @@ if ($row["is3D"] == 1) {
     $thumbnail_nr++;
 };
 }
-
  ?>

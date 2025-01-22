@@ -42,7 +42,7 @@ include "../includes/content_db.php";
 
             <div class="col-lg-9 col-md-6 border-top border-start border-bottom overflow-y-auto" style="max-height: 90vh;">
                 <div class="row"> 
-                    <div class="border-bottom border-end border-3" style="padding:56.25% 0 0 1rem; position:relative;"><iframe src="https://player.vimeo.com/video/952301381?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Luminous Daisies"></iframe>
+                    <div class="border-bottom border-end border-3" style="padding:56.25% 0 0 1rem; position:relative; z-index:0;"><iframe src="https://player.vimeo.com/video/952301381?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Luminous Daisies"></iframe>
                     </div>
                     <figcaption class="figure-caption"> luminous_dasies.mp4 <br> Canon C300 Mkii, 3:4 <br>2024-05-19</figcaption>
                     <script src="https://player.vimeo.com/api/player.js"></script>   
