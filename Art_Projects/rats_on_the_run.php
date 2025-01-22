@@ -27,18 +27,19 @@ include "../includes/content_db.php";
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6 mobile-d d-flex flex-column border-top border-end border-bottom overflow-y-auto" style="max-height: 90vh;">
-               <div  id="mobileD" onclick="myFunction()" class="container-fluid flex-grow-1 p-0">
+               <div class="container-fluid flex-grow-1 p-0">
                    <div class="text-center text-uppercase text-primary">
-                    <h6>
+                    <h6 onclick="text_toggle()">
                    <?php echo $content["0"]["title_$language"]; ?>
                     </h6>
                     </div>
-                    <div class="container-fluid"></div>
-                    <p class="text-primary">
+                    <div id="mobile-d-content" class="container-fluid">
+                    <p class="text-primary" id="mobileD">
                     <?php echo $content["0"]["descr_$language"]; ?>
                         </p>
+                        <?php include "../includes/contributors_link.php"; ?>
                 </div>
-                <?php include "../includes/contributors_link.php"; ?>
+            </div>
             </div>
 
             <div class="col-md-6 border-top border-start border-bottom overflow-y-auto" style="max-height: 90vh;">
