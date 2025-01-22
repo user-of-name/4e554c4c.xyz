@@ -139,15 +139,6 @@
                         <td><?php echo $misc["3"]["element_$language"]; ?></td>
                         <td><a class="contact-link" href="">> @4e_55_4c_4c</a></td>
                       </tr>
-                      <!-- <tr>
-                        <td>&nbsp;</td>
-                      </tr>
-                      <tr>
-                        <td colspan="1">Collective works and contacts:</td>
-                      </tr>
-                      <tr>
-                        <td colspan="1"><a class="contact-link" href="https://unitedfriedfront.xyz">> unitedfriedfront.xyz</a></td>
-                      </tr> -->
                     </tbody>
                   </table>
             </div>
