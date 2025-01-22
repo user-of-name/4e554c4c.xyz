@@ -26,14 +26,14 @@ include "../includes/content_db.php";
    <!--  main body of the page begins -->
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-6 mobile-d d-flex flex-column border-top border-end border-bottom overflow-y-auto" style="max-height: 90vh;">
-               <div  id="mobileD" onclick="myFunction()" class="container-fluid flex-grow-1 p-0">
-                   <div class="text-center text-uppercase text-primary">
-                    <h6>
-                   <?php echo $content["0"]["title_$language"]; ?>
-                    </h6>
+            <div class="col-lg-6 col-md-6 mobile-d overflow-y-auto" style="max-height: 90vh;">
+                <div id="mobileD" class="container-fluid">
+                        <div class="text-center text-uppercase text-primary">
+                            <h6 onclick="text_toggle()">
+                                <?php echo $content["0"]["title_$language"]; ?>
+                            </h6>
                     </div>
-                    <div class="container-fluid"></div>
+                    <div class="container-fluid" ></div>
                     <p class="text-primary">
                     <?php echo $content["0"]["descr_$language"]; ?>
                         </p>
@@ -41,7 +41,7 @@ include "../includes/content_db.php";
                 <?php include "../includes/contributors_link.php"; ?>
             </div>
 
-            <div class="col-md-6 border-top border-start border-bottom overflow-y-auto" style="max-height: 90vh;">
+            <div class="col-lg-6 col-md-6 mobile-d-content order-first order-md-last overflow-y-auto p-2" style="max-height: 90vh;">
                 <div class="row d-flex overflow-y-auto p-2">   
                 <div class="border-bottom border-end border-3" style="padding:56.25% 0 0 1rem; position:relative;">
                     <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" src="https://www.youtube.com/embed/6H08hUQybzI?rel=0&playlist=6H08hUQybzI&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; autoplay;picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
