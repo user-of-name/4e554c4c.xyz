@@ -55,17 +55,17 @@ $stmt = null;
             </div>
 
             <div class="col-lg-9 col-md-6 mobile-d-content order-first order-md-last overflow-y-auto p-2" style="max-height: 90vh;">
-                <div class="row d-flex p-2">  
+                <div class="row d-flex p-2" style="max-width: 100%">  
                     <!-- added bootstrap attributes to trigger modal -->
                     <!-- data-bs-slide-to="0" handles on which slide carousel opens, currently not working as it needs to be attached to specific trigger -->             
                     <?php
-                
+                $thumbnail_nr = 0;
                 foreach ($art_project as $row) {
                 echo'<div class="text-center text-uppercase text-primary"><br>',
                 $row["title_$language"],
                 '<br></div><div id="" class="h-100"><a href="/',
                 $row["project_file_name"],
-                '"> <img src="images/',
+                '"><img src="images/',
                 $row["file_name"],
                 '" class="img_styles img-fluid w-100" style="" alt="..."></a><figcaption class="figure-caption"> ',
                 '<br>',
@@ -73,7 +73,26 @@ $stmt = null;
                 '<br>',
                 $row["location"],
                 '</figcaption></div>';
-                }
+
+                // echo '<div id="" class="h-100"><a href="/',
+                // $row["project_file_name"],
+                // '"><img src="/images/',
+                // $row["file_name"],
+                // '" class="img_styles img-fluid w-100" style="" alt="Thumbnail ',
+                // $thumbnail_nr,
+                // '" data-bs-toggle="modal" data-bs-target="#carouselModal" data-bs-slide-to="',
+                // $thumbnail_nr,
+                // '" alt="..."><figcaption class="figure-caption"> ',
+                // $row["title_$language"],
+                // '<br>',
+                // $row["date"],
+                // '<br>',
+                // $row["location"],
+                // '</figcaption></div>';
+                // $thumbnail_nr++;
+            }
+
+                
                  ?>
                 </div>
             </div>            

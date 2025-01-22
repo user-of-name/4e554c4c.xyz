@@ -43,8 +43,8 @@ include "../includes/img_making_content_db.php";
             </div>
             </div>
 
-            <div class="col-lg-9 col-md-6 border-top border-start border-bottom overflow-y-auto" style="max-height: 90vh;">
-                <div class="row d-flex overflow-y-auto p-2">  
+            <div class="col-lg-9 col-md-6 border-top border-start border-bottom overflow-y-auto" style="max-height: 90vh; max-width: 100%;">
+            <div class="row d-flex overflow-y-auto p-2"> 
                     <!-- added bootstrap attributes to trigger modal -->
                     <!-- data-bs-slide-to="0" handles on which slide carousel opens, currently not working as it needs to be attached to specific trigger -->             
                 <?php include "../includes/get_img_making_images.php";?>
