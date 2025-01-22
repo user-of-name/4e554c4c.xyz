@@ -61,9 +61,7 @@ $stmt = null;
                     <?php
                 
                 foreach ($art_project as $row) {
-                echo'<div class="row" id="img"',
-                    $row["id"],
-                    '"><div class="text-center text-uppercase text-primary"><br>',
+                echo'<div class="text-center text-uppercase text-primary"><br>',
                 $row["title_$language"],
                 '<br></div><div id="" class="h-100"><a href="/',
                 $row["project_file_name"],
@@ -74,7 +72,7 @@ $stmt = null;
                 $row["date"],
                 '<br>',
                 $row["location"],
-                '</figcaption></div></div>';
+                '</figcaption></div>';
                 }
                  ?>
                 </div>
