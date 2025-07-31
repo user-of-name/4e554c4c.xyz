@@ -1,5 +1,5 @@
 <div class="modal" id="carouselModal" tabindex="-1" aria-labelledby="carouselModalLabel" aria-hidden="true">
-<div class="modal-dialog modal-dialog-centered modal-lg">
+<div class="modal-dialog modal-dialog-centered modal-fullscreen">
 <div class="modal-content modal-carousel">
 <div class="modal-body">
   <!-- Carousel -->
