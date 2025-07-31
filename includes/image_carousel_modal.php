@@ -1,10 +1,10 @@
 <div class="modal" id="carouselModal" tabindex="-1" aria-labelledby="carouselModalLabel" aria-hidden="true">
 <div class="modal-dialog modal-dialog-centered modal-fullscreen">
 <div class="modal-content modal-carousel">
-<div class="modal-body">
+<div class="modal-body vh-100 d-flex align-items-center justify-content-center">
   <!-- Carousel -->
   <div id="imageCarousel" class="carousel slide" data-bs-ride="false" data-bs-touch="true">
-    <div class="carousel-inner">
+    <div class="carousel-inner w-100 h-100">
       <?php
       $img_nr = 0;
       foreach ($project_images as $row) {
