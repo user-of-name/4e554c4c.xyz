@@ -42,7 +42,6 @@ const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true; // Enable damping (inertia)
 controls.dampingFactor = 0.05; // Damping factor
 controls.screenSpacePanning = false; // Disable panning in screen space
-controls.maxPolarAngle = Math.PI / 2; // Limit vertical rotation
 
 // Light
 const ambientLight = new THREE.AmbientLight('white', 1);
