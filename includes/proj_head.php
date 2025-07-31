@@ -12,7 +12,7 @@ $content["0"]["title_lv"],
     <title>
     <?php echo $content["0"]["title_$language"]; ?>
     </title>
-
+    <link rel="icon" type="image/png" href="../assets/favicon32.png">
     <link rel="stylesheet" href="../assets/css/style.css">
 
 <!-- <script defer src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
