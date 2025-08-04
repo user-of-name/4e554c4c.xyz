@@ -55,9 +55,11 @@ $stmt = null;
 
                     <h6 class="text-center text-uppercase text-primary">
                     101
-                    </h6>
+                    </h6> 
+                    <!-- loading css at this header here? -->
 
-
+<a id="loadingProgress" class="text-center text-primary" style="display: block; margin-bottom: 20px;">
+    </a>
 
             <canvas id="container3D" class="border-bottom border-end border-3 h-80 w-100" style="width: 80vw; height: 80vh;"></canvas>
                 <script type="module" src="101.js"></script>
@@ -72,3 +74,9 @@ $stmt = null;
 
 </body>
 </html>
+
+
+
+
+
+
