@@ -16,11 +16,11 @@ def print_exif_data(folder_path):
             image_path = os.path.join(folder_path, filename)
             exif_data = get_exif_data(image_path)
             print(f"('{filename}',")
-            print("1058,")
+            print("15,")
             for tag, value in exif_data.items():
                 if tag == 'DateTimeOriginal':
                     print(f"'{value}',")
-            print("'Riga',")
+            print("'Zlin',")
             print("'image_title_en:varchar',")
             print("'image_title_lv:varchar',")
             print(f"{display_order},")
@@ -28,5 +28,5 @@ def print_exif_data(folder_path):
             print("\n")
             display_order += 1
 
-folder_path = 'DCH Rudens 2024\images normal'
+folder_path = 'img_input/input/export'
 print_exif_data(folder_path)
