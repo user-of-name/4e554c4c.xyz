@@ -29,6 +29,7 @@ const loadingManager = new THREE.LoadingManager();
 
 loadingManager.onStart = function(url, item, total) {
     console.log(`Started loading: ${url}`);
+    document.getElementById('loadingProgress').innerText = `Loading ${url}`;
 }
 loadingManager.onProgress = function(url, loaded, total) {
   const percent = ((loaded / total) * 100).toFixed(2);
@@ -38,9 +39,7 @@ loadingManager.onProgress = function(url, loaded, total) {
 loadingManager.onLoad = function() {
     console.log(`Loaded`);
     const progressElem = document.getElementById('loadingProgress');
-    if (progressElem) {
       progressElem.remove();
-    }
     animate();
 }
 

@@ -57,9 +57,11 @@ $stmt = null;
                     101
                     </h6> 
                     <!-- loading css at this header here? -->
-
+<div>
 <a id="loadingProgress" class="text-center text-primary" style="display: block; margin-bottom: 20px;">
+    <?php echo $misc["7"]["element_$language"]; ?>
     </a>
+    </div>
 
             <canvas id="container3D" class="border-bottom border-end border-3 h-80 w-100" style="width: 80vw; height: 80vh;"></canvas>
                 <script type="module" src="101.js"></script>
