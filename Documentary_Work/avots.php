@@ -17,14 +17,14 @@ include "../includes/content_db.php";
 
 <?php include "../includes/proj_head.php"; ?>
 
-<body class="p-2 bg-black">
+<body class="bg-black">
     
 <?php include '../includes/nav.php'; ?>
 
 <div class="container-fluid">
         <div class="row">
         <div class="fixed-bottom start-0 w-100 p0 bg-black border-top border-primary z-1" style="height:25px"></div>
-        <div class="col-lg-3 col-md-6 mobile-d overflow-y-auto" style="max-height: 90vh;">
+        <div class="col-lg-3 col-md-6 mobile-d overflow-y-auto overflow-x-none" style="max-height: 92vh;">
         <div class="container-fluid flex-grow-1 p-0">
                    <div class="text-center text-uppercase text-primary">
                         <a class="title" onclick="text_toggle()">
@@ -41,7 +41,7 @@ include "../includes/content_db.php";
                 
             </div>
 
-            <div class="col-lg-9 col-md-6 mobile-d-content order-first order-md-last overflow-y-auto p-2" style="max-height: 90vh;">
+            <div class="col-lg-9 col-md-6 mobile-d-content order-first order-md-last overflow-y-auto" style="max-height: 92vh;">
             <div class="row d-flex overflow-y-auto p-2">    
 <!-- images start here -->
 

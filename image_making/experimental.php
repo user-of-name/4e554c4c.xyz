@@ -39,7 +39,7 @@ $stmt = null;
 <script defer src="../image_making_main.js"> </script> -->
 <script type = "text/javascript" src="image_making_main.js"></script>
 </head>
-<body class="p-2 bg-black">
+<body class="bg-black">
     
 <?php include '../includes/nav.php'; ?>
 
@@ -48,7 +48,7 @@ $stmt = null;
             <!-- <div class="col-m-12 m-2 m-md-4">
             </div> -->
             <div class="fixed-bottom start-0 w-100 p0 bg-black border-top border-primary z-1" style="height:25px"></div>
-            <div class="col-lg-6 col-md-6 mobile-d overflow-y-auto" style="max-height: 90vh;">
+            <div class="col-lg-6 col-md-6 mobile-d overflow-y-auto overflow-x-none" style="max-height: 92vh;">
             <div class="container-fluid flex-grow-1 p-0">
                    <div class="text-center text-uppercase text-primary">
                         <a class="title" onclick="text_toggle()">
@@ -63,7 +63,7 @@ $stmt = null;
             </div>
             </div>
 
-            <div class="col-lg-6 col-md-6 border-top border-start border-bottom overflow-y-auto" style="max-height: 90vh;">
+            <div class="col-lg-6 col-md-6 border-top border-start border-bottom overflow-y-auto" style="max-height: 92vh;">
                     <div class="m-5">
                          <?php
                     foreach ($image_making_projects as $row){

@@ -19,7 +19,7 @@ include "../includes/content_db.php";
 
 <?php include "../includes/proj_head.php"; ?>
 
-<body class="p-2 bg-black">
+<body class="bg-black">
     
 <?php include '../includes/nav.php'; ?>
 
@@ -28,7 +28,7 @@ include "../includes/content_db.php";
         <div class="fixed-bottom start-0 w-100 p0 bg-black border-top border-primary z-2" style="height:25px"></div>
         <div class="row">
             <!-- shuffled classes around so they properly show mobile version -->
-            <div class="col-lg-6 col-md-6 mobile-d overflow-y-auto" style="max-height: 92vh;">
+            <div class="col-lg-6 col-md-6 mobile-d overflow-y-auto overflow-x-none" style="max-height: 92vh;">
                 <div id="mobileD" class="container-fluid">
                     <div class="text-center text-uppercase text-primary">
                             <a class="title" onclick="text_toggle()">
@@ -45,8 +45,8 @@ include "../includes/content_db.php";
                 </div>
             </div>
 
-            <div class="col-lg-6 col-md-6 mobile-d-content order-first order-md-last overflow-y-auto p-2" style="max-height: 92vh;">
-                <div class="row d-flex overflow-y-auto p-2">  
+            <div class="col-lg-6 col-md-6 mobile-d-content order-first order-md-last overflow-y-auto overflow-x-none" style="max-height: 92vh;">
+                <div class="row d-flex overflow-y-auto overflow-x-none p-2">  
                     <!-- added bootstrap attributes to trigger modal -->
                     <!-- data-bs-slide-to="0" handles on which slide carousel opens, currently not working as it needs to be attached to specific trigger -->             
                 <?php include "../includes/get_project_images.php";?>
