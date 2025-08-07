@@ -41,3 +41,20 @@
 </div>
 </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const carouselModal = document.getElementById('carouselModal');
+  const imageCarousel = document.getElementById('imageCarousel');
+  let carouselInstance = bootstrap.Carousel.getOrCreateInstance(imageCarousel);
+
+  document.querySelectorAll('[data-bs-target="#carouselModal"][data-bs-slide-to]').forEach(function (img) {
+    img.addEventListener('click', function () {
+      const slideTo = parseInt(img.getAttribute('data-bs-slide-to'), 10);
+      setTimeout(function () {
+        carouselInstance.to(slideTo);
+      }, 300); // Wait for modal animation
+    });
+  });
+});
+</script>

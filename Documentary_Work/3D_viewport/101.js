@@ -20,6 +20,32 @@ var viewport_width = canvas.clientWidth;
 renderer.setSize(viewport_width, viewport_height);
 renderer.setPixelRatio(window.devicePixelRatio > 1 ? 2 : 1);
 
+
+
+
+// loading manager
+
+const loadingManager = new THREE.LoadingManager();
+
+loadingManager.onStart = function(url, item, total) {
+    console.log(`Started loading: ${url}`);
+    document.getElementById('loadingProgress').innerText = `Loading ${url}`;
+}
+loadingManager.onProgress = function(url, loaded, total) {
+  const percent = ((loaded / total) * 100).toFixed(2);
+  console.log(`Loading ${url}: ${percent}%`);
+  document.getElementById('loadingProgress').innerText = `Loading ${url}: ${percent}%`;
+}
+loadingManager.onLoad = function() {
+    console.log(`Loaded`);
+    const progressElem = document.getElementById('loadingProgress');
+      progressElem.remove();
+    animate();
+}
+
+
+
+
 // Scene
 const scene = new THREE.Scene();
 scene.background = new THREE.Color('#b8b8b8');
@@ -42,7 +68,6 @@ const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true; // Enable damping (inertia)
 controls.dampingFactor = 0.05; // Damping factor
 controls.screenSpacePanning = false; // Disable panning in screen space
-controls.maxPolarAngle = Math.PI / 2; // Limit vertical rotation
 
 // Light
 const ambientLight = new THREE.AmbientLight('white', 1);
@@ -56,8 +81,9 @@ AreaLight.lookAt(0, 0, 0);
 AreaLight.castShadow = false; // default false
 scene.add(AreaLight);
 
+
 // gltf loader
-const gltfLoader = new GLTFLoader();
+const gltfLoader = new GLTFLoader(loadingManager);
 var Ypos = -6;
 
 gltfLoader.load(
@@ -102,4 +128,4 @@ function animate() {
   renderer.render(scene, camera);
 }
 
-animate();
+// animate();
