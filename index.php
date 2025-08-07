@@ -30,7 +30,7 @@ $stmt = null;
 
 <?php include "includes/proj_head.php"; ?>
 
-<body class="p-2 bg-black">
+<body class=" bg-black">
     
 <?php include 'includes/nav.php'; ?>
 
