@@ -37,9 +37,8 @@ include "../includes/content_db.php";
                     </div>
                     <div id="mobile-d-content">
                     <p class="text-primary">
-                    <?php echo $content["0"]["descr_$language"]; ?>
-                        <span class="char-change"></span>
-                        </p>
+                        <?php echo $content["0"]["descr_$language"]; ?>
+                    </p>
                         <?php include "../includes/contributors_link.php"; ?>
                 </div>
             </div>
