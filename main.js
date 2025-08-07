@@ -48,6 +48,22 @@ function text_toggle() {
       }
     }
 
+    function text_toggle() {
+      const content = document.getElementById('mobile-d-content');
+      if (!content) return;
+    
+      const isMobile = window.innerWidth <= 767.98;
+    
+      if (isMobile) {
+        const isVisible = window.getComputedStyle(content).display !== 'none';
+        content.style.display = isVisible ? 'none' : 'block';
+    
+        // ✅ Set max-height to 70vh
+        content.style.maxHeight = '70vh';
+        content.style.overflowY = 'auto'; // Optional: add scroll if content is tall
+      }
+    }
+
 //this was for the index page to show the project i guess????...... maybe? commented this shit out and it still works so i guess it wasnt in use....
 
 // function contentToggler(project_id) {
