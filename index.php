@@ -38,6 +38,7 @@ $stmt = null;
     <div class="container-fluid">
         <div class="row">
             <!-- shuffled classes around so they properly show mobile version -->
+            <div class="fixed-bottom start-0 w-100 p0 bg-black border-top border-primary z-1" style="height:25px"></div>
             <div class="col-lg-3 col-md-6 mobile-d overflow-y-auto" style="max-height: 90vh;">
                  <div id="mobileD" class="container-fluid flex-grow-1 p-0">
                    <div class="text-center text-uppercase text-primary">

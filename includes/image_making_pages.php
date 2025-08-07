@@ -25,9 +25,10 @@ include "../includes/img_making_content_db.php";
 
     <!--  main body of the page begins -->
     <div class="container-fluid">
+        <div class="fixed-bottom start-0 w-100 p0 bg-black border-top border-primary z-1" style="height:25px"></div>
         <div class="row">
             <!-- shuffled classes around so they properly show mobile version -->
-            <div class="col-lg-3 col-md-6 mobile-d overflow-y-auto" style="max-height: 90vh;">
+            <div class="col-lg-3 col-md-6 mobile-d overflow-y-auto" style="max-height: 92vh;">
                  <div id="mobileD"  class="container-fluid">
                    <div class="text-center text-uppercase text-primary">
                        <h6 onclick="text_toggle()">
@@ -43,7 +44,7 @@ include "../includes/img_making_content_db.php";
             </div>
             </div>
 
-            <div class="col-lg-9 col-md-6 border-top border-start border-bottom overflow-y-auto" style="max-height: 90vh; max-width: 100%;">
+            <div class="col-lg-9 col-md-6 border-top border-start border-bottom overflow-y-auto" style="max-height: 92vh; max-width: 100%;">
             <div class="row d-flex overflow-y-auto p-2"> 
                     <!-- added bootstrap attributes to trigger modal -->
                     <!-- data-bs-slide-to="0" handles on which slide carousel opens, currently not working as it needs to be attached to specific trigger -->             

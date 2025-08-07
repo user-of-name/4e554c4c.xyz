@@ -25,7 +25,7 @@ include "../includes/content_db.php";
 
     <!--  main body of the page begins -->
     <div class="container-fluid">
-        <div class="fixed-bottom start-0 w-100 p0 bg-black border-top border-primary z-1" style="height:25px"></div>
+        <div class="fixed-bottom start-0 w-100 p0 bg-black border-top border-primary z-2" style="height:25px"></div>
         <div class="row">
             <!-- shuffled classes around so they properly show mobile version -->
             <div class="col-lg-6 col-md-6 mobile-d overflow-y-auto" style="max-height: 92vh;">
