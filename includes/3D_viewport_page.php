@@ -61,7 +61,7 @@ $stmt = null;
     </a>
                     <div id="mobile-d-content">
                     <p class="text-primary">
-<?php $description; ?>
+<?php echo $description; ?>
                     </p>
                 </div>
             </div>
