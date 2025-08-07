@@ -1,7 +1,7 @@
 <?php
 if (count($project_collaborators) > 0) {
   echo '<div class="container-fluid ps-0 pb-3">
-  <p class="contributors-decoration" onclick="contributors_toggle()">';
+  <p class="contributors-decoration btn btn-block" tabindex="-1" onclick="contributors_toggle()">';
   echo $misc["5"]["element_$language"];
   echo '</p>
   <div id="contributorsList">';
