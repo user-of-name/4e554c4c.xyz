@@ -17,6 +17,26 @@ var viewport_width = canvas.clientWidth;
 renderer.setSize(viewport_width, viewport_height);
 renderer.setPixelRatio(window.devicePixelRatio > 1 ? 2 : 1);
 
+// loading manager
+
+const loadingManager = new THREE.LoadingManager();
+
+loadingManager.onStart = function(url, item, total) {
+    console.log(`Started loading: ${url}`);
+    document.getElementById('loadingProgress').innerText = ` Loading ${url}`;
+}
+loadingManager.onProgress = function(url, loaded, total) {
+  const percent = ((loaded / total) * 100).toFixed(2);
+  console.log(`Loading ${url}: ${percent}%`);
+  document.getElementById('loadingProgress').innerText = ` Loading ${url}: ${percent}%`;
+}
+loadingManager.onLoad = function() {
+    console.log(`Loaded`);
+    const progressElem = document.getElementById('loadingProgress');
+      progressElem.remove();
+    animate();
+}
+
 // Scene
 const scene = new THREE.Scene();
 scene.background = new THREE.Color('black');
