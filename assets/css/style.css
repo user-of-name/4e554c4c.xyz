@@ -11999,6 +11999,7 @@ button,
 .btn {
   transition: none !important;
   border-radius: 0 !important;
+  border: none;
 }
 
 .title {
@@ -12137,16 +12138,4 @@ button,
 .nav-link:hover {
   background-color: rgb(184, 184, 184);
   border: 1px solid rgb(184, 184, 184);
-}
-
-/* Ensure carousel modal images scale correctly and are not cropped */
-.modal-img {
-  max-width: 100%;
-  max-height: 80vh;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }

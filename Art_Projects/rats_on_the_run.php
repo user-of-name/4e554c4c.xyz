@@ -27,7 +27,7 @@ include "../includes/content_db.php";
     <div class="container-fluid">
         <div class="row">
         <div class="fixed-bottom start-0 w-100 p0 bg-black border-top border-primary z-1" style="height:25px"></div>
-            <div class="col-md-6 mobile-d d-flex flex-column border-top border-end border-bottom overflow-y-auto overflow-x-none" style="max-height: 92vh;">
+            <div class="col-md-6 mobile-d d-flex flex-column border-top border-end border-bottom overflow-y-auto overflow-x-none m-0" style="max-height: 92vh;">
                <div class="container-fluid flex-grow-1 p-0">
                    <div class="text-center text-uppercase text-primary">
                         <a class="title" onclick="text_toggle()">
@@ -43,7 +43,7 @@ include "../includes/content_db.php";
             </div>
             </div>
 
-            <div class="col-lg-6 col-md-6 mobile-d-content order-first order-md-last overflow-y-auto p-2" style="max-height: 92vh;">
+            <div class="col-lg-6 col-md-6 mobile-d-content order-first order-md-last overflow-y-auto" style="max-height: 92vh;">
             <div class="row d-flex overflow-y-auto p-2" style="max-width: 100%">   
                     <div class="border-bottom border-end border-3" style="padding:56.25% 0 0 1rem; position:relative;">
                     <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" src="https://www.youtube.com/embed/6H08hUQybzI?rel=0&playlist=6H08hUQybzI&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; autoplay;picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

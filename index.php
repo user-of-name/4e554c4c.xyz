@@ -39,8 +39,8 @@ $stmt = null;
         <div class="row">
             <!-- shuffled classes around so they properly show mobile version -->
             <div class="fixed-bottom start-0 w-100 p0 bg-black border-top border-primary z-1" style="height:25px"></div>
-            <div class="col-lg-3 col-md-6 mobile-d overflow-y-auto overflow-x-none" style="max-height: 92vh;">
-                 <div id="mobileD" class="container-fluid flex-grow-1 p-0">
+            <div class="col-lg-3 col-md-6 mobile-d overflow-y-auto overflow-x-none m-0" style="max-height: 92vh;">
+                 <div id="mobileD" class="container-fluid flex-grow-1">
                    <div class="text-center text-uppercase text-primary">
                         <a class="title" onclick="text_toggle()">
                        <?php echo $content["0"]["title_$language"]; ?>
