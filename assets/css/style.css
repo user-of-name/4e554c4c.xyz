@@ -12095,6 +12095,10 @@ textarea.form-control-lg {
 
 @media (max-width: 767.98px) {
   .mobile-d {
+    max-height: none;
+    height: auto;
+    overflow-y: visible;
+    padding-bottom: 2em;
     background-color: black;
     position: fixed;
     display: block;
@@ -12125,6 +12129,25 @@ textarea.form-control-lg {
     overflow-x: hidden;
   }
 }
+
+  .title {
+    font-size: 1.2em;
+    padding: 0.5em 0;
+  }
+  .title:before,
+  .title:after {
+    content: "";
+  }
+  #mobile-d-content {
+    max-height: none;
+    overflow-y: visible;
+  }
+
+/* Optional: Prevent double scrollbars on mobile */
+body {
+  overflow-x: hidden;
+}
+
 .nav-link {
   border-color: black;
 }
