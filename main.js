@@ -58,7 +58,6 @@ function text_toggle() {
         const isVisible = window.getComputedStyle(content).display !== 'none';
         content.style.display = isVisible ? 'none' : 'block';
     
-        // ✅ Set max-height to 70vh
         content.style.maxHeight = '70vh';
         content.style.overflowY = 'auto'; // Optional: add scroll if content is tall
       }
