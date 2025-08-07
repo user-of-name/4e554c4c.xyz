@@ -12139,3 +12139,19 @@ button,
   background-color: rgb(184, 184, 184);
   border: 1px solid rgb(184, 184, 184);
 }
+
+
+.char-change::before {
+  content: "A";
+  animation: changeChar .5s steps(1) infinite;
+  display: inline-block;
+  color:  rgb(184, 184, 184);
+  font-family: 'VT323';
+}
+
+@keyframes changeChar {
+  0%   { content: "–"; }
+  25%  { content: "/"; }
+  50%  { content: "|"; }
+  75%  { content: "\\"; }
+}
