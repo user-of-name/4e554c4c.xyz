@@ -29,12 +29,12 @@ const loadingManager = new THREE.LoadingManager();
 
 loadingManager.onStart = function(url, item, total) {
     console.log(`Started loading: ${url}`);
-    document.getElementById('loadingProgress').innerText = `Loading ${url}`;
+    document.getElementById('loadingProgress').innerText = ` Loading ${url}`;
 }
 loadingManager.onProgress = function(url, loaded, total) {
   const percent = ((loaded / total) * 100).toFixed(2);
   console.log(`Loading ${url}: ${percent}%`);
-  document.getElementById('loadingProgress').innerText = `Loading ${url}: ${percent}%`;
+  document.getElementById('loadingProgress').innerText = ` Loading ${url}: ${percent}%`;
 }
 loadingManager.onLoad = function() {
     console.log(`Loaded`);
