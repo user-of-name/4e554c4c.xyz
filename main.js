@@ -1,4 +1,4 @@
- const mobileIndexToggler = document.getElementById("indexToggler");
+const mobileIndexToggler = document.getElementById("indexToggler");
  const mobileIndexContent = document.getElementById('indexContent');
 
  
@@ -29,14 +29,15 @@
     }
     
     //this is for the mobile version thing
-    function text_toggle() {
-      var x = document.getElementById("mobile-d-content");
-      if (x.style.display === "none") {
-        x.style.display = "block";
-      } else {
-        x.style.display = "none";
-      }
+    // Only allow text_toggle() on mobile screens
+function text_toggle() {
+  if (window.innerWidth <= 767.98) {
+    const content = document.getElementById('mobile-d-content');
+    if (content) {
+      content.style.display = (content.style.display === 'block') ? 'none' : 'block';
     }
+  }
+}
 
     function contributors_toggle() {
       var x = document.getElementById("contributorsList");
