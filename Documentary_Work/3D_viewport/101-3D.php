@@ -58,8 +58,8 @@ $stmt = null;
                     </h6> 
                     <!-- loading css at this header here? -->
 <div>
-<a id="loadingProgress" class="text-center text-primary" style="display: block; margin-bottom: 20px;">
-    <?php echo $misc["7"]["element_$language"]; ?> <span class="char-change"></span>
+<a id="loadingProgress" class="text-center text-primary char-change" style="display: block; margin-bottom: 20px;">
+    <?php echo $misc["7"]["element_$language"]; ?>
     </a>
     </div>
 
