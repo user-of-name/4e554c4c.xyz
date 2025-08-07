@@ -77,7 +77,7 @@ const controls = new OrbitControls(camera, renderer.domElement);
 
 
 // gltf loader
-const gltfLoader = new GLTFLoader();
+const gltfLoader = new GLTFLoader(loadingManager);
 gltfLoader.load(
   '/models/fanny_with_wings.glb',
   gltf => {
