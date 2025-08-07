@@ -15,7 +15,7 @@
         }; 
         echo '"><img src="/images/',
         $row["file_name"],
-        '" class="d-block w-100" alt="Image ',
+        '" class="d-block mx-auto img-fluid modal-img" alt="Image ',
         $img_nr,
         '"></div>';
         $img_nr++;

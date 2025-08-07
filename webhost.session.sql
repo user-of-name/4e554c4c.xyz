@@ -7,16 +7,22 @@ INSERT INTO project_images (
     image_title_lv,
     Display_order,
     is3D,
-    href
   )
-VALUES (
-    'file_name:varchar',
-    14,
-    'date:date',
-    'Rotterdam',
-    '101',
-    '101',
-    1,
-    1,
-    'href:varchar'
-  );
+VALUES ('_DSC9881.jpg',
+14,
+'2025:07:02 12:25:11',
+'Rotterdam',
+'image_title_en:varchar',
+'image_title_lv:varchar',
+2,
+0),
+
+
+('_DSC9835.jpg',
+14,
+'2025:07:02 12:18:50',
+'Rotterdam',
+'image_title_en:varchar',
+'image_title_lv:varchar',
+3,
+0);
