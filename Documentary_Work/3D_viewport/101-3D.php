@@ -30,7 +30,7 @@ $stmt = null;
     <title>
     101
     </title>
-
+    <link rel="icon" type="image/png" href="../../assets/favicon32.png">
     <link rel="stylesheet" href="../../assets/css/style.css">
 
 <script defer src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
@@ -58,8 +58,8 @@ $stmt = null;
                     </h6> 
                     <!-- loading css at this header here? -->
 <div>
-<a id="loadingProgress" class="text-center text-primary" style="display: block; margin-bottom: 20px;">
-    <?php echo $misc["7"]["element_$language"]; ?> 
+<a id="loadingProgress" class="text-center text-primary char-change" style="display: block; margin-bottom: 20px;">
+    <?php echo $misc["7"]["element_$language"]; ?>
     </a>
     </div>
 

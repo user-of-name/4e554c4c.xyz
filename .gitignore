@@ -1,2 +1,6 @@
 /models
 /images
+.DS_Store
+images/.DS_Store
+Img_input/.DS_Store
+webhost.session.sql
