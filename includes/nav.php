@@ -137,7 +137,11 @@
                       </tr>
                       <tr>
                         <td><?php echo $misc["3"]["element_$language"]; ?></td>
-                        <td><a class="contact-link" href="">> @4e_55_4c_4c</a></td>
+                        <td><a class="contact-link" href="https://www.instagram.com/4e_55_4c_4c/">> @4e_55_4c_4c</a></td>
+                      </tr>
+                      <tr>
+                        <td><?php echo $misc["6"]["element_$language"]; ?></td>
+                        <td><a class="contact-link" href="https://pixelfed.social/4e554c4c/">> @4e554c4c</a></td>
                       </tr>
                     </tbody>
                   </table>

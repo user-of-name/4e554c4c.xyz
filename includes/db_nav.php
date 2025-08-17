@@ -10,12 +10,12 @@ $stmt = $pdo->prepare(query:$query_groups);
 $stmt->execute();
 $project_groups = $stmt->fetchAll(PDO::FETCH_ASSOC);
 //art project titles
-$query_menu_art_projects = "SELECT title_en, title_lv, project_file_name FROM content WHERE group_id = 2 AND Display = 1 ORDER BY year DESC;";
+$query_menu_art_projects = "SELECT title_en, title_lv, project_file_name FROM content WHERE group_id = 2 AND Display = 1 ORDER BY date DESC;";
 $stmt = $pdo->prepare(query:$query_menu_art_projects);
 $stmt->execute();
 $menu_art_projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
 //documentary titles
-$query_menu_documentary_projects = "SELECT title_en, title_lv, project_file_name FROM content WHERE group_id = 3 AND Display = 1 ORDER BY year DESC;";
+$query_menu_documentary_projects = "SELECT title_en, title_lv, project_file_name FROM content WHERE group_id = 3 AND Display = 1 ORDER BY date DESC;";
 $stmt = $pdo->prepare(query:$query_menu_documentary_projects);
 $stmt->execute();
 $menu_documentary_projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
