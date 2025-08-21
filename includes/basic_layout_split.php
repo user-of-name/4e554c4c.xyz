@@ -1,5 +1,3 @@
-<!-- db query stuff -->
-
 <?php
 //language stuff
 include "../includes/lang-top.php";
@@ -10,19 +8,12 @@ include "../includes/db_nav.php";
 //project id and content
 include "../includes/content_db.php";
 ?>
-
 <!-- html begins -->
-
-
 <!DOCTYPE html>
 <html lang="en">
-
 <?php include "../includes/proj_head.php"; ?>
-
-<body class="bg-black">
-    
+<body class="bg-black">  
 <?php include '../includes/nav.php'; ?>
-
     <!--  main body of the page begins -->
     <div class="container-fluid">
         <div class="fixed-bottom start-0 w-100 p0 bg-black border-top border-primary z-2" style="height:25px"></div>
@@ -46,9 +37,7 @@ include "../includes/content_db.php";
             </div>
 
             <div class="col-lg-6 col-md-6 mobile-d-content order-first order-md-last overflow-y-auto overflow-x-none" style="max-height: 92vh;">
-                <div class="row d-flex overflow-y-auto overflow-x-none p-2">  
-                    <!-- added bootstrap attributes to trigger modal -->
-                    <!-- data-bs-slide-to="0" handles on which slide carousel opens, currently not working as it needs to be attached to specific trigger -->             
+                <div class="row d-flex overflow-y-auto overflow-x-none p-2">              
                 <?php include "../includes/get_project_images.php";?>
                 </div>
             </div>            
@@ -56,7 +45,6 @@ include "../includes/content_db.php";
             </div>
         </div>
     </div>
-<!-- modal trial -->
 <!-- Modal -->
 <?php include "../includes/image_carousel_modal.php"; ?>
 <!-- language junk -->

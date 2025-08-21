@@ -1,7 +1,4 @@
 <?php
-
-// needed for nav bar
-
 // To Get the Current Filename. 
 $currentPage= $_SERVER['SCRIPT_NAME'];
 //groups
