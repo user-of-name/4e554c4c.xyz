@@ -14,10 +14,10 @@ $stmt->execute();
 $content = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 // content
-$query_image_making_doc = "SELECT *
+$query_image_making_doc = "SELECT image_making_projects.title_en, image_making_projects.title_lv, image_making_projects.year, image_making_projects.location_en, image_making_projects.location_lv, img_making_images.file_name, image_making_projects.href
 FROM image_making_projects
 JOIN img_making_images ON image_making_projects.img_making_project_id = img_making_images.img_making_project_id
- WHERE img_making_group = 2 AND Displayed = 1 AND Display_order = 1 ORDER BY date DESC;";
+ WHERE img_making_group = 2  AND Displayed = 1 AND Display_order = 1 ORDER BY date DESC;";
 $stmt = $pdo->prepare(query:$query_image_making_doc);
 $stmt->execute();
 $image_making_projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
