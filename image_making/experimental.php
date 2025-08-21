@@ -14,7 +14,10 @@ $stmt->execute();
 $content = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 // content
-$query_image_making_doc = "SELECT * FROM image_making_projects WHERE img_making_group = 2 AND Displayed = 1 ORDER BY year DESC;";
+$query_image_making_doc = "SELECT *
+FROM image_making_projects
+JOIN img_making_images ON image_making_projects.img_making_project_id = img_making_images.img_making_project_id
+ WHERE img_making_group = 2 AND Displayed = 1 AND Display_order = 1 ORDER BY date DESC;";
 $stmt = $pdo->prepare(query:$query_image_making_doc);
 $stmt->execute();
 $image_making_projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -74,6 +77,9 @@ $stmt = null;
                         '"><h6 class="text-center text-uppercase text-primary">',
                         $row["title_$language"],
                         '</h6>',
+                        '<img src="../images/',
+                        $row["file_name"],
+                        '" class="img_styles img-fluid w-100" style="" alt="...">',
                         '<div class="text-center text-lowercase text-primary">',
                         $row["year"],
                         ' ; ',
