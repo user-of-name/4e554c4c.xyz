@@ -16,11 +16,11 @@ def print_exif_data(folder_path):
             image_path = os.path.join(folder_path, filename)
             exif_data = get_exif_data(image_path)
             print(f"('{filename}',")
-            print("1060,")
+            print("1062,")
             for tag, value in exif_data.items():
                 if tag == 'DateTimeOriginal':
                     print(f"'{value}',")
-            print("'Krustpils',")
+            print("'Copenhagen',")
             print("'image_title_en:varchar',")
             print("'image_title_lv:varchar',")
             print(f"{display_order},")

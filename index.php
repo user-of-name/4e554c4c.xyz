@@ -10,7 +10,7 @@ $stmt = $pdo->prepare(query:$query_content);
 $stmt->execute();
 $content = $stmt->fetchAll(PDO::FETCH_ASSOC);
 // project selection
-$query_projects = "SELECT content.id,content.title_en,content.title_lv,content.project_file_name,content.year,project_images.img_id,project_images.file_name,project_images.project_id,project_images.date,project_images.location from content, project_images where content.id = 6 and project_images.img_id = 42 or content.id = 8 and project_images.img_id = 5 or content.id = 5 and project_images.img_id = 26 or content.id = 9 and project_images.img_id = 69 or content.id = 13 AND project_images.img_id = 135 or content.id = 12 AND project_images.img_id = 97 or content.id = 11 AND project_images.img_id = 99 or content.id = 15 AND project_images.img_id = 141 ORDER BY project_images.date DESC;";
+$query_projects = "SELECT content.id,content.title_en,content.title_lv,content.project_file_name,content.year,project_images.img_id,project_images.file_name,project_images.project_id,project_images.date,project_images.location from content, project_images where content.id = 6 and project_images.img_id = 42 or content.id = 8 and project_images.img_id = 5 or content.id = 5 and project_images.img_id = 26 or content.id = 9 and project_images.img_id = 69 or content.id = 13 AND project_images.img_id = 135 or content.id = 12 AND project_images.img_id = 97 or content.id = 11 AND project_images.img_id = 99 or content.id = 15 AND project_images.img_id = 141 or content.id = 14 AND project_images.img_id = 193 ORDER BY content.date DESC;";
 $stmt = $pdo->prepare(query:$query_projects);
 $stmt->execute();
 $art_project = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -55,7 +55,7 @@ $stmt = null;
                 $row["project_file_name"],
                 '"><img src="images/',
                 $row["file_name"],
-                '" class="img_styles img-fluid w-100" style="" alt="..."></a><figcaption class="figure-caption"> ',
+                '" class="img_styles img-fluid w-100 " style="" alt="..."></a><figcaption class="figure-caption"> ',
                 '<br>',
                 $row["date"],
                 '<br>',

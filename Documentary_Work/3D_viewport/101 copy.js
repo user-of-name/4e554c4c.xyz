@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader';
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { MapControls } from 'three/addons/controls/MapControls.js';
 
 // Renderer
 const canvas = document.querySelector('#container3D');
@@ -54,7 +54,7 @@ scene.background = new THREE.Color('#b8b8b8');
 const camera = new THREE.PerspectiveCamera(
   75,
   viewport_width / viewport_height,
-  0.1,
+  1,
   1000
 );
 camera.position.y = 3;
@@ -63,11 +63,10 @@ camera.position.x = -8;
 camera.lookAt(0, 2, 0);
 scene.add(camera);
 
-// Orbit Controls
-const controls = new OrbitControls(camera, renderer.domElement);
-controls.enableDamping = true; // Enable damping (inertia)
-controls.dampingFactor = 0.05; // Damping factor
-controls.screenSpacePanning = true; // Disable panning in screen space
+//map controls
+const controls = new MapControls( camera, renderer.domElement );
+controls.enableDamping = true;
+controls.screenSpacePanning = true;
 
 // Light
 const ambientLight = new THREE.AmbientLight('white', 1);
@@ -87,7 +86,7 @@ const gltfLoader = new GLTFLoader(loadingManager);
 var Ypos = 0;
 
 gltfLoader.load(
-  '/models/101 model.glb',
+  '/models/101.glb',
   gltf => {
     const mesh = gltf.scene.children[0];
     mesh.scale.set(1, 1, 1);
