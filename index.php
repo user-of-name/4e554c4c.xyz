@@ -40,12 +40,24 @@ $stmt = null;
                     <div id="mobile-d-content">
                     <p class="text-primary">
                     <?php echo $content["0"]["descr_$language"]; ?>
-                        </p>
+                    </p>
+                    <a href="/CV.php">
+                        <p class="contributors-decoration btn btn-block"><?php echo $misc["9"]["element_$language"]; ?></p>
+                        </a>
+                        <br>
+                    <a href="/freelance.php">
+                        <p class="contributors-decoration btn btn-block"><?php echo $misc["10"]["element_$language"]; ?></p>
+                        </a>
                 </div>
             </div>
             </div>
             <div class="col-lg-9 col-md-6 mobile-d-content order-first order-md-last overflow-y-auto overflow-x-none" style="max-height: 92vh;">
-                <div class="row d-flex p-2">        
+                <div class="row d-flex p-2">
+                    <div class="title text-center text-uppercase text-primary">
+                        <a>
+                            <?php echo $misc["8"]["element_$language"]; ?>
+                        </a>
+                    </div>       
                     <?php
                 $thumbnail_nr = 0;
                 foreach ($art_project as $row) {

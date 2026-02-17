@@ -199,6 +199,10 @@
     scroll-behavior: smooth;
   }
 }
+.cv-list {
+  border-bottom: 0.5px solid rgb(184, 184, 184);
+  padding: 5px;
+}
 
 body {
   margin: 0;

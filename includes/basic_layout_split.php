@@ -39,6 +39,7 @@ include "../includes/content_db.php";
             <div class="col-lg-6 col-md-6 mobile-d-content order-first order-md-last overflow-y-auto overflow-x-none" style="max-height: 92vh;">
                 <div class="row d-flex overflow-y-auto overflow-x-none p-2">              
                 <?php include "../includes/get_project_images.php";?>
+                <?php echo $content["0"]["content_$language"]; ?>
                 </div>
             </div>            
         </div>
