@@ -90,13 +90,13 @@ foreach ($category as $cat) {
                     </div>
                     </div>
                 <div class="col-md-1 overflow-y-visible overflow-x-none m-0">
-                    <div class="text-primary">
+                    <div class="text-primary text-end">
                          ' . $entry["start"] . ' -
                           ' . $entry["end"] . '
                     </div>
                 </div>
                 <div class="col-md-3 overflow-y-visible overflow-x-none m-0">
-                    <div class="text-primary">
+                    <div class="text-primary text-end">
                     ' . $entry["location_$language"] . '';
                     if ($entry["description_$language"] != NULL){
                         echo ' - '. $entry["description_$language"] . '';
