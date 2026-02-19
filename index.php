@@ -10,7 +10,7 @@ $stmt = $pdo->prepare(query:$query_content);
 $stmt->execute();
 $content = $stmt->fetchAll(PDO::FETCH_ASSOC);
 // project selection
-$query_projects = "SELECT content.id,content.title_en,content.title_lv,content.project_file_name,content.year,project_images.img_id,project_images.file_name,project_images.project_id,project_images.date,project_images.location from content, project_images where content.id = 6 and project_images.img_id = 42 or content.id = 8 and project_images.img_id = 5 or content.id = 5 and project_images.img_id = 26 or content.id = 9 and project_images.img_id = 69 or content.id = 13 AND project_images.img_id = 135 or content.id = 12 AND project_images.img_id = 97 or content.id = 11 AND project_images.img_id = 99 or content.id = 15 AND project_images.img_id = 141 or content.id = 14 AND project_images.img_id = 193 ORDER BY content.date DESC;";
+$query_projects = "SELECT content.id,content.title_en,content.title_lv,content.project_file_name,content.year,project_images.img_id,project_images.file_name,project_images.project_id,project_images.date,project_images.location from content, project_images where content.id = 6 and project_images.img_id = 42 or content.id = 8 and project_images.img_id = 5 or content.id = 5 and project_images.img_id = 26 or content.id = 9 and project_images.img_id = 69 or content.id = 13 AND project_images.img_id = 135 or content.id = 12 AND project_images.img_id = 97 or content.id = 11 AND project_images.img_id = 99 or content.id = 15 AND project_images.img_id = 141 or content.id = 14 AND project_images.img_id = 193 or content.id = 7 AND project_images.img_id = 56 ORDER BY content.date DESC;";
 $stmt = $pdo->prepare(query:$query_projects);
 $stmt->execute();
 $art_project = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -57,22 +57,27 @@ $stmt = null;
                         <a>
                             <?php echo $misc["8"]["element_$language"]; ?>
                         </a>
-                    </div>       
+                        
+                    </div>
+                         
                     <?php
                 $thumbnail_nr = 0;
                 foreach ($art_project as $row) {
-                echo'<div class="text-center text-uppercase text-primary"><br>',
-                $row["title_$language"],
-                '<br></div><div id="" class="h-100"><a href="/',
+                echo'<div id="" class="h-100"><a href="/',
                 $row["project_file_name"],
-                '"><img src="images/',
+                '"><br><br><img src="images/',
                 $row["file_name"],
-                '" class="img_styles img-fluid w-100 " style="" alt="..."></a><figcaption class="figure-caption"> ',
+                '" class="img_styles img-fluid w-100 " style="" alt="..."></a>',
                 '<br>',
+                '<div class="row"><div class="col-md-2 text-primary">',
                 $row["date"],
-                '<br>',
+                '</div><div class="col-md-2 text-primary">',
                 $row["location"],
-                '</figcaption></div>';
+                '</div><div class="col-md-8 text-center text-uppercase text-primary">',
+                $row["title_$language"],
+                '</div>',
+                '</div>',
+                '</div>';
             }
                  ?>
                 </div>
