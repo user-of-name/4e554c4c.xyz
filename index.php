@@ -73,7 +73,7 @@ $stmt = null;
                 $row["date"],
                 '</div><div class="col-md-2 text-primary">',
                 $row["location"],
-                '</div><div class="col-md-8 text-center text-uppercase text-primary">',
+                '</div><div class="col-md-8 text-uppercase text-primary">',
                 $row["title_$language"],
                 '</div>',
                 '</div>',
